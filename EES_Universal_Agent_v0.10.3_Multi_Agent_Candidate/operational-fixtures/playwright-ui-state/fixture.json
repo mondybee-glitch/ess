@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "title": "Playwright keyboard and status-state smoke fixture",
+  "runtime": "Node.js + Playwright",
+  "language": "TypeScript",
+  "scope": "Browser smoke test; requires Playwright browser installed locally"
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "backend-observability",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "backend-observability-01",
+      "title": "Trace Correlation",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-07-01-backend-observability",
+      "input": {
+        "request": "Follow a request across API, queue, and worker.",
+        "scenario": "trace-correlation"
+      },
+      "expected_output": "Correlation identifiers survive boundaries without exposing sensitive payloads.",
+      "automated_checks": [
+        "trace propagation test passes",
+        "redaction check passes"
+      ],
+      "human_review_rubric": [
+        "trace spans identify service boundaries",
+        "PII and secrets are excluded"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Correlation identifiers survive boundaries without exposing sensitive payloads.",
+        "Verification requirement: trace propagation test passes",
+        "Verification requirement: redaction check passes"
+      ]
+    },
+    {
+      "id": "backend-observability-02",
+      "title": "Alert Signal",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-07-02-backend-observability",
+      "input": {
+        "request": "Define an alert for elevated error rate and latency.",
+        "scenario": "alert-signal"
+      },
+      "expected_output": "Alert uses actionable thresholds, a clear owner, and a runbook; noisy symptoms are minimized.",
+      "automated_checks": [
+        "alert rule syntax validated",
+        "test fixture triggers expected alert"
+      ],
+      "human_review_rubric": [
+        "threshold aligns to user impact",
+        "owner and next action are documented"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Alert uses actionable thresholds, a clear owner, and a runbook; noisy symptoms are minimized.",
+        "Verification requirement: alert rule syntax validated",
+        "Verification requirement: test fixture triggers expected alert"
+      ]
+    },
+    {
+      "id": "backend-observability-03",
+      "title": "Log Redaction",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-07-03-backend-observability",
+      "input": {
+        "request": "Prevent credentials and personal data from entering logs.",
+        "scenario": "log-redaction"
+      },
+      "expected_output": "Sensitive fields are masked or omitted across success and failure paths.",
+      "automated_checks": [
+        "redaction tests cover errors",
+        "logs are scanned for seeded secrets"
+      ],
+      "human_review_rubric": [
+        "logs retain diagnostic value",
+        "redaction occurs before export"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Sensitive fields are masked or omitted across success and failure paths.",
+        "Verification requirement: redaction tests cover errors",
+        "Verification requirement: logs are scanned for seeded secrets"
+      ]
+    }
+  ]
+}

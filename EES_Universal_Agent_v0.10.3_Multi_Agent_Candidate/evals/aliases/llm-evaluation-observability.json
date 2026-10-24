@@ -1,0 +1,113 @@
+{
+  "skill": "llm-evaluation-observability",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "lee-01",
+      "input": "Compare two model configurations for a support-agent task.",
+      "success_criteria": [
+        "Same versioned cases and budgets are used",
+        "Critical failure slices are reported",
+        "Cost and latency accompany quality results"
+      ],
+      "result": null,
+      "fixture": "fixtures/llm-evaluation-observability/llm-evaluation-observability-lee-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Same versioned cases and budgets are used",
+          "Critical failure slices are reported",
+          "Cost and latency accompany quality results"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "lee-02",
+      "input": "Evaluate a RAG change with citation and stale-document failures.",
+      "success_criteria": [
+        "Retrieval and generation are assessed separately",
+        "Citation support and stale context are checked",
+        "Prompt-injection and privacy risks are recorded"
+      ],
+      "result": null,
+      "fixture": "fixtures/llm-evaluation-observability/llm-evaluation-observability-lee-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Retrieval and generation are assessed separately",
+          "Citation support and stale context are checked",
+          "Prompt-injection and privacy risks are recorded"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "lee-03",
+      "input": "Create a release gate for an agent regression suite.",
+      "success_criteria": [
+        "Thresholds and rollback triggers are explicit",
+        "Automated and human evidence are separated",
+        "No success claim is made from an empty or biased dataset"
+      ],
+      "result": null,
+      "fixture": "fixtures/llm-evaluation-observability/llm-evaluation-observability-lee-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Thresholds and rollback triggers are explicit",
+          "Automated and human evidence are separated",
+          "No success claim is made from an empty or biased dataset"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "llm-evaluation-observability"
+}

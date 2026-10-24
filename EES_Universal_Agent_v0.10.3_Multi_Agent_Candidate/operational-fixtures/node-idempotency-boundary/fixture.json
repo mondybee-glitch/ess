@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "title": "Node.js idempotency and concurrent request boundary",
+  "runtime": "node >=18",
+  "language": "JavaScript",
+  "scope": "Deterministic in-memory model; not a production database proof"
+}

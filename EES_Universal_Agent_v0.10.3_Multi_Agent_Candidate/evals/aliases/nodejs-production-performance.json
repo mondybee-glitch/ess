@@ -1,0 +1,113 @@
+{
+  "skill": "nodejs-production-performance",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "npp-01",
+      "input": "Prepare a Node.js service for a containerized production release.",
+      "success_criteria": [
+        "Runtime image excludes build-only artifacts and secrets",
+        "Health, readiness, signal, and shutdown behavior are checked",
+        "Release and rollback criteria are explicit"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-production-performance/nodejs-production-performance-npp-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Runtime image excludes build-only artifacts and secrets",
+          "Health, readiness, signal, and shutdown behavior are checked",
+          "Release and rollback criteria are explicit"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "npp-02",
+      "input": "Investigate high latency in a Node.js API under concurrent load.",
+      "success_criteria": [
+        "Event-loop and blocking work are measured or bounded",
+        "Tail latency and resource saturation are reported",
+        "The proposed fix is tied to a baseline measurement"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-production-performance/nodejs-production-performance-npp-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Event-loop and blocking work are measured or bounded",
+          "Tail latency and resource saturation are reported",
+          "The proposed fix is tied to a baseline measurement"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "npp-03",
+      "input": "Design observability for a Node.js worker processing queued jobs.",
+      "success_criteria": [
+        "User or job outcomes, errors, latency, saturation, and correlation are covered",
+        "Retries and dead-letter behavior are visible",
+        "Logs and evidence avoid sensitive values"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-production-performance/nodejs-production-performance-npp-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "User or job outcomes, errors, latency, saturation, and correlation are covered",
+          "Retries and dead-letter behavior are visible",
+          "Logs and evidence avoid sensitive values"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "nodejs-production-performance"
+}

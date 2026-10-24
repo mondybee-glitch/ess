@@ -1,0 +1,6 @@
+{
+  "fixture_id": "browser-extension-messaging",
+  "title": "Browser extension message allow-list and sender boundary",
+  "language": "python",
+  "purpose": "Deterministic contract fixture only; does not validate an actual React app or browser extension package."
+}

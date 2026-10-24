@@ -1,0 +1,113 @@
+{
+  "skill": "software-testing",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "st-01",
+      "input": "Write tests for a discount calculator with tiered thresholds.",
+      "success_criteria": [
+        "Boundary values tested",
+        "A deliberately mutated implementation fails at least one test",
+        "Tests run and results shown"
+      ],
+      "result": null,
+      "fixture": "fixtures/software-testing/software-testing-st-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Boundary values tested",
+          "A deliberately mutated implementation fails at least one test",
+          "Tests run and results shown"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "st-02",
+      "input": "Write a Playwright E2E for login then checkout.",
+      "success_criteria": [
+        "Uses locators and auto-wait, no fixed sleeps",
+        "Passes 3 consecutive runs",
+        "Test data reset method stated"
+      ],
+      "result": null,
+      "fixture": "fixtures/software-testing/software-testing-st-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Uses locators and auto-wait, no fixed sleeps",
+          "Passes 3 consecutive runs",
+          "Test data reset method stated"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "st-03",
+      "input": "A suite reports 90% coverage but most tests have no assertions.",
+      "success_criteria": [
+        "Flags the suite as untrustworthy",
+        "Shows evidence (e.g. mutation result or assertion count)",
+        "Recommends concrete fixes"
+      ],
+      "result": null,
+      "fixture": "fixtures/software-testing/software-testing-st-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Flags the suite as untrustworthy",
+          "Shows evidence (e.g. mutation result or assertion count)",
+          "Recommends concrete fixes"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "software-testing"
+}

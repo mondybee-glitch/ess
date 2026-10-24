@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "database-engineering",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "database-engineering-01",
+      "title": "Migration Rollback",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-02-01-database-engineering",
+      "input": {
+        "request": "Add a non-null column to a populated table safely.",
+        "scenario": "migration-rollback"
+      },
+      "expected_output": "Migration handles existing rows, defines rollback or forward-recovery, and proves data integrity.",
+      "automated_checks": [
+        "migration runs on representative fixture",
+        "row-count and constraint checks pass"
+      ],
+      "human_review_rubric": [
+        "locking and downtime risk are evaluated",
+        "rollback is concrete"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Migration handles existing rows, defines rollback or forward-recovery, and proves data integrity.",
+        "Verification requirement: migration runs on representative fixture",
+        "Verification requirement: row-count and constraint checks pass"
+      ]
+    },
+    {
+      "id": "database-engineering-02",
+      "title": "Transaction Integrity",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-02-02-database-engineering",
+      "input": {
+        "request": "Transfer value between two accounts under concurrent requests.",
+        "scenario": "transaction-integrity"
+      },
+      "expected_output": "Atomicity and invariants hold under concurrency; partial writes cannot persist.",
+      "automated_checks": [
+        "transaction failure injection passes",
+        "concurrency invariant check passes"
+      ],
+      "human_review_rubric": [
+        "isolation level is justified",
+        "deadlock and retry behavior are covered"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Atomicity and invariants hold under concurrency; partial writes cannot persist.",
+        "Verification requirement: transaction failure injection passes",
+        "Verification requirement: concurrency invariant check passes"
+      ]
+    },
+    {
+      "id": "database-engineering-03",
+      "title": "Backup Restore",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-02-03-database-engineering",
+      "input": {
+        "request": "Prove the latest backup can be restored in an isolated environment.",
+        "scenario": "backup-restore"
+      },
+      "expected_output": "Restore completes and integrity checks reconcile expected records and timestamps.",
+      "automated_checks": [
+        "restore command/result retained",
+        "checksums or record counts reconcile"
+      ],
+      "human_review_rubric": [
+        "backup success is not mistaken for restore success",
+        "RPO/RTO are measured"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Restore completes and integrity checks reconcile expected records and timestamps.",
+        "Verification requirement: restore command/result retained",
+        "Verification requirement: checksums or record counts reconcile"
+      ]
+    }
+  ]
+}

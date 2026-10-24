@@ -1,0 +1,94 @@
+{
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "med-01",
+      "input": "baseline media-production task with a valid fixture",
+      "success_criteria": "Produces direct evidence for media-production; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/media-production/media-production-med-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for media-production; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "med-02",
+      "input": "failure and recovery case for media-production",
+      "success_criteria": "Produces direct evidence for media-production; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/media-production/media-production-med-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for media-production; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "med-03",
+      "input": "near-miss routing case for media-production",
+      "success_criteria": "Produces direct evidence for media-production; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/media-production/media-production-med-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for media-production; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "media-production"
+}

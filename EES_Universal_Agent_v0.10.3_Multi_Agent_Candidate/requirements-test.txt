@@ -1,0 +1,3 @@
+# Optional unit-test dependency. Core validation/fixture checks use Python stdlib.
+pytest>=8.0,<9.0
+cryptography>=44,<47  # tests for signed evidence manifests

@@ -1,0 +1,117 @@
+{
+  "skill": "debugging-and-code-repair",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "db-01",
+      "input": "A pagination endpoint skips the last item of each page. Fix it.",
+      "success_criteria": [
+        "Failing test written first",
+        "Root cause stated",
+        "Diff under 20 lines",
+        "Full suite passes"
+      ],
+      "result": null,
+      "fixture": "fixtures/debugging-and-code-repair/debugging-and-code-repair-db-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Failing test written first",
+          "Root cause stated",
+          "Diff under 20 lines",
+          "Full suite passes"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "db-02",
+      "input": "A test fails 1 run in 10 in CI.",
+      "success_criteria": [
+        "No more than 5 diagnostic reruns",
+        "Failure rate recorded",
+        "Cause identified (race, clock, order, data) or honestly marked unresolved",
+        "No blind retry added as a 'fix'"
+      ],
+      "result": null,
+      "fixture": "fixtures/debugging-and-code-repair/debugging-and-code-repair-db-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "No more than 5 diagnostic reruns",
+          "Failure rate recorded",
+          "Cause identified (race, clock, order, data) or honestly marked unresolved",
+          "No blind retry added as a 'fix'"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "db-03",
+      "input": "Bug report: 'it sometimes breaks' with no steps.",
+      "success_criteria": [
+        "Asks for or derives a minimal reproduction",
+        "Does not patch without a reproduction",
+        "Marks the fix `unverified` if it cannot be reproduced"
+      ],
+      "result": null,
+      "fixture": "fixtures/debugging-and-code-repair/debugging-and-code-repair-db-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Asks for or derives a minimal reproduction",
+          "Does not patch without a reproduction",
+          "Marks the fix `unverified` if it cannot be reproduced"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "debugging-and-code-repair"
+}

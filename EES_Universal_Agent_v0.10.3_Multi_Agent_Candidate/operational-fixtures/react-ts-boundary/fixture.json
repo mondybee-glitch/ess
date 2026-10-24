@@ -1,0 +1,6 @@
+{
+  "fixture_id": "react-ts-boundary",
+  "title": "React/TypeScript state and accessibility contract",
+  "language": "python",
+  "purpose": "Deterministic contract fixture only; does not validate an actual React app or browser extension package."
+}

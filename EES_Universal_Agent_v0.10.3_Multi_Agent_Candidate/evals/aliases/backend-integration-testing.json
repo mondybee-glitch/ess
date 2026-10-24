@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "backend-integration-testing",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "backend-integration-testing-01",
+      "title": "Contract Failure",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-05-01-backend-integration-testing",
+      "input": {
+        "request": "Stub a downstream service returning schema drift.",
+        "scenario": "contract-failure"
+      },
+      "expected_output": "Contract failure is detected and callers handle it with an explicit safe error.",
+      "automated_checks": [
+        "contract mismatch test fails as expected",
+        "caller fallback behavior asserted"
+      ],
+      "human_review_rubric": [
+        "failure ownership is clear",
+        "error is not silently swallowed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Contract failure is detected and callers handle it with an explicit safe error.",
+        "Verification requirement: contract mismatch test fails as expected",
+        "Verification requirement: caller fallback behavior asserted"
+      ]
+    },
+    {
+      "id": "backend-integration-testing-02",
+      "title": "Dependency Timeout",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-05-02-backend-integration-testing",
+      "input": {
+        "request": "Simulate a downstream timeout and partial response.",
+        "scenario": "dependency-timeout"
+      },
+      "expected_output": "Timeout, cancellation, retry limits, and user-visible outcome are deterministic.",
+      "automated_checks": [
+        "timeout test is bounded",
+        "retry count and final state asserted"
+      ],
+      "human_review_rubric": [
+        "retry amplification is avoided",
+        "deadline budgets are propagated"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Timeout, cancellation, retry limits, and user-visible outcome are deterministic.",
+        "Verification requirement: timeout test is bounded",
+        "Verification requirement: retry count and final state asserted"
+      ]
+    },
+    {
+      "id": "backend-integration-testing-03",
+      "title": "Test Data Isolation",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-05-03-backend-integration-testing",
+      "input": {
+        "request": "Run integration suites concurrently against test data.",
+        "scenario": "test-data-isolation"
+      },
+      "expected_output": "Tests remain deterministic and cleanup leaves no cross-test leakage.",
+      "automated_checks": [
+        "parallel run is repeatable",
+        "cleanup/namespace assertion passes"
+      ],
+      "human_review_rubric": [
+        "fixtures are isolated",
+        "test never targets production"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Tests remain deterministic and cleanup leaves no cross-test leakage.",
+        "Verification requirement: parallel run is repeatable",
+        "Verification requirement: cleanup/namespace assertion passes"
+      ]
+    }
+  ]
+}

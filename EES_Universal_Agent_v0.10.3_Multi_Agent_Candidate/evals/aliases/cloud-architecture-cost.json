@@ -1,0 +1,94 @@
+{
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "clo-01",
+      "input": "baseline cloud-architecture-cost task with a valid fixture",
+      "success_criteria": "Produces direct evidence for cloud-architecture-cost; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/cloud-architecture-cost/cloud-architecture-cost-clo-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for cloud-architecture-cost; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "clo-02",
+      "input": "failure and recovery case for cloud-architecture-cost",
+      "success_criteria": "Produces direct evidence for cloud-architecture-cost; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/cloud-architecture-cost/cloud-architecture-cost-clo-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for cloud-architecture-cost; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "clo-03",
+      "input": "near-miss routing case for cloud-architecture-cost",
+      "success_criteria": "Produces direct evidence for cloud-architecture-cost; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/cloud-architecture-cost/cloud-architecture-cost-clo-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for cloud-architecture-cost; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "cloud-architecture-cost"
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "skill_id": "web-artifacts-builder",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "web-01",
+      "title": "Build a multi-step interactive dashboard",
+      "input": {
+        "request": "Create a responsive React/TypeScript dashboard with filters, shared state, loading/empty/error states, and clear acceptance checks."
+      },
+      "success_criteria": [
+        "State ownership and component boundaries are explicit",
+        "Core filters update the visible result set and are keyboard operable",
+        "Responsive and failure states are specified and verified or marked not-run"
+      ],
+      "fixture": "fixtures/web-artifacts-builder/web-artifacts-builder-case-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "State ownership and component boundaries are explicit",
+          "Core filters update the visible result set and are keyboard operable",
+          "Responsive and failure states are specified and verified or marked not-run"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked when a grader is available",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "web-02",
+      "title": "Produce a self-contained browser artifact",
+      "input": {
+        "request": "Bundle an interactive prototype into a single HTML file and state which dependencies or browser features remain external."
+      },
+      "success_criteria": [
+        "Standalone artifact is distinguished from deployable application",
+        "Build and openability checks are recorded",
+        "External dependencies and security limitations are disclosed"
+      ],
+      "fixture": "fixtures/web-artifacts-builder/web-artifacts-builder-case-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Standalone artifact is distinguished from deployable application",
+          "Build and openability checks are recorded",
+          "External dependencies and security limitations are disclosed"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked when a grader is available",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "web-03",
+      "title": "Route an existing production app task",
+      "input": {
+        "request": "Given an existing Next.js application, add a page using its current stack instead of introducing a separate artifact scaffold."
+      },
+      "success_criteria": [
+        "Existing framework and package manager are inspected first",
+        "Changes follow current project conventions",
+        "Build and test outcomes are evidence-backed"
+      ],
+      "fixture": "fixtures/web-artifacts-builder/web-artifacts-builder-case-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Existing framework and package manager are inspected first",
+          "Changes follow current project conventions",
+          "Build and test outcomes are evidence-backed"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked when a grader is available",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    }
+  ]
+}

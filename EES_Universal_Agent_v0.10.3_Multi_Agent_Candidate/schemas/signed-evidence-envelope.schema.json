@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EES Signed Evidence Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "signature_schema_version",
+    "algorithm",
+    "payload",
+    "payload_sha256",
+    "signature_base64",
+    "key_id",
+    "signing_note"
+  ],
+  "properties": {
+    "signature_schema_version": {
+      "const": 1
+    },
+    "algorithm": {
+      "const": "Ed25519"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "payload_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature_base64": {
+      "type": "string",
+      "minLength": 1
+    },
+    "key_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signing_note": {
+      "type": "string"
+    }
+  }
+}

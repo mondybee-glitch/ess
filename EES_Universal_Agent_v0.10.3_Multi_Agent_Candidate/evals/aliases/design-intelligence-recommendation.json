@@ -1,0 +1,113 @@
+{
+  "skill": "design-intelligence-recommendation",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "dir-01",
+      "input": "Generate a design system for a data-heavy SaaS dashboard.",
+      "success_criteria": [
+        "Requirements drive hierarchy and visual choices",
+        "Tokens and data-visualization rules are explicit",
+        "Dense, empty, error, and long-content states are covered"
+      ],
+      "result": null,
+      "fixture": "fixtures/design-intelligence-recommendation/design-intelligence-recommendation-dir-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Requirements drive hierarchy and visual choices",
+          "Tokens and data-visualization rules are explicit",
+          "Dense, empty, error, and long-content states are covered"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "dir-02",
+      "input": "Review a landing-page concept for visual and UX anti-patterns.",
+      "success_criteria": [
+        "Anti-patterns are tied to user goals",
+        "Responsive and accessibility risks are identified",
+        "Recommendations remain hypotheses until rendered"
+      ],
+      "result": null,
+      "fixture": "fixtures/design-intelligence-recommendation/design-intelligence-recommendation-dir-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Anti-patterns are tied to user goals",
+          "Responsive and accessibility risks are identified",
+          "Recommendations remain hypotheses until rendered"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "dir-03",
+      "input": "Adapt a design recommendation for Arabic and English locales.",
+      "success_criteria": [
+        "RTL/LTR and text expansion are addressed",
+        "Typography and component states remain coherent",
+        "Both directions receive visual evidence"
+      ],
+      "result": null,
+      "fixture": "fixtures/design-intelligence-recommendation/design-intelligence-recommendation-dir-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "RTL/LTR and text expansion are addressed",
+          "Typography and component states remain coherent",
+          "Both directions receive visual evidence"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "design-intelligence-recommendation"
+}

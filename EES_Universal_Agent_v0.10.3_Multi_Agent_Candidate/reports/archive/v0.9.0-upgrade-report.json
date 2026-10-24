@@ -1,0 +1,22 @@
+{
+  "release": "0.9.0-Candidate",
+  "created_from": "EES_Gemini_v0.8.0_Clean_Fixed",
+  "implemented": [
+    "removed archived Python test files from docs/releases to avoid pytest collection collisions",
+    "added tests/test_hierarchical_routing_v080.py",
+    "added Hyper-Cognitive Engineering Kernel to root SKILL.md",
+    "expanded payments-financial, browser-editor-extensions, system-design, embedded-iot with failure traps, invariants, decision matrices, adversarial checks",
+    "added references/failure-patterns.md for the four upgraded skills",
+    "added deterministic React/TypeScript contract and browser-extension messaging fixtures",
+    "moved legacy additions/plans and stale v0.75/v0.76 reports to docs/archive/pre-v0.9.0",
+    "updated active runtime/registry/manifest/catalog versions to 0.9.0"
+  ],
+  "not_done_or_not_claimed": [
+    "physical 74-to-32 skill directory consolidation is intentionally not applied because the current registry, eval contracts, dependencies, ownership references and fixture paths all use the 74 IDs; alias-aware registry/runtime migration plus equivalence tests must precede retirement",
+    "only four skills received deep invariant-first rewrites in this pass; remaining 70 skill bodies need domain-specific research and testing",
+    "the new React/TypeScript fixture is a Python contract model, not a real npm/TypeScript build or browser integration test",
+    "full pytest suite and live Gemini agent evaluation must be run and reviewed before production approval",
+    "security sandbox/runtime separation and prior arbitrary command/file-boundary findings require a separate verified remediation pass"
+  ],
+  "release_gate": "candidate; not production-approved"
+}

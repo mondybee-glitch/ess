@@ -1,0 +1,33 @@
+{
+  "release": "0.8.0-clean-candidate",
+  "changes": [
+    "runtime-enforced hierarchical routing",
+    "routing schema and validation",
+    "mandatory security floor for high/critical tasks",
+    "gitignore and dockerignore",
+    "duplicate nodejs fixture copies removed",
+    "legacy archive/scripts moved under docs/releases",
+    "version identifiers aligned",
+    "release notes organized",
+    "old fixture report renamed"
+  ],
+  "preserved_specialist_skills": 74,
+  "physical_skill_merge_performed": false,
+  "removed_or_moved": [
+    "project/tests/__pycache__",
+    "project/scripts/__pycache__",
+    "project/integrations/adaptive-engineering-agent/scripts/__pycache__",
+    "project/skills/nodejs-outcome-testing/fixtures",
+    "project/skills/nodejs-component-architecture/fixtures",
+    "project/skills/nodejs-production-performance/fixtures",
+    "project/archive/v0.7.0 (moved to docs/releases/archive-v0.7.0)",
+    "project/scripts/validate_v070.py (moved to docs/releases/legacy-scripts)",
+    "project/scripts/test_runtime_v070.py (moved to docs/releases/legacy-scripts)"
+  ],
+  "known_limitations": [
+    "No live Gemini API session executed",
+    "No semantic merge of 74 skill bodies into fewer physical skills",
+    "OS-level sandboxing still depends on Docker/container policy",
+    "Human review remains required for high-impact actions"
+  ]
+}

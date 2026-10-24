@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "scope": "static routing and path audit; does not establish that routing produces correct task outcomes",
+  "capabilities": 74,
+  "findings": [],
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "status": "passed"
+  }
+}

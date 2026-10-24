@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "skill_id": "skill-creation-and-evaluation",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "sce-01",
+      "title": "Author a narrow, testable skill",
+      "input": {
+        "request": "Create a skill for reviewing database migrations. Define purpose, trigger description, exclusions, required inputs, a domain-specific procedure, acceptance checks, and three distinct evaluation prompts."
+      },
+      "success_criteria": [
+        "One primary responsibility and clear exclusions are explicit",
+        "Trigger description contains distinctive terms and negative routing boundaries",
+        "Procedure contains database-migration-specific checks rather than generic boilerplate",
+        "Three evaluation cases include expected observable properties and human review criteria"
+      ],
+      "fixture": "fixtures/skill-creation-and-evaluation/skill-creation-and-evaluation-case-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "One primary responsibility and clear exclusions are explicit",
+          "Trigger description contains distinctive terms and negative routing boundaries",
+          "Procedure contains database-migration-specific checks rather than generic boilerplate",
+          "Three evaluation cases include expected observable properties and human review criteria"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "skill-specific output properties are checked by a task grader when available",
+        "no unsupported agent-success claim"
+      ],
+      "human_review_rubric": [
+        "scope and permissions respected",
+        "technical reasoning is coherent",
+        "evidence directly supports claims",
+        "uncertainty and failures are explicit"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "sce-02",
+      "title": "Diagnose false skill activation",
+      "input": {
+        "request": "A repository has two skills whose descriptions both match “build a REST API”; refine the trigger contract and design positive and near-miss routing cases without changing unrelated skill instructions."
+      },
+      "success_criteria": [
+        "Overlapping trigger cause is identified",
+        "Positive and near-miss prompts distinguish the intended skill",
+        "Any proposed description is concise and domain-specific",
+        "Routing improvement is marked unverified until the cases are actually run"
+      ],
+      "fixture": "fixtures/skill-creation-and-evaluation/skill-creation-and-evaluation-case-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Overlapping trigger cause is identified",
+          "Positive and near-miss prompts distinguish the intended skill",
+          "Any proposed description is concise and domain-specific",
+          "Routing improvement is marked unverified until the cases are actually run"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "skill-specific output properties are checked by a task grader when available",
+        "no unsupported agent-success claim"
+      ],
+      "human_review_rubric": [
+        "scope and permissions respected",
+        "technical reasoning is coherent",
+        "evidence directly supports claims",
+        "uncertainty and failures are explicit"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "sce-03",
+      "title": "Evaluate a skill without an agent runner",
+      "input": {
+        "request": "Prepare an evaluation plan when no agent CLI or subagent runner is installed; do not pretend fixture checks are model-quality results."
+      },
+      "success_criteria": [
+        "Static and fixture-contract checks are clearly separated from agent runs",
+        "Paired baseline comparison controls model, tools, budget, and case version",
+        "Variance, human review, and failure categorization are specified",
+        "Agent outcome remains unverified until actual runs and grading artifacts exist"
+      ],
+      "fixture": "fixtures/skill-creation-and-evaluation/skill-creation-and-evaluation-case-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Static and fixture-contract checks are clearly separated from agent runs",
+          "Paired baseline comparison controls model, tools, budget, and case version",
+          "Variance, human review, and failure categorization are specified",
+          "Agent outcome remains unverified until actual runs and grading artifacts exist"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "skill-specific output properties are checked by a task grader when available",
+        "no unsupported agent-success claim"
+      ],
+      "human_review_rubric": [
+        "scope and permissions respected",
+        "technical reasoning is coherent",
+        "evidence directly supports claims",
+        "uncertainty and failures are explicit"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    }
+  ]
+}

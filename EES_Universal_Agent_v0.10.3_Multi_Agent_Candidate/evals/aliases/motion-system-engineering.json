@@ -1,0 +1,113 @@
+{
+  "skill": "motion-system-engineering",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "mse-01",
+      "input": "Create a reusable motion API for enter, exit, and feedback states.",
+      "success_criteria": [
+        "Names and tokens are semantic and consistent",
+        "State logic is not coupled to animation completion",
+        "Representative component evidence exists"
+      ],
+      "result": null,
+      "fixture": "fixtures/motion-system-engineering/motion-system-engineering-mse-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Names and tokens are semantic and consistent",
+          "State logic is not coupled to animation completion",
+          "Representative component evidence exists"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "mse-02",
+      "input": "Build a custom CSS motion bundle containing only selected categories.",
+      "success_criteria": [
+        "Build inputs and outputs are recorded",
+        "Generated selectors and size are inspected",
+        "License and source attribution are preserved when external code is used"
+      ],
+      "result": null,
+      "fixture": "fixtures/motion-system-engineering/motion-system-engineering-mse-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Build inputs and outputs are recorded",
+          "Generated selectors and size are inspected",
+          "License and source attribution are preserved when external code is used"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "mse-03",
+      "input": "Fix a retriggered animation that leaves stale classes and state.",
+      "success_criteria": [
+        "Cleanup is idempotent on end and cancellation",
+        "Repeated triggers do not create duplicate listeners",
+        "Application state remains correct when motion is disabled"
+      ],
+      "result": null,
+      "fixture": "fixtures/motion-system-engineering/motion-system-engineering-mse-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Cleanup is idempotent on end and cancellation",
+          "Repeated triggers do not create duplicate listeners",
+          "Application state remains correct when motion is disabled"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "motion-system-engineering"
+}

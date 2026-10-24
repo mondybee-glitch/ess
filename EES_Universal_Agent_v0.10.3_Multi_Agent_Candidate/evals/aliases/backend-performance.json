@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "backend-performance",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "backend-performance-01",
+      "title": "Baseline",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-08-01-backend-performance",
+      "input": {
+        "request": "Benchmark an endpoint before optimization.",
+        "scenario": "baseline"
+      },
+      "expected_output": "A reproducible baseline records workload, sample size, latency percentiles, throughput, and error rate.",
+      "automated_checks": [
+        "benchmark metadata retained",
+        "p50/p95/p99 and error count present"
+      ],
+      "human_review_rubric": [
+        "workload reflects expected usage",
+        "measurement noise is discussed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: A reproducible baseline records workload, sample size, latency percentiles, throughput, and error rate.",
+        "Verification requirement: benchmark metadata retained",
+        "Verification requirement: p50/p95/p99 and error count present"
+      ]
+    },
+    {
+      "id": "backend-performance-02",
+      "title": "Bottleneck",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-08-02-backend-performance",
+      "input": {
+        "request": "Investigate a slow database-backed endpoint.",
+        "scenario": "bottleneck"
+      },
+      "expected_output": "Profiling identifies the measured bottleneck before optimization; query plan and resource metrics support the change.",
+      "automated_checks": [
+        "profile/query plan retained",
+        "before/after comparison is valid"
+      ],
+      "human_review_rubric": [
+        "no premature optimization",
+        "same workload and environment used"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Profiling identifies the measured bottleneck before optimization; query plan and resource metrics support the change.",
+        "Verification requirement: profile/query plan retained",
+        "Verification requirement: before/after comparison is valid"
+      ]
+    },
+    {
+      "id": "backend-performance-03",
+      "title": "Load Regression",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-08-03-backend-performance",
+      "input": {
+        "request": "Load-test a candidate build against its baseline.",
+        "scenario": "load-regression"
+      },
+      "expected_output": "Regression thresholds flag material latency/error changes without claiming significance from tiny samples.",
+      "automated_checks": [
+        "threshold comparison runs",
+        "sample size and variability reported"
+      ],
+      "human_review_rubric": [
+        "capacity limits are explicit",
+        "resource saturation and recovery are checked"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Regression thresholds flag material latency/error changes without claiming significance from tiny samples.",
+        "Verification requirement: threshold comparison runs",
+        "Verification requirement: sample size and variability reported"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "skill": "design-system-theming-rtl",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "dst-01",
+      "input": "Add a themeable card and form system with LTR and RTL support.",
+      "success_criteria": [
+        "Tokens and override ownership are explicit",
+        "Both directions preserve layout and meaning",
+        "Focus and contrast states are checked"
+      ],
+      "result": null,
+      "fixture": "fixtures/design-system-theming-rtl/design-system-theming-rtl-dst-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Tokens and override ownership are explicit",
+          "Both directions preserve layout and meaning",
+          "Focus and contrast states are checked"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "dst-02",
+      "input": "Reduce specificity conflicts in a utility-heavy CSS system.",
+      "success_criteria": [
+        "Public and generated layers are identified",
+        "Override order is tested",
+        "Compiled CSS and size evidence are retained"
+      ],
+      "result": null,
+      "fixture": "fixtures/design-system-theming-rtl/design-system-theming-rtl-dst-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Public and generated layers are identified",
+          "Override order is tested",
+          "Compiled CSS and size evidence are retained"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "dst-03",
+      "input": "Make a responsive navigation layout work across narrow and wide content.",
+      "success_criteria": [
+        "Behavior is defined by content constraints",
+        "Keyboard and direction behavior remain correct",
+        "Visual evidence covers required breakpoints"
+      ],
+      "result": null,
+      "fixture": "fixtures/design-system-theming-rtl/design-system-theming-rtl-dst-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Behavior is defined by content constraints",
+          "Keyboard and direction behavior remain correct",
+          "Visual evidence covers required breakpoints"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "design-system-theming-rtl"
+}

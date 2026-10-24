@@ -1,0 +1,116 @@
+{
+  "skill": "browser-e2e-and-test-diagnostics",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "beatd-01",
+      "input": "Design or review a task in the domain of browser-e2e-and-test-diagnostics.",
+      "success_criteria": [
+        "Scope and authorization are explicit",
+        "Required inputs and outputs are complete",
+        "Verification evidence is recorded",
+        "Unverified limitations are not hidden"
+      ],
+      "result": null,
+      "fixture": "fixtures/browser-e2e-and-test-diagnostics/browser-e2e-and-test-diagnostics-bro-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "report or changed files",
+          "exact command results",
+          "limitations and handoff"
+        ],
+        "properties": [
+          "scope checked",
+          "evidence retained",
+          "failure states explicit"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "required evidence fields are declared",
+        "result is not treated as passed",
+        "no unsupported effectiveness claim"
+      ],
+      "human_review_rubric": [
+        "safety boundary respected",
+        "source/license constraints respected",
+        "reasoning is technically coherent",
+        "evidence supports each claim"
+      ]
+    },
+    {
+      "id": "beatd-02",
+      "input": "Handle a failure or boundary case for browser-e2e-and-test-diagnostics.",
+      "success_criteria": [
+        "Scope and authorization are explicit",
+        "Required inputs and outputs are complete",
+        "Verification evidence is recorded",
+        "Unverified limitations are not hidden"
+      ],
+      "result": null,
+      "fixture": "fixtures/browser-e2e-and-test-diagnostics/browser-e2e-and-test-diagnostics-bro-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "report or changed files",
+          "exact command results",
+          "limitations and handoff"
+        ],
+        "properties": [
+          "scope checked",
+          "evidence retained",
+          "failure states explicit"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "required evidence fields are declared",
+        "result is not treated as passed",
+        "no unsupported effectiveness claim"
+      ],
+      "human_review_rubric": [
+        "safety boundary respected",
+        "source/license constraints respected",
+        "reasoning is technically coherent",
+        "evidence supports each claim"
+      ]
+    },
+    {
+      "id": "beatd-03",
+      "input": "Prepare a release or verification decision involving browser-e2e-and-test-diagnostics.",
+      "success_criteria": [
+        "Scope and authorization are explicit",
+        "Required inputs and outputs are complete",
+        "Verification evidence is recorded",
+        "Unverified limitations are not hidden"
+      ],
+      "result": null,
+      "fixture": "fixtures/browser-e2e-and-test-diagnostics/browser-e2e-and-test-diagnostics-bro-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "report or changed files",
+          "exact command results",
+          "limitations and handoff"
+        ],
+        "properties": [
+          "scope checked",
+          "evidence retained",
+          "failure states explicit"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "required evidence fields are declared",
+        "result is not treated as passed",
+        "no unsupported effectiveness claim"
+      ],
+      "human_review_rubric": [
+        "safety boundary respected",
+        "source/license constraints respected",
+        "reasoning is technically coherent",
+        "evidence supports each claim"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "browser-e2e-and-test-diagnostics"
+}

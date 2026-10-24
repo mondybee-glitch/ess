@@ -1,0 +1,117 @@
+{
+  "skill": "backend-development",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "be-01",
+      "input": "Add GET /orders/{id} where users may only read their own orders.",
+      "success_criteria": [
+        "Ownership check in server code",
+        "Test: other user's order returns 403 or 404",
+        "Test: owner succeeds",
+        "Tests run and results shown"
+      ],
+      "result": null,
+      "fixture": "fixtures/backend-development/backend-development-be-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Ownership check in server code",
+          "Test: other user's order returns 403 or 404",
+          "Test: owner succeeds",
+          "Tests run and results shown"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "be-02",
+      "input": "Add a NOT NULL column to a 10M-row table without downtime.",
+      "success_criteria": [
+        "Expand then backfill then constrain plan",
+        "No full-table lock in the plan",
+        "Rollback or forward-fix stated",
+        "Plan reviewed against the stated engine version"
+      ],
+      "result": null,
+      "fixture": "fixtures/backend-development/backend-development-be-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Expand then backfill then constrain plan",
+          "No full-table lock in the plan",
+          "Rollback or forward-fix stated",
+          "Plan reviewed against the stated engine version"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "be-03",
+      "input": "A payment webhook is delivered twice by the provider.",
+      "success_criteria": [
+        "Idempotency key or dedupe table",
+        "Test delivers the event twice and asserts a single effect",
+        "Timeout and retry behavior stated"
+      ],
+      "result": null,
+      "fixture": "fixtures/backend-development/backend-development-be-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Idempotency key or dedupe table",
+          "Test delivers the event twice and asserts a single effect",
+          "Timeout and retry behavior stated"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "backend-development"
+}

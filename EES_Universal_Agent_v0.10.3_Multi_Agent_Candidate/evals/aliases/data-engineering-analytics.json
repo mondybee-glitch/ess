@@ -1,0 +1,94 @@
+{
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "dat-01",
+      "input": "baseline data-engineering-analytics task with a valid fixture",
+      "success_criteria": "Produces direct evidence for data-engineering-analytics; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/data-engineering-analytics/data-engineering-analytics-dat-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for data-engineering-analytics; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "dat-02",
+      "input": "failure and recovery case for data-engineering-analytics",
+      "success_criteria": "Produces direct evidence for data-engineering-analytics; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/data-engineering-analytics/data-engineering-analytics-dat-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for data-engineering-analytics; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "dat-03",
+      "input": "near-miss routing case for data-engineering-analytics",
+      "success_criteria": "Produces direct evidence for data-engineering-analytics; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/data-engineering-analytics/data-engineering-analytics-dat-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for data-engineering-analytics; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "data-engineering-analytics"
+}

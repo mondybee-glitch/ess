@@ -1,0 +1,119 @@
+{
+  "skill": "devops-and-deployment",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "do-01",
+      "input": "Write a production Dockerfile for a Node.js 20 API.",
+      "success_criteria": [
+        "Multi-stage build",
+        "Non-root user",
+        "Pinned base image",
+        "`.dockerignore` present",
+        "Image built and size reported"
+      ],
+      "result": null,
+      "fixture": "fixtures/devops-and-deployment/devops-and-deployment-do-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Multi-stage build",
+          "Non-root user",
+          "Pinned base image",
+          "`.dockerignore` present",
+          "Image built and size reported"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "do-02",
+      "input": "Add a CI pipeline with dependency caching and secret scanning.",
+      "success_criteria": [
+        "Stages ordered lint, test, build, scan",
+        "Cache configured",
+        "Secret scan step present",
+        "Pipeline syntax validated or marked unverified"
+      ],
+      "result": null,
+      "fixture": "fixtures/devops-and-deployment/devops-and-deployment-do-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Stages ordered lint, test, build, scan",
+          "Cache configured",
+          "Secret scan step present",
+          "Pipeline syntax validated or marked unverified"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "do-03",
+      "input": "The team says 'our backups work'.",
+      "success_criteria": [
+        "Asks for or performs a restore test",
+        "Marks the claim `unverified` without one",
+        "Specifies what a passing restore test shows"
+      ],
+      "result": null,
+      "fixture": "fixtures/devops-and-deployment/devops-and-deployment-do-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Asks for or performs a restore test",
+          "Marks the claim `unverified` without one",
+          "Specifies what a passing restore test shows"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "devops-and-deployment"
+}

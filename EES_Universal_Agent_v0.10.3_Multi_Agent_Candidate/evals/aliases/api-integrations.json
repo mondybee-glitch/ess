@@ -1,0 +1,94 @@
+{
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "api-01",
+      "input": "baseline api-integrations task with a valid fixture",
+      "success_criteria": "Produces direct evidence for api-integrations; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/api-integrations/api-integrations-api-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for api-integrations; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "api-02",
+      "input": "failure and recovery case for api-integrations",
+      "success_criteria": "Produces direct evidence for api-integrations; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/api-integrations/api-integrations-api-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for api-integrations; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "api-03",
+      "input": "near-miss routing case for api-integrations",
+      "success_criteria": "Produces direct evidence for api-integrations; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/api-integrations/api-integrations-api-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for api-integrations; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "api-integrations"
+}

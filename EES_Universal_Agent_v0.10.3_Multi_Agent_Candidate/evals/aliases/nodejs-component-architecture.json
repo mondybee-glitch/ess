@@ -1,0 +1,113 @@
+{
+  "skill": "nodejs-component-architecture",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "nca-01",
+      "input": "Split a Node.js service into business components and layers without leaking HTTP objects into domain code.",
+      "success_criteria": [
+        "Component and layer boundaries are explicit",
+        "Domain code is transport-independent",
+        "Public exports and dependencies are recorded"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-component-architecture/nodejs-component-architecture-nca-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Component and layer boundaries are explicit",
+          "Domain code is transport-independent",
+          "Public exports and dependencies are recorded"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "nca-02",
+      "input": "Review configuration and error handling for a Node.js worker.",
+      "success_criteria": [
+        "Configuration is validated before use",
+        "Operational and programmer failures are distinguished",
+        "Secrets are not printed in errors or evidence"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-component-architecture/nodejs-component-architecture-nca-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Configuration is validated before use",
+          "Operational and programmer failures are distinguished",
+          "Secrets are not printed in errors or evidence"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "nca-03",
+      "input": "Implement graceful shutdown for a Node.js service with HTTP and queue consumers.",
+      "success_criteria": [
+        "Signals stop new work",
+        "In-flight resources are drained or bounded",
+        "Exit behavior and evidence are recorded"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-component-architecture/nodejs-component-architecture-nca-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Signals stop new work",
+          "In-flight resources are drained or bounded",
+          "Exit behavior and evidence are recorded"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "nodejs-component-architecture"
+}

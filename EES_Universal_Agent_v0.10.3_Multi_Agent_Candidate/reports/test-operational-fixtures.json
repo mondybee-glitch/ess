@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-24T18:51:31.506553+00:00",
+  "runner": "scripts/run_operational_fixtures.py",
+  "claim_boundary": "A passing record means only that the deterministic fixture tests passed. It is not an agent-run skill evaluation.",
+  "summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "timed_out": 0,
+    "agent_effectiveness": "not evaluated"
+  },
+  "records": [
+    {
+      "fixture_id": "accessible-keyboard-focus",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 715.68,
+      "artifact_hashes": {
+        "fixture.json": "764bf14db4bdb0864fc29def00e348db06e1ce6842ce2c81835fcac493d78e1e",
+        "subject.py": "2f0fb55ef67380b4cccb229ded0f18ccedd1de1b40777961052818f7263a0505",
+        "test_fixture.py": "48ad2784b1f1f9fa34f819a39ef5f0c032434647c2470a5a67cc85fc3967e733",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "fb1b22864b759ed6d64c39c972f6a88aee9288ba326df0147ed7f7544f2a2d96"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Keyboard operability and focus order contract",
+      "stdout": "",
+      "stderr": "test_accessible_control_passes (test_fixture.ContractTests.test_accessible_control_passes) ... ok\ntest_keyboard_and_name_failures_detected (test_fixture.ContractTests.test_keyboard_and_name_failures_detected) ... ok\ntest_negative_one_is_valid (test_fixture.ContractTests.test_negative_one_is_valid) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:21.716703+00:00"
+    },
+    {
+      "fixture_id": "api-tenancy-auth",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 704.05,
+      "artifact_hashes": {
+        "fixture.json": "a2cb3a5761954cf4deeb886a9367f729927da82612d9f0075e21a68926731aa4",
+        "subject.py": "9818b6f27a69e4ef6d334e4f89c5bf50f38b6f7c419628109970d0169925d0bb",
+        "test_fixture.py": "7c2b32acc7eb214326db774b502e8e4f5347ccc55803363f663991af32b69dda",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "325d0d3575302c97a05837992847025564df07da2abb387d50685164183c934e"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "API authorization and tenant isolation",
+      "stdout": "",
+      "stderr": "test_cross_tenant_denied (test_fixture.ContractTests.test_cross_tenant_denied) ... ok\ntest_owner_same_tenant_allowed (test_fixture.ContractTests.test_owner_same_tenant_allowed) ... ok\ntest_unauthenticated_denied (test_fixture.ContractTests.test_unauthenticated_denied) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:22.432869+00:00"
+    },
+    {
+      "fixture_id": "browser-extension-messaging",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 732.82,
+      "artifact_hashes": {
+        "fixture.json": "5cb288387c508f043809e2f2c90c60dfa900e81461597a570f2ef4f8fb14fb10",
+        "subject.py": "0e841f92057c3de1eb2f1ca66352fb25908139311a9e3e1ebdab150c25a05620",
+        "test_fixture.py": "252baf8e8701423831e8ea4a981ca24042b86934e263643de8cf2d445b7f8019",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "7bcd46c6eda55cf78c01c163cc142e120ee23894df6995b574cdcc774ac7304c"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Browser extension message allow-list and sender boundary",
+      "stdout": "",
+      "stderr": "test_known_sender_and_action (test_fixture.BoundaryTests.test_known_sender_and_action) ... ok\ntest_malformed_preference_rejected (test_fixture.BoundaryTests.test_malformed_preference_rejected) ... ok\ntest_unknown_action_rejected (test_fixture.BoundaryTests.test_unknown_action_rejected) ... ok\ntest_unknown_fields_rejected (test_fixture.BoundaryTests.test_unknown_fields_rejected) ... ok\ntest_wrong_sender_rejected (test_fixture.BoundaryTests.test_wrong_sender_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:23.137299+00:00"
+    },
+    {
+      "fixture_id": "crypto-envelope-nonce-safety",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 774.15,
+      "artifact_hashes": {
+        "fixture.json": "c993118320ed3d4519a8ba9e2703d90dc254524ce36a5ab1c02b63ffae5e2242",
+        "subject.py": "67a514a6fb2f68fc308e2d8b2ec5d930650f751390bf9b1a62b9dff4275de499",
+        "test_fixture.py": "bdb147b9d17903af1c2d0630c57cf4d32041d9d7cbb34261680a0842bd0715d7",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "79ed527da69ac56cc2814e22d5e9ee5d95c127a752607a174c9870a295f441db"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "crypto-envelope-nonce-safety",
+      "stdout": "",
+      "stderr": "test_detects_ecb_weak_hash_and_insecure_rng (test_fixture.CryptoPatternGuardTests.test_detects_ecb_weak_hash_and_insecure_rng) ... ok\ntest_detects_password_hash_and_secret_comparison (test_fixture.CryptoPatternGuardTests.test_detects_password_hash_and_secret_comparison) ... ok\ntest_ignores_comment_and_vetted_api_names (test_fixture.CryptoPatternGuardTests.test_ignores_comment_and_vetted_api_names) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:23.870490+00:00"
+    },
+    {
+      "fixture_id": "database-migration-rollback",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 749.65,
+      "artifact_hashes": {
+        "fixture.json": "8930d628f83424904a8ff44e4c4208d46f6af13ee7c57d110df71bec5cc4dc0b",
+        "subject.py": "2a3e240cb5a0d27da682ad8c7467c0d4986666287fce3e68d3c008a4fe492100",
+        "test_fixture.py": "228371626b1945fdc17b0ea56f0166c0d73663782e45a7ebaf6c5ec06402d5cc",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "76dff08c70b43c7ac3f266c3cc72b1a3676cdc405d442c652b6be2df7874b564"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Database migration rollback invariant",
+      "stdout": "",
+      "stderr": "test_invalid_migration_rolls_back (test_fixture.ContractTests.test_invalid_migration_rolls_back) ... ok\ntest_valid_migration_commits (test_fixture.ContractTests.test_valid_migration_commits) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:24.644984+00:00"
+    },
+    {
+      "fixture_id": "ml-baseline-regression",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 679.57,
+      "artifact_hashes": {
+        "fixture.json": "b1acde353502941e55c2999d0deb50ebdc7212d4c287337904848a082e6c3deb",
+        "subject.py": "c690c56aafbacf7ebe47485e493d78fd50fa5b518cdec1d3e06e8620d76f523f",
+        "test_fixture.py": "5f88ea28ca91e6b29c9a7162d66993df861000dbfc5a3212e55808a460608a33",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "31c096313da54323f92a143cb2828e61f301276eb0ccfca5395c83266cc4d843"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "ML baseline comparison and regression gate",
+      "stdout": "",
+      "stderr": "test_improvement_passes (test_fixture.ContractTests.test_improvement_passes) ... ok\ntest_nonnumeric_rejected (test_fixture.ContractTests.test_nonnumeric_rejected) ... ok\ntest_regression_fails (test_fixture.ContractTests.test_regression_fails) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:25.394994+00:00"
+    },
+    {
+      "fixture_id": "observability-redaction",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 658.61,
+      "artifact_hashes": {
+        "fixture.json": "3d2582ff558b78d62995b268050784640517f3285885d25c8d0dff0a1e24ea00",
+        "subject.py": "f8cc8b1f40c895ccd38dbb6f74f192c8233f7e6cd1c5bb371b2b171063eeaaad",
+        "test_fixture.py": "5a377bdd58d987237cbc9024c2c157118ce60f56a150f150c585bd4dd4b976f6",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "17c43441a608e1da74a635844f9de82731c564dae2df4c79fe875a63a56733b8"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Trace context and secret redaction",
+      "stdout": "",
+      "stderr": "test_secrets_redacted (test_fixture.ContractTests.test_secrets_redacted) ... ok\ntest_trace_propagates (test_fixture.ContractTests.test_trace_propagates) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:26.074914+00:00"
+    },
+    {
+      "fixture_id": "prompt-injection-tool-policy",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 646.0,
+      "artifact_hashes": {
+        "fixture.json": "ae06b73c45dbcededca712a1294f98547bfe899b9999becbdff25f0953228197",
+        "subject.py": "3382b7720138af7a361749b9a2f064f5c27be0993c5411cc3ebd73550d362a2b",
+        "test_fixture.py": "d882eb0e656ceb2a5760666a6c1d612613bcd582b96557fb55ebd5c8fedd0209",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "afb88399a3e366fd7e031805259ef6d2a1a28bb3e1e144209ed3efc3e99d1602"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Prompt injection and tool allowlist",
+      "stdout": "",
+      "stderr": "test_allowed_tool_passes (test_fixture.ContractTests.test_allowed_tool_passes) ... ok\ntest_allowlist_still_applies (test_fixture.ContractTests.test_allowlist_still_applies) ... ok\ntest_untrusted_prompt_cannot_authorize (test_fixture.ContractTests.test_untrusted_prompt_cannot_authorize) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:26.733877+00:00"
+    },
+    {
+      "fixture_id": "queue-backpressure",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 645.71,
+      "artifact_hashes": {
+        "fixture.json": "b04a5d7aa62f63b9537490fe2183cd046611821598fa15ee000cb8cefa16c389",
+        "subject.py": "1927a121eb57c2bbba61d59e54dc81a1c8993ff8cd1a930c1af5315c2df3b822",
+        "test_fixture.py": "182371c22fb7c8c8883b145519ceba01fe3b863262fb472632c3c69fcd5e24d5",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "0ed4a942134fed403823c4fb5b5750193a6f4b5844712b1e7bf45327b9815c6e"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Queue backpressure and cancellation",
+      "stdout": "",
+      "stderr": "test_cancel_rejects_work (test_fixture.ContractTests.test_cancel_rejects_work) ... ok\ntest_capacity_enforced (test_fixture.ContractTests.test_capacity_enforced) ... ok\ntest_invalid_capacity (test_fixture.ContractTests.test_invalid_capacity) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:27.380255+00:00"
+    },
+    {
+      "fixture_id": "rag-tenant-acl",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 644.56,
+      "artifact_hashes": {
+        "fixture.json": "01c604ab0a7781396d5e5afd3918a784c54fbaa0404878d603cdec1b92f72633",
+        "subject.py": "c4d752fb639a7373b6d9e07e4d4712fc181e733f93971dd3ef85c72eb366a37c",
+        "test_fixture.py": "960a253e50a82f7758bf5fa37cb9d8f48fe55f1b4f8607be8e0c422c6df14524",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "4f30d7523cd7b5399288dec3e074c8cd187550011c5299bfb9c5e3422c3bbddc"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "RAG relevance authorization and tenant isolation",
+      "stdout": "",
+      "stderr": "test_irrelevant_documents_excluded (test_fixture.ContractTests.test_irrelevant_documents_excluded) ... ok\ntest_tenant_and_acl_both_required (test_fixture.ContractTests.test_tenant_and_acl_both_required) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:28.026359+00:00"
+    },
+    {
+      "fixture_id": "react-ts-boundary",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 699.39,
+      "artifact_hashes": {
+        "fixture.json": "409b851da5e9de554a7759fdabdb36139c3e06dccf60fb9082ae2316e66326ed",
+        "subject.py": "4d7da8bac850c118d4233d1fcffdf40f0493682efaf4ca192dab0c5b7b8fe54d",
+        "test_fixture.py": "cef7c3fb9251735e9105f9258542305f34d396106c174c1be1db24e8f4b87f35",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "6fd857d0eb2bc820480345ed5fd7d6bbaa2e96bd8555a34b294a7889397927bd"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "React/TypeScript state and accessibility contract",
+      "stdout": "",
+      "stderr": "test_controlled_state_uses_new_boolean_value (test_fixture.ContractTests.test_controlled_state_uses_new_boolean_value) ... ok\ntest_empty_identifier_rejected (test_fixture.ContractTests.test_empty_identifier_rejected) ... ok\ntest_identifier_trimmed (test_fixture.ContractTests.test_identifier_trimmed) ... ok\ntest_invalid_boolean_rejected (test_fixture.ContractTests.test_invalid_boolean_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:28.671300+00:00"
+    },
+    {
+      "fixture_id": "recovery-rollback",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 725.25,
+      "artifact_hashes": {
+        "fixture.json": "f4502028c43985a0a083a725768d13bcb2388c796bfe06ce513a6bd5e838117b",
+        "subject.py": "476f076b33e40897ded65e1790b6e7401a94e61683ba0fe16c685d16e6aa4a1a",
+        "test_fixture.py": "a023707b802bd83015d94c2f370603655864344c5b18a56a24d97f8ddbafb6bd",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "95709042f29a049b50065aff1938848504ca0331080c7765d8b78558f07a1cc0"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Recovery point and rollback",
+      "stdout": "",
+      "stderr": "test_healthy_rollback_restores_good_state (test_fixture.ContractTests.test_healthy_rollback_restores_good_state) ... ok\ntest_rpo_threshold (test_fixture.ContractTests.test_rpo_threshold) ... ok\ntest_unhealthy_rollback_not_success (test_fixture.ContractTests.test_unhealthy_rollback_not_success) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:29.371149+00:00"
+    },
+    {
+      "fixture_id": "retry-idempotency",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 694.6,
+      "artifact_hashes": {
+        "fixture.json": "b721aeea0ada90d959882d717ec807cedb4262dc0d529566172b403b4b2b79fd",
+        "subject.py": "d9bf700f4c1e0f96e5425bd42b3cbc5832d5eef74f62e4eff158280cdb5494f4",
+        "test_fixture.py": "8c00ec5ce6808526c2a6b3021c75ce9923aa09ff625ae6c59334f294cf9f817b",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "fdcfbee620ed626c1e462069a46bc37608a6ade07a59b253f8a9318d8f2f01cc"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Retries, timeouts and idempotency",
+      "stdout": "",
+      "stderr": "test_duplicate_key_executes_once (test_fixture.ContractTests.test_duplicate_key_executes_once) ... ok\ntest_exhaustion_fails (test_fixture.ContractTests.test_exhaustion_fails) ... ok\ntest_transient_timeout_recovers (test_fixture.ContractTests.test_transient_timeout_recovers) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:30.096763+00:00"
+    },
+    {
+      "fixture_id": "service-readiness-shutdown",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_ms": 714.79,
+      "artifact_hashes": {
+        "fixture.json": "c103f6f10b92199365c857f232a113c61b6d6ab02dd5d490942eb8af06b945ba",
+        "subject.py": "46f290b80f94ebf35ecfc655a98570b13abb04df48c783d00d1e8d64cb2b7195",
+        "test_fixture.py": "c14a56807aada8d064931d73c3190e545bb5a29cc359fd25bc56167274a7d237",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr.txt": "1b594e8c1964e9796a7740a3251da34f484983ac29577fd4500019c335041566"
+      },
+      "scope": "fixture implementation only; does not prove agent/skill effectiveness",
+      "title": "Health, readiness and graceful shutdown",
+      "stdout": "",
+      "stderr": "test_liveness_differs_from_readiness (test_fixture.ContractTests.test_liveness_differs_from_readiness) ... ok\ntest_shutdown_removes_readiness (test_fixture.ContractTests.test_shutdown_removes_readiness) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+      "started_at": "2026-10-24T18:51:30.791728+00:00"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Fixture frontend-quality-and-cross-platform-ui-fro-01
+
+Design or review a task in the domain of frontend-quality-and-cross-platform-ui.
+
+## Evidence requirement
+Record scope, authorization, source/version facts, exact commands, artifacts, limitations, and the decision. Mark agent execution as Unverified unless actually run.

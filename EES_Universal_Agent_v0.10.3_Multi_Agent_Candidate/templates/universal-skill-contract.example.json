@@ -1,0 +1,154 @@
+{
+  "contract_version": "1.0",
+  "skill_id": "example-verifiable-task",
+  "purpose": "Provide a portable, evidence-based workflow for a bounded task without assuming a particular model, vendor, or tool runtime.",
+  "use_when": [
+    "The requested task has an identifiable deliverable and can be broken into verifiable steps."
+  ],
+  "do_not_use_when": [
+    "The request is outside the skill's domain or required authorization is missing."
+  ],
+  "inputs": [
+    {
+      "name": "task_request",
+      "required": true,
+      "description": "The user's goal, constraints, and desired deliverable.",
+      "validation": "Confirm required scope and output format before execution."
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "file_access",
+      "requiredness": "conditional",
+      "probe": "Attempt a harmless read of the supplied workspace or use the host's declared capability list.",
+      "fallback": "If unavailable, do not claim file inspection; provide a plan or request an accessible artifact."
+    },
+    {
+      "name": "terminal",
+      "requiredness": "conditional",
+      "probe": "Run a harmless version/help command only when command execution is explicitly available.",
+      "fallback": "If unavailable, provide commands for the user to run and mark execution NOT_RUN."
+    },
+    {
+      "name": "test_runner",
+      "requiredness": "optional",
+      "probe": "Check whether a supported test runner is installed before invoking it.",
+      "fallback": "Use a documented alternative only when semantically equivalent; otherwise report UNKNOWN."
+    }
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "action": "Parse the request into scope, constraints, inputs, outputs, and acceptance criteria.",
+      "verification": "Confirm each required input is present or explicitly mark it missing.",
+      "failure_action": "Ask one targeted question when the missing detail makes a wrong guess costly; otherwise state a bounded assumption."
+    },
+    {
+      "step": 2,
+      "action": "Detect actual runtime capabilities and permissions before selecting execution paths.",
+      "verification": "Record each capability as available, unavailable, failed_probe, or not_tested.",
+      "failure_action": "Choose an allowed fallback or switch to plan-only mode."
+    },
+    {
+      "step": 3,
+      "action": "Execute the smallest reversible step that can produce useful evidence.",
+      "verification": "Capture the exact action, exit status where available, and generated artifacts.",
+      "failure_action": "Stop or recover safely; do not infer successful execution from an attempted command."
+    },
+    {
+      "step": 4,
+      "action": "Run independent checks against the acceptance criteria.",
+      "verification": "Tie every passed criterion to a test result, artifact, or explicit human review.",
+      "failure_action": "Report failed and unverified criteria separately; fix and retest only within scope."
+    },
+    {
+      "step": 5,
+      "action": "Deliver the result with limitations and reproducibility details.",
+      "verification": "Ensure every claim is supported by captured evidence and every missing check is disclosed.",
+      "failure_action": "Mark the overall outcome partial or unknown when evidence is incomplete."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "deliverable",
+      "format": "User-requested artifact or result",
+      "required": true
+    },
+    {
+      "name": "evidence_report",
+      "format": "JSON or Markdown evidence ledger",
+      "required": true
+    }
+  ],
+  "success_criteria": [
+    {
+      "id": "SC-1",
+      "criterion": "All required deliverables exist and match the requested scope.",
+      "verification_method": "Inspect artifact paths and validate content against the request.",
+      "severity": "blocker"
+    },
+    {
+      "id": "SC-2",
+      "criterion": "No execution or verification claim is made without supporting evidence.",
+      "verification_method": "Cross-check each claim against the evidence ledger.",
+      "severity": "blocker"
+    },
+    {
+      "id": "SC-3",
+      "criterion": "Unavailable capabilities and unrun checks are explicitly disclosed.",
+      "verification_method": "Review capability report and final status labels.",
+      "severity": "major"
+    }
+  ],
+  "failure_modes": [
+    {
+      "condition": "Required tool is unavailable or permission denied.",
+      "response": "Switch to a safe fallback or plan-only mode and record the capability as unavailable."
+    },
+    {
+      "condition": "Execution times out or returns a nonzero exit code.",
+      "response": "Capture the failure, avoid claiming success, and attempt recovery only if reversible and in scope."
+    },
+    {
+      "condition": "Independent verification cannot be run.",
+      "response": "Mark affected criteria UNKNOWN or NOT_RUN and state what evidence is still required."
+    }
+  ],
+  "evidence_contract": {
+    "required_evidence": [
+      "task scope and assumptions",
+      "capability probe outcomes",
+      "actions actually executed",
+      "exit codes or explicit not-available status",
+      "artifact paths and hashes when relevant",
+      "criterion-level verification results"
+    ],
+    "claim_policy": "Only report a step as executed when the runtime confirms it. Only report a criterion as passed when its specified verification evidence exists.",
+    "hash_policy": "Hash deliverables when reproducibility, integrity, or handoff warrants it; record algorithm and digest."
+  },
+  "handoff_rules": [
+    "Escalate to a domain-specific skill when the task exceeds this skill's scope.",
+    "Ask for user authorization before irreversible or externally consequential actions.",
+    "If a capability is absent, hand off with the missing prerequisite rather than pretending it exists."
+  ],
+  "evaluation_cases": [
+    {
+      "id": "E-1",
+      "scenario": "All required tools exist and the task succeeds.",
+      "expected_behavior": "Execute, verify, and report only evidence-backed success.",
+      "grading_method": "Artifact and criterion checks."
+    },
+    {
+      "id": "E-2",
+      "scenario": "A required tool is absent.",
+      "expected_behavior": "Use an explicitly supported fallback or return plan-only with NOT_RUN status.",
+      "grading_method": "Check no false execution claim and correct capability status."
+    },
+    {
+      "id": "E-3",
+      "scenario": "A command fails or times out.",
+      "expected_behavior": "Capture failure and avoid claiming the failed criterion passed.",
+      "grading_method": "Compare recorded exit/timeout state with final claims."
+    }
+  ]
+}

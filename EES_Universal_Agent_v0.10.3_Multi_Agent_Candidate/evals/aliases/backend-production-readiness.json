@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "backend-production-readiness",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "backend-production-readiness-01",
+      "title": "Deployment Gate",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-10-01-backend-production-readiness",
+      "input": {
+        "request": "Prepare a service change for production deployment.",
+        "scenario": "deployment-gate"
+      },
+      "expected_output": "Build, migration, monitoring, owner, and rollback checks are evidenced before release approval.",
+      "automated_checks": [
+        "release checklist has evidence per criterion",
+        "required checks return expected exit"
+      ],
+      "human_review_rubric": [
+        "approval is scoped to this deployment",
+        "unverified items block Go"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Build, migration, monitoring, owner, and rollback checks are evidenced before release approval.",
+        "Verification requirement: release checklist has evidence per criterion",
+        "Verification requirement: required checks return expected exit"
+      ]
+    },
+    {
+      "id": "backend-production-readiness-02",
+      "title": "Rollback",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-10-02-backend-production-readiness",
+      "input": {
+        "request": "Plan recovery for a failed release.",
+        "scenario": "rollback"
+      },
+      "expected_output": "Rollback/forward-fix decision, triggers, owner, data compatibility, and verification are explicit.",
+      "automated_checks": [
+        "rollback rehearsal artifact exists",
+        "post-rollback smoke check passes"
+      ],
+      "human_review_rubric": [
+        "irreversible data changes are covered",
+        "stop conditions are actionable"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Rollback/forward-fix decision, triggers, owner, data compatibility, and verification are explicit.",
+        "Verification requirement: rollback rehearsal artifact exists",
+        "Verification requirement: post-rollback smoke check passes"
+      ]
+    },
+    {
+      "id": "backend-production-readiness-03",
+      "title": "Ownership",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-10-03-backend-production-readiness",
+      "input": {
+        "request": "Prepare on-call handoff for a new service.",
+        "scenario": "ownership"
+      },
+      "expected_output": "Service owner, SLO, runbook, paging route, and known failure modes are documented.",
+      "automated_checks": [
+        "required owner and runbook fields present",
+        "alert links resolve"
+      ],
+      "human_review_rubric": [
+        "handoff is actionable",
+        "unknowns are listed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Service owner, SLO, runbook, paging route, and known failure modes are documented.",
+        "Verification requirement: required owner and runbook fields present",
+        "Verification requirement: alert links resolve"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "release_label": "EES Gemini v0.9.1 — Skill Governance Update",
+  "approval_scope": "Controlled internal pilot only; not production certified",
+  "date": "2026-10-24",
+  "changes": [
+    "Added external-skill intake and provenance policy",
+    "Added evidence-based incumbent-versus-candidate scorecard with non-compensable license and security gates",
+    "Added MERGE_UPGRADE / ADD_DISTINCT_SKILL / KEEP_EXISTING / QUARANTINE / REJECT decisions",
+    "Added canonical placement rules, negative-trigger routing checks, regression and rollback requirements",
+    "Added intake decision template, JSON Schema, Arabic and English README notes, and focused policy tests"
+  ],
+  "checks": {
+    "structural_validation": "PASS: 32 canonical skills, 74 capabilities, 222 eval contracts, 51 central fixtures, 13 operational fixture projects, 0 warnings",
+    "skill_governance_tests": "PASS: 2 passed",
+    "focused_regression_tests": "PASS: 11 passed",
+    "routing_audit": "PASS: 0 errors, 0 warnings",
+    "operational_fixtures": "PASS: 13 passed, 0 failed, 0 timed out"
+  },
+  "not_completed": [
+    "Full pytest suite not rerun to completion",
+    "Live Gemini API/CLI integration not tested",
+    "Independent security review not performed",
+    "Agent effectiveness benchmark not performed"
+  ],
+  "policy_note": "Imported skills are candidates, not automatic additions. Benchmark first; merge into an existing canonical skill when overlapping, and create a new route only for a distinct task intent."
+}

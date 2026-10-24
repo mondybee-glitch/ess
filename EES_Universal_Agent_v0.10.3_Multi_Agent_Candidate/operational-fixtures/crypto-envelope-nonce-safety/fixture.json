@@ -1,0 +1,22 @@
+{
+  "fixture_id": "crypto-envelope-nonce-safety",
+  "purpose": "Heuristic regression guard for common weak-crypto source patterns",
+  "runner": "python-unittest",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    ".",
+    "-p",
+    "test_fixture.py",
+    "-v"
+  ],
+  "risk_tier": "high",
+  "limitations": [
+    "Static pattern checks can produce false positives and false negatives",
+    "Does not implement or certify encryption, nonce uniqueness, KMS, or key rotation",
+    "Executed by scripts/run_operational_fixtures.py using unittest discovery; pytest is not required for this fixture."
+  ]
+}

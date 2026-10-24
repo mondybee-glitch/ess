@@ -1,0 +1,113 @@
+{
+  "skill": "frontend-build-quality",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "fbq-01",
+      "input": "Change a Sass token and ship compiled CSS and source maps.",
+      "success_criteria": [
+        "Source/artifact relationship is clear",
+        "Lint/build and size checks are run",
+        "Generated outputs are not falsely marked verified"
+      ],
+      "result": null,
+      "fixture": "fixtures/frontend-build-quality/frontend-build-quality-fbq-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Source/artifact relationship is clear",
+          "Lint/build and size checks are run",
+          "Generated outputs are not falsely marked verified"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "fbq-02",
+      "input": "Add a JavaScript component with public exports and unit tests.",
+      "success_criteria": [
+        "Export and side-effect behavior are checked",
+        "Focused tests and type checks run",
+        "Failure evidence is retained"
+      ],
+      "result": null,
+      "fixture": "fixtures/frontend-build-quality/frontend-build-quality-fbq-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Export and side-effect behavior are checked",
+          "Focused tests and type checks run",
+          "Failure evidence is retained"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "fbq-03",
+      "input": "Prepare a frontend release after a dependency update.",
+      "success_criteria": [
+        "Lockfile and dependency policy are checked",
+        "Browser/build artifacts are reproducible",
+        "Unrun or failed gates block a success claim"
+      ],
+      "result": null,
+      "fixture": "fixtures/frontend-build-quality/frontend-build-quality-fbq-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Lockfile and dependency policy are checked",
+          "Browser/build artifacts are reproducible",
+          "Unrun or failed gates block a success claim"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "frontend-build-quality"
+}

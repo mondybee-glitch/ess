@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "ui-design-system-accessibility",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "ui-design-system-accessibility-01",
+      "title": "Semantic Accessibility",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-03-01-ui-design-system-accessibility",
+      "input": {
+        "request": "Implement an accessible dialog and form flow.",
+        "scenario": "semantic-accessibility"
+      },
+      "expected_output": "Semantic roles, labels, focus entry/return, keyboard controls, and error announcements work.",
+      "automated_checks": [
+        "keyboard-only smoke test passes",
+        "accessible names verified"
+      ],
+      "human_review_rubric": [
+        "focus is never trapped incorrectly",
+        "errors are programmatically associated"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Semantic roles, labels, focus entry/return, keyboard controls, and error announcements work.",
+        "Verification requirement: keyboard-only smoke test passes",
+        "Verification requirement: accessible names verified"
+      ]
+    },
+    {
+      "id": "ui-design-system-accessibility-02",
+      "title": "Design Tokens",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-03-02-ui-design-system-accessibility",
+      "input": {
+        "request": "Apply shared color, spacing, and typography tokens.",
+        "scenario": "design-tokens"
+      },
+      "expected_output": "Components use documented tokens and preserve contrast and RTL behavior.",
+      "automated_checks": [
+        "token lint or source check passes",
+        "contrast checks meet target"
+      ],
+      "human_review_rubric": [
+        "no hard-coded drift without rationale",
+        "theme fallback defined"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Components use documented tokens and preserve contrast and RTL behavior.",
+        "Verification requirement: token lint or source check passes",
+        "Verification requirement: contrast checks meet target"
+      ]
+    },
+    {
+      "id": "ui-design-system-accessibility-03",
+      "title": "Visual Regression",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-03-03-ui-design-system-accessibility",
+      "input": {
+        "request": "Change a reusable component without unintended layout changes.",
+        "scenario": "visual-regression"
+      },
+      "expected_output": "Visual diff is reviewed at key breakpoints with intentional changes distinguished from regressions.",
+      "automated_checks": [
+        "screenshots captured at defined viewports",
+        "baseline comparison linked"
+      ],
+      "human_review_rubric": [
+        "font loading and reduced motion considered",
+        "responsive states covered"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Visual diff is reviewed at key breakpoints with intentional changes distinguished from regressions.",
+        "Verification requirement: screenshots captured at defined viewports",
+        "Verification requirement: baseline comparison linked"
+      ]
+    }
+  ]
+}

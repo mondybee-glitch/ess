@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "task_id", "event_count", "head_hash", "events"],
+  "properties": {
+    "schema_version": {"const": "0.7.5"},
+    "task_id": {"type": "string", "minLength": 1},
+    "event_count": {"type": "integer", "minimum": 0},
+    "head_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "events": {"type": "array", "items": {"type": "object", "required": ["revision", "timestamp", "type", "previous_hash", "event_hash"]}}
+  },
+  "additionalProperties": true
+}

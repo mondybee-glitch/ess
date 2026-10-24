@@ -1,0 +1,113 @@
+{
+  "skill": "css-motion-performance",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "cmp-01",
+      "input": "Reduce jank in a card list with enter and exit animations.",
+      "success_criteria": [
+        "Baseline and after traces use the same flow",
+        "Layout/paint/input effects are measured",
+        "The fix does not remove the functional state"
+      ],
+      "result": null,
+      "fixture": "fixtures/css-motion-performance/css-motion-performance-cmp-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Baseline and after traces use the same flow",
+          "Layout/paint/input effects are measured",
+          "The fix does not remove the functional state"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "cmp-02",
+      "input": "Audit a page with large infinite animations and filters.",
+      "success_criteria": [
+        "Costly or unbounded motion is identified",
+        "A bounded alternative is tested",
+        "Reduced-motion and low-power behavior are considered"
+      ],
+      "result": null,
+      "fixture": "fixtures/css-motion-performance/css-motion-performance-cmp-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Costly or unbounded motion is identified",
+          "A bounded alternative is tested",
+          "Reduced-motion and low-power behavior are considered"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "cmp-03",
+      "input": "Set animation timing budgets for a responsive interface.",
+      "success_criteria": [
+        "Duration, delay, concurrency, and interruption budgets are explicit",
+        "Budgets are checked at multiple viewports",
+        "The result distinguishes measurement from opinion"
+      ],
+      "result": null,
+      "fixture": "fixtures/css-motion-performance/css-motion-performance-cmp-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Duration, delay, concurrency, and interruption budgets are explicit",
+          "Budgets are checked at multiple viewports",
+          "The result distinguishes measurement from opinion"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "css-motion-performance"
+}

@@ -1,0 +1,185 @@
+name: EES Release Assurance
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  python_validation:
+    name: Python regression, fixtures, audit, and SBOM
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install validation and audit tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-test.txt -r requirements-gemini.txt pip-audit cyclonedx-bom
+      - name: Full Python regression suite
+        run: python -m pytest -q tests
+      - name: Structural and operational validation
+        if: always()
+        run: |
+          python scripts/validate.py --full
+          python scripts/run_operational_fixtures.py --timeout 60 --output reports/operational-fixtures-release.json
+      - name: Python dependency vulnerability audit
+        if: always()
+        run: python -m pip_audit -r requirements-test.txt -r requirements-gemini.txt --format=json > reports/pip-audit.json
+      - name: Resolved Python environment SBOM
+        if: always()
+        run: python -m cyclonedx_py environment --output-reproducible --output-file reports/python-environment-sbom.cdx.json
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: ees-python-assurance-evidence
+          path: |
+            reports/*release*.json
+            reports/*sbom*.json
+            reports/pip-audit.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  node_browser:
+    name: Node lockfile, dependency audit, and Playwright
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Require reviewed committed lockfile
+        run: test -s operational-fixtures/playwright-ui-state/package-lock.json
+      - name: Reproducible install, dependency audit, and browser tests
+        working-directory: operational-fixtures/playwright-ui-state
+        run: |
+          npm ci --no-audit --no-fund
+          npm audit --audit-level=high
+          npx playwright install --with-deps chromium
+          npm test
+          npm sbom --sbom-format=cyclonedx > ../../reports/node-sbom.cdx.json
+      - name: Run JavaScript and Playwright operational fixtures
+        run: python scripts/run_multilang_fixtures.py --include-playwright --timeout 120 --output reports/multilang-fixtures-release.json
+      - name: Fail closed if any multilingual fixture was skipped
+        run: python -c "import json,sys; s=json.load(open('reports/multilang-fixtures-release.json'))['summary']; print(s); sys.exit(0 if s['failed']==0 and s['timed_out']==0 and s['skipped']==0 and s['passed']==s['total'] else 1)"
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: ees-node-browser-assurance-evidence
+          path: |
+            reports/node-sbom.cdx.json
+            reports/multilang-fixtures-release.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  source_security:
+    name: Full-history secret scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Gitleaks full-history scan
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+          # 8.30.0 is intentionally pinned instead of 8.30.1 due an upstream
+          # reported detection regression in 8.30.1.
+          GITLEAKS_VERSION: '8.30.0'
+          GITLEAKS_ENABLE_COMMENTS: 'false'
+      - name: Local entropy heuristic (supplemental only)
+        if: always()
+        run: python scripts/secret_entropy_scan.py --output reports/secret-entropy-scan-ci.json
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: ees-source-security-evidence
+          path: reports/secret-entropy-scan-ci.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  docker_build:
+    name: Clean Docker build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build sandbox with a clean cache
+        run: docker build --no-cache -f sandbox/Dockerfile -t ees-gemini-sandbox:${{ github.sha }} .
+      - name: Record image metadata
+        run: docker image inspect ees-gemini-sandbox:${{ github.sha }} --format '{{json .RepoDigests}} {{.Id}}'
+      - name: Scan container OS and library vulnerabilities
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          version: 'v0.76.1'
+          image-ref: ees-gemini-sandbox:${{ github.sha }}
+          format: json
+          output: reports/trivy-image-cves.json
+          exit-code: '1'
+          ignore-unfixed: 'false'
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: ees-container-security-evidence
+          path: reports/trivy-image-cves.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  gemini_live_smoke:
+    name: Live Gemini API smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install the optional Gemini adapter dependency
+        run: python -m pip install -r requirements-gemini.txt
+      - name: Live low-token API smoke test
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EES_GEMINI_MODEL: ${{ vars.EES_GEMINI_MODEL || 'gemini-3.8-flash' }}
+        run: python scripts/live_gemini_smoke.py --output reports/live-gemini-smoke-ci.json
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: ees-gemini-smoke-evidence
+          path: reports/live-gemini-smoke-ci.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  release_decision:
+    name: Consolidated release gate
+    if: always()
+    needs: [python_validation, node_browser, source_security, docker_build, gemini_live_smoke]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every mandatory job to pass
+        env:
+          PYTHON_RESULT: ${{ needs.python_validation.result }}
+          NODE_RESULT: ${{ needs.node_browser.result }}
+          SECURITY_RESULT: ${{ needs.source_security.result }}
+          DOCKER_RESULT: ${{ needs.docker_build.result }}
+          GEMINI_RESULT: ${{ needs.gemini_live_smoke.result }}
+        run: |
+          printf 'python_validation=%s\nnode_browser=%s\nsource_security=%s\ndocker_build=%s\ngemini_live_smoke=%s\n' \
+            "$PYTHON_RESULT" "$NODE_RESULT" "$SECURITY_RESULT" "$DOCKER_RESULT" "$GEMINI_RESULT"
+          test "$PYTHON_RESULT" = success
+          test "$NODE_RESULT" = success
+          test "$SECURITY_RESULT" = success
+          test "$DOCKER_RESULT" = success
+          test "$GEMINI_RESULT" = success

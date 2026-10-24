@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ees.local/schemas/hierarchical-routing.schema.json",
+  "title": "EES Hierarchical Routing",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "release",
+    "stage1_routes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "release": {
+      "type": "string"
+    },
+    "stage1_routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "skills"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^route-[0-9]{2,}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "skills": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "source_skill_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source_skills_preserved": {
+      "type": "boolean"
+    },
+    "canonical_route_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "canonical_skill_count": {
+      "type": "integer",
+      "const": 32
+    },
+    "canonical_skills": {
+      "type": "array",
+      "minItems": 32,
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "route_id",
+          "name",
+          "aliases"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "route_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "alias_policy": {
+      "type": "string"
+    }
+  }
+}

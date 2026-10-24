@@ -1,0 +1,68 @@
+{
+  "document_title": "EES Gemini v0.9.0 Internal Release Readiness Assessment",
+  "assessment_type": "internal pre-release conformance review",
+  "version": "0.9.0-Candidate",
+  "decision": "CONDITIONAL — NOT CERTIFIED FOR PRODUCTION",
+  "decision_date": "2026-10-24",
+  "verified_facts": {
+    "canonical_skill_folders": 32,
+    "preserved_capability_ids": 74,
+    "evaluation_contracts": 222,
+    "central_fixtures": 51,
+    "operational_fixture_projects": 13,
+    "bytecode_files_in_release_zip": 0
+  },
+  "checks": [
+    {
+      "name": "Structural validator",
+      "command": "python scripts/validate.py",
+      "status": "PASS",
+      "evidence": "32 canonical skills; 74 capability IDs; 222 evaluation contracts; 51 central fixtures; 13 operational fixture projects; no warnings."
+    },
+    {
+      "name": "Routing audit",
+      "command": "python scripts/audit_routing.py",
+      "status": "PASS",
+      "evidence": "0 errors and 0 warnings."
+    },
+    {
+      "name": "Operational fixtures",
+      "command": "python scripts/run_operational_fixtures.py",
+      "status": "PASS",
+      "evidence": "13 passed; 0 failed; 0 timed out; agent effectiveness explicitly not evaluated."
+    },
+    {
+      "name": "Focused regression suites",
+      "command": "Selected pytest suites",
+      "status": "PASS",
+      "evidence": "Previously recorded focused suites passed: 24 tests and 9 subtests; additional canonical merge/routing suite passed 15 tests."
+    },
+    {
+      "name": "Complete pytest suite",
+      "command": "python -m pytest -q",
+      "status": "INCOMPLETE",
+      "evidence": "The complete suite did not finish within the execution window. Verbose run stalled around test_risk_classification_v072.py when run after preceding tests; the same test passes in isolation. Do not represent the full suite as passing."
+    },
+    {
+      "name": "Live Gemini integration",
+      "status": "NOT RUN",
+      "evidence": "No live Gemini CLI/API execution or provider credential-based validation was performed."
+    },
+    {
+      "name": "Independent security review",
+      "status": "NOT PERFORMED",
+      "evidence": "No third-party penetration test, threat-model sign-off, or OS-level sandbox verification is included."
+    }
+  ],
+  "release_blockers": [
+    "Full pytest suite must complete successfully in a clean CI environment; investigate test-order/environment interaction around test_risk_classification_v072.py.",
+    "Run the supported live Gemini integration tests in a controlled environment.",
+    "Complete human semantic review of all 32 canonical skills and source-module conflict resolution.",
+    "Complete independent security review of command execution, filesystem boundaries, dual runtime surfaces, and sandbox isolation."
+  ],
+  "scope_limitations": [
+    "This report is an internal evidence summary, not a third-party certificate, regulatory certification, or production warranty.",
+    "Passing structural and focused tests does not prove agent effectiveness, superior intelligence, or production safety.",
+    "Production approval requires all release blockers to be closed and evidence attached to the release record."
+  ]
+}

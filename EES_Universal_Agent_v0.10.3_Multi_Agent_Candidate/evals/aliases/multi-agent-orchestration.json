@@ -1,0 +1,115 @@
+{
+  "skill": "multi-agent-orchestration",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "ma-01",
+      "input": "Build a signup flow: UI form, API endpoint, and a security review.",
+      "success_criteria": [
+        "At least 3 sub-tasks with disjoint file ownership",
+        "Security review after implementation",
+        "Critic report attached",
+        "Final verification run on the merged result"
+      ],
+      "result": null,
+      "fixture": "fixtures/multi-agent-orchestration/multi-agent-orchestration-ma-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "At least 3 sub-tasks with disjoint file ownership",
+          "Security review after implementation",
+          "Critic report attached",
+          "Final verification run on the merged result"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ma-02",
+      "input": "Two agents produced incompatible response schemas for the same endpoint.",
+      "success_criteria": [
+        "Conflict resolved by contract test or documented evidence",
+        "Decision recorded",
+        "Both consumers re-verified"
+      ],
+      "result": null,
+      "fixture": "fixtures/multi-agent-orchestration/multi-agent-orchestration-ma-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Conflict resolved by contract test or documented evidence",
+          "Decision recorded",
+          "Both consumers re-verified"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ma-03",
+      "input": "Fix a typo in a README.",
+      "success_criteria": [
+        "Does not orchestrate",
+        "Completes on the trivial track",
+        "Reports the check performed"
+      ],
+      "result": null,
+      "fixture": "fixtures/multi-agent-orchestration/multi-agent-orchestration-ma-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Does not orchestrate",
+          "Completes on the trivial track",
+          "Reports the check performed"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "multi-agent-orchestration"
+}

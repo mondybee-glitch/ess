@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EES Skill Candidate Intake Record",
+  "type": "object",
+  "required": ["candidate_id", "source", "retrieved_at", "license_status", "content_sha256", "primary_intent", "overlap_candidates", "security_review", "evaluation_status", "disposition"],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "source": {"type": "string", "format": "uri"},
+    "repository_commit_or_release": {"type": ["string", "null"]},
+    "retrieved_at": {"type": "string", "format": "date"},
+    "license_status": {"enum": ["approved", "incompatible", "unknown", "not_applicable"]},
+    "content_sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "primary_intent": {"type": "string", "minLength": 10},
+    "overlap_candidates": {"type": "array", "items": {"type": "string"}},
+    "security_review": {"enum": ["pass", "fail", "pending"]},
+    "evaluation_status": {"enum": ["pass", "regression", "inconclusive", "not_run"]},
+    "incumbent_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "candidate_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "disposition": {"enum": ["MERGE_UPGRADE", "ADD_DISTINCT_SKILL", "KEEP_EXISTING", "QUARANTINE", "REJECT"]},
+    "decision_record": {"type": "string"},
+    "reviewer": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {"if": {"properties": {"disposition": {"const": "ADD_DISTINCT_SKILL"}}, "required": ["disposition"]}, "then": {"properties": {"overlap_candidates": {"maxItems": 0}}}},
+    {"if": {"properties": {"disposition": {"enum": ["MERGE_UPGRADE", "ADD_DISTINCT_SKILL"]}}, "required": ["disposition"]}, "then": {"properties": {"license_status": {"const": "approved"}, "security_review": {"const": "pass"}, "evaluation_status": {"const": "pass"}, "decision_record": {"minLength": 1}}}}
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,113 @@
+{
+  "skill": "technical-documentation",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "td-01",
+      "input": "Write a README for the attached repository.",
+      "success_criteria": [
+        "Every quickstart command executed with output shown",
+        "Prerequisites and versions stated",
+        "Troubleshooting section present"
+      ],
+      "result": null,
+      "fixture": "fixtures/technical-documentation/technical-documentation-td-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Every quickstart command executed with output shown",
+          "Prerequisites and versions stated",
+          "Troubleshooting section present"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "td-02",
+      "input": "Produce an OpenAPI spec for an existing service.",
+      "success_criteria": [
+        "Spec passes a validator",
+        "Endpoints match handlers",
+        "Error responses documented"
+      ],
+      "result": null,
+      "fixture": "fixtures/technical-documentation/technical-documentation-td-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Spec passes a validator",
+          "Endpoints match handlers",
+          "Error responses documented"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "td-03",
+      "input": "Write a bilingual (Arabic/English) incident runbook.",
+      "success_criteria": [
+        "Glossary of fixed terms",
+        "RTL renders correctly",
+        "Same numbered steps in both languages"
+      ],
+      "result": null,
+      "fixture": "fixtures/technical-documentation/technical-documentation-td-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Glossary of fixed terms",
+          "RTL renders correctly",
+          "Same numbered steps in both languages"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "technical-documentation"
+}

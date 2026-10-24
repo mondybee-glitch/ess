@@ -1,0 +1,34 @@
+# Never send secrets or local runtime state to Docker build context
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
+**/.venv
+**/venv
+**/secrets/**
+**/*.pem
+**/*.key
+**/node_modules
+**/dist
+**/build
+# Generated runtime and test artifacts
+.pytest_cache/
+**/.pytest_cache/
+node_modules/
+**/node_modules/
+playwright-report/
+test-results/
+coverage/
+dist/
+build/
+.env
+.env.*
+!.env.example

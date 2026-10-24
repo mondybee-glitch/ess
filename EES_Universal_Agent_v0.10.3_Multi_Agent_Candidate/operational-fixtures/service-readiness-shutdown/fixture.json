@@ -1,0 +1,18 @@
+{
+  "fixture_id": "service-readiness-shutdown",
+  "title": "Health, readiness and graceful shutdown",
+  "runtime": "python>=3.10",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    ".",
+    "-p",
+    "test_fixture.py",
+    "-v"
+  ],
+  "scope": "deterministic domain contract test for fixture implementation; not an AI-agent skill effectiveness evaluation",
+  "reset": "fresh subprocess; source fixture files are immutable during execution"
+}

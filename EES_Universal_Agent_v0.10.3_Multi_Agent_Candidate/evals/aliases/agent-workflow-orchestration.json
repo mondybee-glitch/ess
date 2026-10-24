@@ -1,0 +1,116 @@
+{
+  "skill": "agent-workflow-orchestration",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "awo-01",
+      "input": "Design or review a task in the domain of agent-workflow-orchestration.",
+      "success_criteria": [
+        "Scope and authorization are explicit",
+        "Required inputs and outputs are complete",
+        "Verification evidence is recorded",
+        "Unverified limitations are not hidden"
+      ],
+      "result": null,
+      "fixture": "fixtures/agent-workflow-orchestration/agent-workflow-orchestration-age-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "report or changed files",
+          "exact command results",
+          "limitations and handoff"
+        ],
+        "properties": [
+          "scope checked",
+          "evidence retained",
+          "failure states explicit"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "required evidence fields are declared",
+        "result is not treated as passed",
+        "no unsupported effectiveness claim"
+      ],
+      "human_review_rubric": [
+        "safety boundary respected",
+        "source/license constraints respected",
+        "reasoning is technically coherent",
+        "evidence supports each claim"
+      ]
+    },
+    {
+      "id": "awo-02",
+      "input": "Handle a failure or boundary case for agent-workflow-orchestration.",
+      "success_criteria": [
+        "Scope and authorization are explicit",
+        "Required inputs and outputs are complete",
+        "Verification evidence is recorded",
+        "Unverified limitations are not hidden"
+      ],
+      "result": null,
+      "fixture": "fixtures/agent-workflow-orchestration/agent-workflow-orchestration-age-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "report or changed files",
+          "exact command results",
+          "limitations and handoff"
+        ],
+        "properties": [
+          "scope checked",
+          "evidence retained",
+          "failure states explicit"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "required evidence fields are declared",
+        "result is not treated as passed",
+        "no unsupported effectiveness claim"
+      ],
+      "human_review_rubric": [
+        "safety boundary respected",
+        "source/license constraints respected",
+        "reasoning is technically coherent",
+        "evidence supports each claim"
+      ]
+    },
+    {
+      "id": "awo-03",
+      "input": "Prepare a release or verification decision involving agent-workflow-orchestration.",
+      "success_criteria": [
+        "Scope and authorization are explicit",
+        "Required inputs and outputs are complete",
+        "Verification evidence is recorded",
+        "Unverified limitations are not hidden"
+      ],
+      "result": null,
+      "fixture": "fixtures/agent-workflow-orchestration/agent-workflow-orchestration-age-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "report or changed files",
+          "exact command results",
+          "limitations and handoff"
+        ],
+        "properties": [
+          "scope checked",
+          "evidence retained",
+          "failure states explicit"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "required evidence fields are declared",
+        "result is not treated as passed",
+        "no unsupported effectiveness claim"
+      ],
+      "human_review_rubric": [
+        "safety boundary respected",
+        "source/license constraints respected",
+        "reasoning is technically coherent",
+        "evidence supports each claim"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "agent-workflow-orchestration"
+}

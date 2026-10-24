@@ -1,0 +1,113 @@
+{
+  "skill": "llm-tool-contracts",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "ltc-01",
+      "input": "Add a typed tool that updates an external record from an agent.",
+      "success_criteria": [
+        "Input/output validation is executable",
+        "Authorization and approval boundary are explicit",
+        "Duplicate and timeout behavior is safe"
+      ],
+      "result": null,
+      "fixture": "fixtures/llm-tool-contracts/llm-tool-contracts-ltc-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Input/output validation is executable",
+          "Authorization and approval boundary are explicit",
+          "Duplicate and timeout behavior is safe"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ltc-02",
+      "input": "Make structured model output reliable across two providers.",
+      "success_criteria": [
+        "Provider differences are isolated",
+        "Invalid output is rejected or repaired under a bounded policy",
+        "Comparable evidence is recorded"
+      ],
+      "result": null,
+      "fixture": "fixtures/llm-tool-contracts/llm-tool-contracts-ltc-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Provider differences are isolated",
+          "Invalid output is rejected or repaired under a bounded policy",
+          "Comparable evidence is recorded"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ltc-03",
+      "input": "Review streaming agent middleware for cancellation and redaction.",
+      "success_criteria": [
+        "Partial output and cancellation are handled",
+        "Sensitive values are redacted from traces",
+        "Failures remain observable"
+      ],
+      "result": null,
+      "fixture": "fixtures/llm-tool-contracts/llm-tool-contracts-ltc-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Partial output and cancellation are handled",
+          "Sensitive values are redacted from traces",
+          "Failures remain observable"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "llm-tool-contracts"
+}

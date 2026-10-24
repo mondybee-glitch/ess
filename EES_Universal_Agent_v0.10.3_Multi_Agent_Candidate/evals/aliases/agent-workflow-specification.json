@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "agent-workflow-specification",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "agent-workflow-specification-01",
+      "title": "Acceptance Contract",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-01-01-agent-workflow-specification",
+      "input": {
+        "request": "Turn a vague engineering request into observable acceptance criteria.",
+        "scenario": "acceptance-contract"
+      },
+      "expected_output": "Each criterion is testable and linked to a planned verification method.",
+      "automated_checks": [
+        "criteria have observable outcomes",
+        "each has a check or evidence plan"
+      ],
+      "human_review_rubric": [
+        "assumptions are separated from facts",
+        "scope is bounded"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Each criterion is testable and linked to a planned verification method.",
+        "Verification requirement: criteria have observable outcomes",
+        "Verification requirement: each has a check or evidence plan"
+      ]
+    },
+    {
+      "id": "agent-workflow-specification-02",
+      "title": "Decision Record",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-01-02-agent-workflow-specification",
+      "input": {
+        "request": "Choose between two architecture options under constraints.",
+        "scenario": "decision-record"
+      },
+      "expected_output": "Decision record states constraints, alternatives, evidence, trade-offs, and reversal conditions.",
+      "automated_checks": [
+        "all alternatives compared",
+        "decision owner and date present"
+      ],
+      "human_review_rubric": [
+        "uncertainty is explicit",
+        "no claim exceeds evidence"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Decision record states constraints, alternatives, evidence, trade-offs, and reversal conditions.",
+        "Verification requirement: all alternatives compared",
+        "Verification requirement: decision owner and date present"
+      ]
+    },
+    {
+      "id": "agent-workflow-specification-03",
+      "title": "Agent Evaluation",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-01-03-agent-workflow-specification",
+      "input": {
+        "request": "Evaluate an agent fix against a reproducible baseline.",
+        "scenario": "agent-evaluation"
+      },
+      "expected_output": "Scoring uses explicit graders and retained outputs; fixture presence is not mistaken for task success.",
+      "automated_checks": [
+        "baseline and candidate IDs retained",
+        "agent outcome has artifact link"
+      ],
+      "human_review_rubric": [
+        "blind spots and flaky runs reported",
+        "paired comparison is fair"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Scoring uses explicit graders and retained outputs; fixture presence is not mistaken for task success.",
+        "Verification requirement: baseline and candidate IDs retained",
+        "Verification requirement: agent outcome has artifact link"
+      ]
+    }
+  ]
+}

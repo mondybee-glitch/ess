@@ -1,0 +1,94 @@
+{
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "ai-01",
+      "input": "baseline ai-agents-rag-mcp task with a valid fixture",
+      "success_criteria": "Produces direct evidence for ai-agents-rag-mcp; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/ai-agents-rag-mcp/ai-agents-rag-mcp-ai-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for ai-agents-rag-mcp; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ai-02",
+      "input": "failure and recovery case for ai-agents-rag-mcp",
+      "success_criteria": "Produces direct evidence for ai-agents-rag-mcp; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/ai-agents-rag-mcp/ai-agents-rag-mcp-ai-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for ai-agents-rag-mcp; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ai-03",
+      "input": "near-miss routing case for ai-agents-rag-mcp",
+      "success_criteria": "Produces direct evidence for ai-agents-rag-mcp; respects scope and reports unverified items; no unsupported passed claim.",
+      "result": null,
+      "fixture": "fixtures/ai-agents-rag-mcp/ai-agents-rag-mcp-ai-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Produces direct evidence for ai-agents-rag-mcp; respects scope and reports unverified items; no unsupported passed claim."
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "ai-agents-rag-mcp"
+}

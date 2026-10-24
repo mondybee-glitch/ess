@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "defensive-automation-and-audit",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "defensive-automation-and-audit-01",
+      "title": "Allowlisted Action",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-06-01-defensive-automation-and-audit",
+      "input": {
+        "request": "Execute a registered check instead of user-supplied shell text.",
+        "scenario": "allowlisted-action"
+      },
+      "expected_output": "Only the allowlisted runner executes without a shell; unknown IDs and shell metacharacters are rejected.",
+      "automated_checks": [
+        "unknown-check test is rejected",
+        "shell-injection fixture is refused"
+      ],
+      "human_review_rubric": [
+        "command provenance is retained",
+        "timeout is bounded"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Only the allowlisted runner executes without a shell; unknown IDs and shell metacharacters are rejected.",
+        "Verification requirement: unknown-check test is rejected",
+        "Verification requirement: shell-injection fixture is refused"
+      ]
+    },
+    {
+      "id": "defensive-automation-and-audit-02",
+      "title": "Audit Record",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-06-02-defensive-automation-and-audit",
+      "input": {
+        "request": "Record an action and verify its evidence chain.",
+        "scenario": "audit-record"
+      },
+      "expected_output": "Each event links to its predecessor and artifact hashes; modified evidence is detected.",
+      "automated_checks": [
+        "ledger chain validates",
+        "artifact mutation test fails verification"
+      ],
+      "human_review_rubric": [
+        "limitations of unsigned logs are stated",
+        "identity is not inferred from text"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Each event links to its predecessor and artifact hashes; modified evidence is detected.",
+        "Verification requirement: ledger chain validates",
+        "Verification requirement: artifact mutation test fails verification"
+      ]
+    },
+    {
+      "id": "defensive-automation-and-audit-03",
+      "title": "Approval Boundary",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-06-03-defensive-automation-and-audit",
+      "input": {
+        "request": "Attempt a high-impact task with no scoped approval.",
+        "scenario": "approval-boundary"
+      },
+      "expected_output": "Task remains blocked until a non-expired approval references its task ID and scope.",
+      "automated_checks": [
+        "missing approval blocked",
+        "expired/out-of-scope approval blocked"
+      ],
+      "human_review_rubric": [
+        "approver identity verification limits explicit",
+        "approval cannot broaden task scope"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Task remains blocked until a non-expired approval references its task ID and scope.",
+        "Verification requirement: missing approval blocked",
+        "Verification requirement: expired/out-of-scope approval blocked"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "local-desktop-media-lifecycle",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "local-desktop-media-lifecycle-01",
+      "title": "File Lifecycle",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-04-01-local-desktop-media-lifecycle",
+      "input": {
+        "request": "Import a large media file into a desktop app.",
+        "scenario": "file-lifecycle"
+      },
+      "expected_output": "File ownership, cancellation, partial writes, and cleanup are handled without corrupting the source.",
+      "automated_checks": [
+        "interrupted import test passes",
+        "temporary files are cleaned"
+      ],
+      "human_review_rubric": [
+        "source is not modified unexpectedly",
+        "large-file memory use bounded"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: File ownership, cancellation, partial writes, and cleanup are handled without corrupting the source.",
+        "Verification requirement: interrupted import test passes",
+        "Verification requirement: temporary files are cleaned"
+      ]
+    },
+    {
+      "id": "local-desktop-media-lifecycle-02",
+      "title": "Permissions",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-04-02-local-desktop-media-lifecycle",
+      "input": {
+        "request": "Restrict app access to user-selected folders.",
+        "scenario": "permissions"
+      },
+      "expected_output": "Access is least-privilege and follows platform permission boundaries.",
+      "automated_checks": [
+        "denied permission path tested",
+        "unselected paths are refused"
+      ],
+      "human_review_rubric": [
+        "permissions are explained to user",
+        "no broad filesystem access"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Access is least-privilege and follows platform permission boundaries.",
+        "Verification requirement: denied permission path tested",
+        "Verification requirement: unselected paths are refused"
+      ]
+    },
+    {
+      "id": "local-desktop-media-lifecycle-03",
+      "title": "Resource Cleanup",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-04-03-local-desktop-media-lifecycle",
+      "input": {
+        "request": "Close a window while media conversion is active.",
+        "scenario": "resource-cleanup"
+      },
+      "expected_output": "Child processes and temporary resources are safely stopped or recovered.",
+      "automated_checks": [
+        "process cleanup test passes",
+        "partial outputs are detectable"
+      ],
+      "human_review_rubric": [
+        "shutdown timeout is bounded",
+        "resume/retry behavior defined"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Child processes and temporary resources are safely stopped or recovered.",
+        "Verification requirement: process cleanup test passes",
+        "Verification requirement: partial outputs are detectable"
+      ]
+    }
+  ]
+}

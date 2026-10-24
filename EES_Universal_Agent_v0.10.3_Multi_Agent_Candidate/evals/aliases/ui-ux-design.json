@@ -1,0 +1,119 @@
+{
+  "skill": "ui-ux-design",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "ux-01",
+      "input": "Redesign a B2B equipment quote-request form for hospital procurement buyers.",
+      "success_criteria": [
+        "Users and task defined",
+        "Every field justified or removed",
+        "Error and empty states specified",
+        "Mobile layout specified",
+        "Contrast ratios computed with numbers"
+      ],
+      "result": null,
+      "fixture": "fixtures/ui-ux-design/ui-ux-design-ux-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Users and task defined",
+          "Every field justified or removed",
+          "Error and empty states specified",
+          "Mobile layout specified",
+          "Contrast ratios computed with numbers"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ux-02",
+      "input": "Produce a design-token set for a medical-equipment company site.",
+      "success_criteria": [
+        "Color roles, type scale, and spacing defined",
+        "Contrast computed for text/background pairs",
+        "All text pairs at least 4.5:1 or flagged",
+        "Exported in a machine-readable format (JSON or CSS variables)"
+      ],
+      "result": null,
+      "fixture": "fixtures/ui-ux-design/ui-ux-design-ux-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Color roles, type scale, and spacing defined",
+          "Contrast computed for text/background pairs",
+          "All text pairs at least 4.5:1 or flagged",
+          "Exported in a machine-readable format (JSON or CSS variables)"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "ux-03",
+      "input": "Critique the attached screenshot of a checkout page.",
+      "success_criteria": [
+        "At least 5 findings",
+        "Each finding has heuristic, severity, and a concrete fix",
+        "Accessibility issues separated from usability issues"
+      ],
+      "result": null,
+      "fixture": "fixtures/ui-ux-design/ui-ux-design-ux-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "At least 5 findings",
+          "Each finding has heuristic, severity, and a concrete fix",
+          "Accessibility issues separated from usability issues"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "ui-ux-design"
+}

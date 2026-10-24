@@ -1,0 +1,46 @@
+{
+  "version": "0.10.0",
+  "candidate": "EES_Gemini_v0.10.0_Adaptive_Runtime_Evidence_Candidate",
+  "status": "BLOCKED_NOT_GA",
+  "implemented": [
+    "retained fail-closed signed runtime attestation from v0.9.3",
+    "temporary instinct lifecycle with holdout/regression gates; score bounds and expiry limits enforced",
+    "tamper-evident instinct event ledger verification on load and before save",
+    "risk-tiered sandbox policy planner and Docker wrapper with non-root, read-only root, no network, dropped capabilities, no-new-privileges, tmpfs and resource limits",
+    "content-addressed hierarchical route cache with TTL, invalidation, bounded cache size, atomic writes, and no raw task text persistence",
+    "candidate SBOM and local heuristic secret scan report"
+  ],
+  "not_claimed": [
+    "provider-side Gemini context caching",
+    "verified kernel/container isolation",
+    "full pytest suite passed",
+    "full-history secret scan complete",
+    "production readiness or GA"
+  ],
+  "required_before_GA": [
+    "complete full pytest suite including runtime lifecycle/e2e tests",
+    "clean Docker build and adversarial sandbox isolation tests",
+    "live Gemini API and provider context-cache smoke tests",
+    "dependency audit and complete SBOM validation",
+    "Trivy image CVE triage and immutable base-image digest pinning",
+    "full-history secret scan",
+    "Playwright browser execution",
+    "independent security review"
+  ],
+  "validation": {
+    "structural_validation": "PASS: python scripts/validate.py --full; 32 skills, 74 capabilities, 222 eval contracts, 51 central fixtures, 9 checks, 16 operational fixture projects; zero warnings",
+    "focused_tests": "PASS: 17 tests across adaptive runtime, signed runtime gate, contract verifier, version checks and sandbox wrapper",
+    "broad_regression_batch": "PASS: 38 tests and 9 subtests",
+    "adapter_repository_timeout_batch": "PASS: 21 tests",
+    "full_pytest_suite": "INCOMPLETE: full suite timed out after partial progress; runtime/e2e batch also timed out; do not treat as passed",
+    "python_compile": "PASS: python -m compileall -q scripts tests",
+    "secret_scan": "PASS with limitations: local heuristic scanned 633 files and found 0 findings; not a full-history scanner and not proof of absence of secrets",
+    "sbom": "PARTIAL_NOT_RELEASE_GRADE: candidate CycloneDX-style manifest generated; dependency audit and CVE triage not completed",
+    "docker_runtime": "NOT RUN: Docker executable unavailable; sandbox isolation not verified",
+    "live_gemini": "NOT RUN: credentials/provider context-cache smoke test not performed",
+    "trivy_and_immutable_image_pin": "NOT RUN",
+    "playwright_browser_execution": "NOT RUN",
+    "independent_security_review": "PENDING"
+  },
+  "release_decision": "BLOCKED_NOT_GA"
+}

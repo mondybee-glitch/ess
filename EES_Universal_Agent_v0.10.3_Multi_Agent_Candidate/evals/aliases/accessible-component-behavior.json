@@ -1,0 +1,113 @@
+{
+  "skill": "accessible-component-behavior",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "acb-01",
+      "input": "Implement an accessible dialog with focus trap and return focus.",
+      "success_criteria": [
+        "States and focus transitions are explicit",
+        "Keyboard escape and dismissal are tested",
+        "ARIA and fallback behavior match the implementation"
+      ],
+      "result": null,
+      "fixture": "fixtures/accessible-component-behavior/accessible-component-behavior-acb-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "States and focus transitions are explicit",
+          "Keyboard escape and dismissal are tested",
+          "ARIA and fallback behavior match the implementation"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "acb-02",
+      "input": "Review a dropdown that works only on hover.",
+      "success_criteria": [
+        "Keyboard and touch gaps are identified",
+        "Semantic state and focus behavior are proposed",
+        "Repeated initialization does not duplicate handlers"
+      ],
+      "result": null,
+      "fixture": "fixtures/accessible-component-behavior/accessible-component-behavior-acb-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Keyboard and touch gaps are identified",
+          "Semantic state and focus behavior are proposed",
+          "Repeated initialization does not duplicate handlers"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "acb-03",
+      "input": "Fix a toast system that announces stale or duplicated messages.",
+      "success_criteria": [
+        "Announcement timing and live-region behavior are controlled",
+        "Dismissal and cleanup are idempotent",
+        "Error and reduced-motion paths are retained"
+      ],
+      "result": null,
+      "fixture": "fixtures/accessible-component-behavior/accessible-component-behavior-acb-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Announcement timing and live-region behavior are controlled",
+          "Dismissal and cleanup are idempotent",
+          "Error and reduced-motion paths are retained"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "accessible-component-behavior"
+}

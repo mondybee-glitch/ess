@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "backend-reliability-recovery",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "backend-reliability-recovery-01",
+      "title": "Retry Budget",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-09-01-backend-reliability-recovery",
+      "input": {
+        "request": "Harden a service that retries transient upstream failures.",
+        "scenario": "retry-budget"
+      },
+      "expected_output": "Retries are bounded, jittered, idempotent, and constrained by an end-to-end deadline.",
+      "automated_checks": [
+        "retry count and deadline tests pass",
+        "retry storm path is simulated"
+      ],
+      "human_review_rubric": [
+        "retryability is classified",
+        "backoff does not hide permanent failure"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Retries are bounded, jittered, idempotent, and constrained by an end-to-end deadline.",
+        "Verification requirement: retry count and deadline tests pass",
+        "Verification requirement: retry storm path is simulated"
+      ]
+    },
+    {
+      "id": "backend-reliability-recovery-02",
+      "title": "Restore Drill",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-09-02-backend-reliability-recovery",
+      "input": {
+        "request": "Rehearse recovery from a corrupted derived data store.",
+        "scenario": "restore-drill"
+      },
+      "expected_output": "Restore/rebuild completes in isolation and measured recovery objective is reported.",
+      "automated_checks": [
+        "restore drill artifacts retained",
+        "integrity comparison passes"
+      ],
+      "human_review_rubric": [
+        "RTO/RPO are measured",
+        "rollback target is not overwritten"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Restore/rebuild completes in isolation and measured recovery objective is reported.",
+        "Verification requirement: restore drill artifacts retained",
+        "Verification requirement: integrity comparison passes"
+      ]
+    },
+    {
+      "id": "backend-reliability-recovery-03",
+      "title": "Degraded Mode",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-09-03-backend-reliability-recovery",
+      "input": {
+        "request": "Operate when a non-critical dependency is unavailable.",
+        "scenario": "degraded-mode"
+      },
+      "expected_output": "Critical user paths remain safe while degraded behavior is visible and reversible.",
+      "automated_checks": [
+        "dependency fault injection passes",
+        "health and alert states are asserted"
+      ],
+      "human_review_rubric": [
+        "degraded-mode boundaries are explicit",
+        "no silent data loss"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Critical user paths remain safe while degraded behavior is visible and reversible.",
+        "Verification requirement: dependency fault injection passes",
+        "Verification requirement: health and alert states are asserted"
+      ]
+    }
+  ]
+}

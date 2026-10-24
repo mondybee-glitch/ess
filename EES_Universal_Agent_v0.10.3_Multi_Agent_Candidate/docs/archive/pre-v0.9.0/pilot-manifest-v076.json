@@ -1,0 +1,67 @@
+{
+  "package_version": "0.7.6",
+  "manifest_status": "historical-regression-reference-reconstructed-from-current-eval-contracts",
+  "selected_cases": [
+    {
+      "skill": "accessible-component-behavior",
+      "case_id": "acb-01"
+    },
+    {
+      "skill": "accessible-component-behavior",
+      "case_id": "acb-02"
+    },
+    {
+      "skill": "accessible-component-behavior",
+      "case_id": "acb-03"
+    },
+    {
+      "skill": "agent-skill-security-intake",
+      "case_id": "assi-01"
+    },
+    {
+      "skill": "agent-skill-security-intake",
+      "case_id": "assi-02"
+    },
+    {
+      "skill": "agent-skill-security-intake",
+      "case_id": "assi-03"
+    },
+    {
+      "skill": "agent-workflow-orchestration",
+      "case_id": "awo-01"
+    },
+    {
+      "skill": "agent-workflow-orchestration",
+      "case_id": "awo-02"
+    },
+    {
+      "skill": "agent-workflow-orchestration",
+      "case_id": "awo-03"
+    },
+    {
+      "skill": "agent-workflow-specification",
+      "case_id": "agent-workflow-specification-01"
+    },
+    {
+      "skill": "agent-workflow-specification",
+      "case_id": "agent-workflow-specification-02"
+    },
+    {
+      "skill": "agent-workflow-specification",
+      "case_id": "agent-workflow-specification-03"
+    },
+    {
+      "skill": "ai-agents-rag-mcp",
+      "case_id": "ai-01"
+    },
+    {
+      "skill": "ai-agents-rag-mcp",
+      "case_id": "ai-02"
+    },
+    {
+      "skill": "ai-agents-rag-mcp",
+      "case_id": "ai-03"
+    }
+  ],
+  "note": "This is a compatibility test manifest, not evidence of a historical pilot execution."
+}

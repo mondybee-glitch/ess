@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "package_version": "0.7.6",
+  "generated_at": "2026-10-24T11:49:41.304541+00:00",
+  "scope": "Manual review queue derived from skill names and declared responsibilities; not a semantic duplicate detector.",
+  "candidate_pair_count": 12,
+  "hard_conflicts_approved": 0,
+  "hard_conflict_policy": "Hard exclusion only: both skills should not be selected for the same decision scope. Topic overlap alone is not enough.",
+  "pairs": [
+    {
+      "skills": [
+        "agent-workflow-specification",
+        "agent-workflow-orchestration"
+      ],
+      "review_reason": "specification/acceptance criteria versus execution sequencing",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "agent-workflow-orchestration",
+        "multi-agent-orchestration"
+      ],
+      "review_reason": "single-workflow coordination versus explicitly multi-agent coordination",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "backend-observability",
+        "observability-and-ai-evaluation"
+      ],
+      "review_reason": "service telemetry versus evaluation observability",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "observability-and-ai-evaluation",
+        "llm-evaluation-observability"
+      ],
+      "review_reason": "broad AI evaluation observability versus LLM-specific evaluation traces/metrics",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "frontend-development",
+        "web-artifacts-builder"
+      ],
+      "review_reason": "general frontend implementation versus interactive artifact construction",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "frontend-quality-and-cross-platform-ui",
+        "frontend-build-quality"
+      ],
+      "review_reason": "cross-platform UI quality versus build/lint/typecheck quality",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "ui-design-system-accessibility",
+        "accessible-component-behavior"
+      ],
+      "review_reason": "system-level accessibility versus interaction/focus behavior of components",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "ui-design-system-accessibility",
+        "react-component-library-engineering"
+      ],
+      "review_reason": "system conventions/accessibility versus reusable React component package engineering",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "api-design-contracts",
+        "api-integrations"
+      ],
+      "review_reason": "contract design/versioning versus connecting to external APIs",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "software-testing",
+        "backend-integration-testing"
+      ],
+      "review_reason": "general test strategy versus backend service integration tests",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "backend-production-readiness",
+        "devops-and-deployment"
+      ],
+      "review_reason": "service release criteria versus deployment/operations implementation",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    },
+    {
+      "skills": [
+        "machine-learning-evaluation",
+        "llm-evaluation-observability"
+      ],
+      "review_reason": "ML model evaluation versus LLM-specific evaluation instrumentation",
+      "status": "review-candidate-not-proven-duplicate",
+      "compare": [
+        "primary_scope",
+        "inputs",
+        "outputs",
+        "success_criteria",
+        "routing_signals",
+        "dependencies",
+        "pilot outcome"
+      ],
+      "recommended_next_step": "Two domain reviewers compare at least 6 discriminating cases before merge/split/conflict decisions."
+    }
+  ],
+  "limitation": "No candidate is automatically merged, split, or excluded. Overlapping tasks can legitimately require both specialists."
+}

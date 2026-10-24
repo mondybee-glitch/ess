@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-24",
+  "package": "EES Gemini",
+  "version": "0.9.3",
+  "candidate": "EES_Gemini_v0.9.3_Engineering_Hardening_Candidate",
+  "release_decision": "BLOCKED_NOT_GA",
+  "changes": [
+    "Signed Ed25519 evidence is enforced by default in task_runtime verification",
+    "Verification is bound to task_id, runtime version, repository tree hash and required check IDs",
+    "Release decision revalidates the signed evidence envelope and current repository tree",
+    "Missing or invalid attestation fails closed to BLOCKED",
+    "Added strict-mode runtime integration tests"
+  ],
+  "verification": {
+    "structural_validation": {
+      "status": "PASS",
+      "command": "python scripts/validate.py --full",
+      "details": "32 skills; 74 capabilities; 222 evaluation contracts; 51 central fixtures; 9 checks; 16 operational fixture projects; 0 warnings."
+    },
+    "python_compilation": {
+      "status": "PASS",
+      "details": "Changed runtime, validator, and focused test files compiled successfully."
+    },
+    "signed_runtime_gate_tests": {
+      "status": "PASS",
+      "command": "python -m pytest -q tests/test_signed_runtime_gate.py",
+      "result": "2 passed"
+    },
+    "contract_verifier_and_version_tests": {
+      "status": "PASS",
+      "command": "python -m pytest -q tests/test_contract_verifier.py tests/test_check_all_version.py",
+      "result": "8 passed"
+    },
+    "runtime_regression": {
+      "status": "PASS_WITH_COMPATIBILITY_OVERRIDE",
+      "command": "EES_REQUIRE_SIGNED_EVIDENCE=0 python -m pytest -q tests/test_runtime_v072.py -x",
+      "result": "9 passed",
+      "limitation": "Legacy regression suite deliberately opts out of the new strict attestation gate; strict mode is tested separately."
+    },
+    "repository_integrity": {
+      "status": "PASS_WITH_COMPATIBILITY_OVERRIDE",
+      "command": "EES_REQUIRE_SIGNED_EVIDENCE=0 python -m pytest -q tests/test_repository_integrity_v072.py",
+      "result": "3 passed"
+    },
+    "combined_broader_test_run": {
+      "status": "INCOMPLETE",
+      "details": "A combined broader invocation exceeded the execution window. Full suite is not claimed as passed."
+    },
+    "docker_enforcement": {
+      "status": "NOT_RUN",
+      "details": "Docker unavailable in execution environment; runtime restrictions not exercised in a real container."
+    },
+    "ci_release_workflow": {
+      "status": "NOT_RUN",
+      "details": "No remote GitHub Actions run performed."
+    },
+    "live_gemini_smoke": {
+      "status": "BLOCKED_NO_KEY",
+      "details": "No live API call performed; no credentials available in this run."
+    },
+    "dependency_audit_sbom": {
+      "status": "NOT_FULLY_VERIFIED",
+      "details": "Fresh resolved dependency audit/SBOM not completed for this candidate."
+    },
+    "image_cve_scan": {
+      "status": "NOT_RUN",
+      "details": "Docker and image scanner execution not available."
+    },
+    "independent_security_review": {
+      "status": "PENDING_EXTERNAL_REVIEW"
+    }
+  },
+  "security_notes": [
+    "A valid signature authenticates signed bytes and key possession; it does not prove evidence truthfulness.",
+    "Production signing keys must be held outside the agent sandbox and ideally in a managed signing service.",
+    "EES_REQUIRE_SIGNED_EVIDENCE=0 disables the gate and must not be set in production."
+  ],
+  "release_gate": "Do not publish as GA until all mandatory gates have fresh PASS evidence and independent review approves."
+}

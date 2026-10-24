@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "async-jobs-messaging",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "async-jobs-messaging-01",
+      "title": "Duplicate Delivery",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-06-01-async-jobs-messaging",
+      "input": {
+        "request": "Replay the same queue message multiple times.",
+        "scenario": "duplicate-delivery"
+      },
+      "expected_output": "Consumer processing is idempotent and one logical side effect is committed.",
+      "automated_checks": [
+        "duplicate delivery test passes",
+        "dedupe key and storage are verified"
+      ],
+      "human_review_rubric": [
+        "at-least-once semantics are assumed",
+        "concurrent duplicates are tested"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Consumer processing is idempotent and one logical side effect is committed.",
+        "Verification requirement: duplicate delivery test passes",
+        "Verification requirement: dedupe key and storage are verified"
+      ]
+    },
+    {
+      "id": "async-jobs-messaging-02",
+      "title": "Dead Letter",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-06-02-async-jobs-messaging",
+      "input": {
+        "request": "Send a permanently invalid message through retry exhaustion.",
+        "scenario": "dead-letter"
+      },
+      "expected_output": "Retry budget is bounded and the message is captured in a diagnosable dead-letter path.",
+      "automated_checks": [
+        "retry count is asserted",
+        "dead-letter metadata is retained"
+      ],
+      "human_review_rubric": [
+        "poison message is not retried forever",
+        "replay procedure is safe"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Retry budget is bounded and the message is captured in a diagnosable dead-letter path.",
+        "Verification requirement: retry count is asserted",
+        "Verification requirement: dead-letter metadata is retained"
+      ]
+    },
+    {
+      "id": "async-jobs-messaging-03",
+      "title": "Ordering",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-06-03-async-jobs-messaging",
+      "input": {
+        "request": "Process ordered events with a delayed earlier event.",
+        "scenario": "ordering"
+      },
+      "expected_output": "Ordering guarantees or explicit out-of-order handling preserve domain invariants.",
+      "automated_checks": [
+        "sequence invariant test passes",
+        "late event behavior is defined"
+      ],
+      "human_review_rubric": [
+        "partition key and ordering scope are clear",
+        "recovery path exists"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Ordering guarantees or explicit out-of-order handling preserve domain invariants.",
+        "Verification requirement: sequence invariant test passes",
+        "Verification requirement: late event behavior is defined"
+      ]
+    }
+  ]
+}

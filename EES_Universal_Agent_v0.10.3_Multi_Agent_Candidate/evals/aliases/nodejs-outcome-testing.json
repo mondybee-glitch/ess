@@ -1,0 +1,113 @@
+{
+  "skill": "nodejs-outcome-testing",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "not-01",
+      "input": "Test a Node.js endpoint that writes to a database and publishes a queue message.",
+      "success_criteria": [
+        "Response, persistence, and message outcomes are asserted",
+        "Test data is isolated and reset",
+        "Duplicate or partial failure behavior is covered"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-outcome-testing/nodejs-outcome-testing-not-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Response, persistence, and message outcomes are asserted",
+          "Test data is isolated and reset",
+          "Duplicate or partial failure behavior is covered"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "not-02",
+      "input": "Audit a Node.js test suite that has high line coverage but only checks HTTP status codes.",
+      "success_criteria": [
+        "Missing outcome assertions are identified",
+        "Concrete tests for state, external call, message, or telemetry are proposed",
+        "The conclusion is supported by retained evidence"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-outcome-testing/nodejs-outcome-testing-not-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Missing outcome assertions are identified",
+          "Concrete tests for state, external call, message, or telemetry are proposed",
+          "The conclusion is supported by retained evidence"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "not-03",
+      "input": "Diagnose a flaky Node.js integration test involving an external HTTP service.",
+      "success_criteria": [
+        "Environment and dependency causes are separated from product defects",
+        "Retry budget and flake evidence are recorded",
+        "The test is not declared reliable without repeated proof"
+      ],
+      "result": null,
+      "fixture": "fixtures/nodejs-outcome-testing/nodejs-outcome-testing-not-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Environment and dependency causes are separated from product defects",
+          "Retry budget and flake evidence are recorded",
+          "The test is not declared reliable without repeated proof"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "nodejs-outcome-testing"
+}

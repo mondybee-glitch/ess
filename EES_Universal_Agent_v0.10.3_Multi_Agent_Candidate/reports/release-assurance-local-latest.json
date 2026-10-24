@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-24T15:40:45Z",
+  "package": "EES Gemini",
+  "version": "0.9.2",
+  "release_decision": "BLOCKED_NOT_GA",
+  "environment": {
+    "platform": "Linux",
+    "python_version": "3.13.5",
+    "pytest_version": "9.0.2",
+    "node_major": 22,
+    "docker_available": false
+  },
+  "gates": {
+    "structural_validation": {
+      "status": "PASS",
+      "command": "python scripts/validate.py --full",
+      "details": "32 skills; 74 capabilities; 222 eval contracts; 51 central fixtures; 9 checks; 16 operational fixture projects; 0 warnings."
+    },
+    "pytest_full_suite": {
+      "status": "PASS_LOCAL",
+      "command": "python -m pytest -q tests",
+      "details": "67 passed; 9 subtests passed; 80.59 seconds. Local run only, not a clean container/CI run."
+    },
+    "python_operational_fixtures": {
+      "status": "PASS",
+      "details": "14 passed; 0 failed; 0 timed out; agent effectiveness not evaluated."
+    },
+    "javascript_fixture": {
+      "status": "PASS",
+      "details": "2 Node tests passed."
+    },
+    "playwright_browser": {
+      "status": "SKIPPED_BLOCKER",
+      "details": "Dependencies/browser not installed locally; CI gate configured, requires generated/committed lockfile."
+    },
+    "node_package_lock": {
+      "status": "BLOCKED_NETWORK_TIMEOUT",
+      "details": "npm install --package-lock-only timed out (exit 124); no package-lock.json created and no integrity data fabricated. Manual GitHub Actions lock-resolution workflow added."
+    },
+    "npm_audit": {
+      "status": "NOT_RUN_LOCALLY_CI_CONFIGURED",
+      "details": "Registry resolution unavailable locally; release workflow runs npm audit after npm ci."
+    },
+    "python_vulnerability_audit": {
+      "status": "NOT_RUN_LOCALLY_CI_CONFIGURED",
+      "details": "pip-audit unavailable locally; release workflow installs and runs it."
+    },
+    "resolved_dependency_sbom": {
+      "status": "NOT_RUN_LOCALLY_CI_CONFIGURED",
+      "details": "Current candidate manifest SBOM has 4 direct components only and is PARTIAL_NOT_RELEASE_GRADE. CI workflow builds Node and Python environment SBOMs."
+    },
+    "secret_entropy_scan": {
+      "status": "PASS_HEURISTIC_ONLY",
+      "details": "0 findings across 612 text files; heuristic only, not history scan."
+    },
+    "gitleaks_history_scan": {
+      "status": "NOT_RUN_LOCALLY_CI_CONFIGURED",
+      "details": "Release workflow scans full Git history. Gitleaks 8.30.0 pinned; 8.30.1 deliberately avoided due an upstream reported detection regression."
+    },
+    "docker_clean_build": {
+      "status": "NOT_RUN_DOCKER_UNAVAILABLE_CI_CONFIGURED",
+      "details": "No Docker binary available here; release workflow builds with --no-cache and the Dockerfile requires npm ci plus a real lockfile."
+    },
+    "live_gemini_smoke": {
+      "status": "BLOCKED_NO_KEY",
+      "details": "GEMINI_API_KEY is absent; no live API call was claimed."
+    },
+    "independent_security_review": {
+      "status": "PENDING_EXTERNAL_REVIEW",
+      "details": "Must be signed off by an independent reviewer before GA."
+    },
+    "agent_effectiveness": {
+      "status": "NOT_EVALUATED",
+      "details": "Repository tests and fixture passes do not prove real agent-run quality."
+    },
+    "docker_image_cve_scan": {
+      "status": "NOT_RUN_LOCALLY_CI_CONFIGURED",
+      "details": "Trivy image scan for CRITICAL/HIGH OS and library findings is configured in release-assurance CI; it was not run locally because Docker and Trivy are unavailable."
+    },
+    "docker_base_image_digest": {
+      "status": "PENDING_PIN_AND_CVE_TRIAGE",
+      "details": "sandbox/Dockerfile uses mutable node:22-bookworm-slim tag. Pin an audited multi-platform image digest after the image vulnerability scan and triage before GA."
+    }
+  },
+  "automation_added": [
+    ".github/workflows/resolve-node-lock-candidate.yml",
+    ".github/workflows/release-assurance.yml",
+    "Trivy CRITICAL/HIGH container image scan",
+    "Docker base-image digest pinning release gate"
+  ],
+  "release_gate": "Do not publish v1.0.0-GA until all blocked/not-run gates have verifiable evidence and independent review approves.",
+  "candidate_hardening_delta": {
+    "status": "PARTIAL_IMPLEMENTED",
+    "report": "reports/implementation-hardening-delta-2026-10-24.json",
+    "details": "Ed25519 evidence verification and constrained sandbox launcher added. Final focused suite passed 13 tests and structural validation passed. Full suite did not complete in this environment; no release-gate status is upgraded by this delta."
+  }
+}

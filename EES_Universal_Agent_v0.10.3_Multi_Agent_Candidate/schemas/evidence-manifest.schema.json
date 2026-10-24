@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["run_id", "package_version", "repository", "claims"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "package_version": {"const": "0.7.5"},
+    "repository": {"type": "object"},
+    "claims": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": true
+}

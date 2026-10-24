@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "skill_id": "brand-guidelines",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "brand-01",
+      "title": "Apply a supplied brand system",
+      "input": {
+        "request": "Apply supplied logo, color, typography, spacing, and imagery rules to a web interface."
+      },
+      "success_criteria": [
+        "Supplied brand source is treated as authoritative",
+        "Contrast and hierarchy are checked",
+        "Missing values are reported rather than invented"
+      ],
+      "fixture": "fixtures/brand-guidelines/brand-guidelines-case-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Supplied brand source is treated as authoritative",
+          "Contrast and hierarchy are checked",
+          "Missing values are reported rather than invented"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked when a grader is available",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "brand-02",
+      "title": "Avoid incorrect Anthropic branding",
+      "input": {
+        "request": "Design an interface for a non-Anthropic company without replacing its supplied palette with Anthropic colors."
+      },
+      "success_criteria": [
+        "The target brand is identified before styling",
+        "Anthropic-specific tokens are not applied unless requested",
+        "Any proposed token is labeled as proposed"
+      ],
+      "fixture": "fixtures/brand-guidelines/brand-guidelines-case-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "The target brand is identified before styling",
+          "Anthropic-specific tokens are not applied unless requested",
+          "Any proposed token is labeled as proposed"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked when a grader is available",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "brand-03",
+      "title": "Review a brand application",
+      "input": {
+        "request": "Review a slide deck or UI for brand drift, contrast failures, logo distortion, and typography fallback problems."
+      },
+      "success_criteria": [
+        "Findings point to concrete examples",
+        "Accessibility issues include practical fixes",
+        "Unverified font availability and export fidelity are disclosed"
+      ],
+      "fixture": "fixtures/brand-guidelines/brand-guidelines-case-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Findings point to concrete examples",
+          "Accessibility issues include practical fixes",
+          "Unverified font availability and export fidelity are disclosed"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked when a grader is available",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    }
+  ]
+}

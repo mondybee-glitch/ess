@@ -1,0 +1,179 @@
+{
+  "version": "0.10.3",
+  "policy": {
+    "execution": "Only this catalog is executable through task_runtime.py run-check; commands are argv arrays and never passed through a shell.",
+    "integrity": "Each runner is SHA-256 pinned. The package tree hash is checked before execution.",
+    "limitations": "Catalog allowlisting does not provide OS sandboxing, signatures, or external identity verification. Review runner and dependency code before approval. Operational fixture checks are deterministic domain contract examples; they do not run an AI agent or establish skill effectiveness."
+  },
+  "checks": [
+    {
+      "check_id": "package-validate-v072",
+      "purpose": "Validate manifest, 32 canonical skill files, 74 capability aliases, routing, central fixtures, and preserved evaluation contracts.",
+      "runner": "scripts/validate.py",
+      "argv": [
+        "--full"
+      ],
+      "expected_exit_code": 0,
+      "timeout_seconds": 120,
+      "artifact_path": "stdout and stderr retained under task out-dir/runs/",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "valid package passes",
+        "version divergence fails",
+        "unregistered skill fails",
+        "unknown dependency fails",
+        "runner pin mismatch fails"
+      ],
+      "runner_sha256": "3a08ee09b5de605801752421a0aef4f94e4e63abf1107726371060d4f54468cc"
+    },
+    {
+      "check_id": "runtime-regression-v072",
+      "purpose": "Exercise positive and negative runtime behavior including forged execution refusal, evidence integrity, risk gates, and state tampering.",
+      "runner": "tests/test_runtime_v072.py",
+      "argv": [],
+      "expected_exit_code": 0,
+      "timeout_seconds": 180,
+      "artifact_path": "stdout and stderr retained under task out-dir/runs/",
+      "blocking": true,
+      "risk_tier": "high",
+      "cases": [
+        "exit-code zero accepted only from actual run-check",
+        "nonzero result does not pass",
+        "missing artifact does not pass",
+        "tampered artifact is detected",
+        "approval boundary enforced"
+      ],
+      "runner_sha256": "6a3079591642d56031de91c69278fae6adeeaa4bb6c832f61a3e835ce3db584b"
+    },
+    {
+      "check_id": "risk-classification-v072",
+      "purpose": "Test task risk classification independently from capability relevance.",
+      "runner": "tests/test_risk_classification_v072.py",
+      "argv": [],
+      "expected_exit_code": 0,
+      "timeout_seconds": 60,
+      "artifact_path": "stdout and stderr retained under task out-dir/runs/",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "external API security testing is high risk",
+        "production database drop is critical risk"
+      ],
+      "runner_sha256": "e7b1e064bd321c7b06761d07e4e4ece616f59929b41f687e3dab32cda8b4eaef"
+    },
+    {
+      "check_id": "event-ledger-v072",
+      "purpose": "Verify tampered task-state event chains are rejected by the local runtime.",
+      "runner": "tests/test_event_ledger_v072.py",
+      "argv": [],
+      "expected_exit_code": 0,
+      "timeout_seconds": 60,
+      "artifact_path": "stdout and stderr retained under task out-dir/runs/",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "changed event payload causes ledger validation failure"
+      ],
+      "runner_sha256": "06a95a2530b463e97af80d9ac8f548c07aa6d58ff3ebb91dfdb53acac82d6a6c"
+    },
+    {
+      "check_id": "repository-integrity-v072",
+      "purpose": "Verify repository snapshot changes are blocked after routing, before check execution, and before final verification.",
+      "runner": "tests/test_repository_integrity_v072.py",
+      "argv": [],
+      "expected_exit_code": 0,
+      "timeout_seconds": 120,
+      "artifact_path": "stdout and stderr retained under task out-dir/runs/",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "change before start blocks",
+        "change after start prevents checks",
+        "change before verify prevents pass"
+      ],
+      "runner_sha256": "2bafe3987923fa668ed5b5bbbd7cf1387bdab8b86e3a1bbf7b1333d66fe935c1"
+    },
+    {
+      "check_id": "fixture-contract-v072",
+      "purpose": "Validate 222 evaluation contracts and linked fixture selectors without claiming AI-agent execution.",
+      "runner": "scripts/run_eval.py",
+      "argv": [
+        "--output",
+        "@OUT_DIR@/reports/fixture-contract-v072.json"
+      ],
+      "expected_exit_code": 0,
+      "timeout_seconds": 120,
+      "artifact_path": "stdout and stderr retained under task out-dir/runs/; fixture report written under task out-dir/reports/",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "unique case ids",
+        "fixture selector is unique",
+        "expected output matches source fixture",
+        "agent outcomes stay unverified"
+      ],
+      "runner_sha256": "497946bcbd292d1492e449d30003aa0c6594f8841e9a238a57b25af3f281f5c0"
+    },
+    {
+      "check_id": "anthropic-integration-v072",
+      "purpose": "Verify selective Agent Skills adaptations, source provenance, registry completeness, and six new contracts without claiming AI-agent execution.",
+      "runner": "tests/test_anthropic_integration_v072.py",
+      "argv": [],
+      "expected_exit_code": 0,
+      "timeout_seconds": 60,
+      "artifact_path": "stdout and stderr retained under task out-dir/runs/",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "registry and manifest contain all 74 skills",
+        "four selected upstream workflows are documented",
+        "license and non-vendoring boundary is documented",
+        "six new eval contracts remain defined-not-run"
+      ],
+      "runner_sha256": "164d58d988178be802156b5bc0c057558d723d9a5b2f7bd7c275530430ed12bb"
+    },
+    {
+      "check_id": "operational-domain-fixtures-v074",
+      "purpose": "Execute 11 deterministic domain fixture projects covering tenant authorization, retries/idempotency, migration rollback, queue backpressure, readiness/shutdown, prompt-injection tool policy, RAG ACL isolation, secret redaction, recovery rollback/RPO, ML baseline regression, and keyboard accessibility contracts.",
+      "runner": "scripts/run_operational_fixtures.py",
+      "argv": [
+        "--output",
+        "@OUT_DIR@/reports/operational-fixtures.json"
+      ],
+      "expected_exit_code": 0,
+      "timeout_seconds": 120,
+      "artifact_path": "per-fixture stdout/stderr hashes, source hashes, exit codes, durations and summary in @OUT_DIR@/reports/operational-fixtures.json",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "positive and negative domain assertions execute",
+        "nonzero exit is recorded as failed",
+        "source artifacts are SHA-256 bound",
+        "report explicitly states agent effectiveness not evaluated"
+      ],
+      "runner_sha256": "03c152c6d773ab54af8886cb9214395e50ccf3b3eca4e991e74467d20c1a1c0b"
+    },
+    {
+      "check_id": "routing-audit-v074",
+      "purpose": "Audit all capability references, skill/eval paths, fixture paths, critical preflight declarations and required handoffs.",
+      "runner": "scripts/audit_routing.py",
+      "argv": [
+        "--output",
+        "@OUT_DIR@/reports/routing-audit.json"
+      ],
+      "expected_exit_code": 0,
+      "timeout_seconds": 60,
+      "artifact_path": "JSON routing audit report with errors and warnings",
+      "blocking": true,
+      "risk_tier": "medium",
+      "cases": [
+        "unknown capability references fail",
+        "missing skill/eval/fixture paths fail",
+        "critical preflight declarations are checked",
+        "missing recommended handoffs are surfaced"
+      ],
+      "runner_sha256": "8d237ec04197912241a237c4466bac170741c04d6fe5944d3a8a7ea194e459d3"
+    }
+  ]
+}

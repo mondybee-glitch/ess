@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "skill_id": "mcp-server-engineering",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "mcpse-01",
+      "title": "Design a narrowly scoped MCP server",
+      "input": {
+        "request": "Design a TypeScript MCP server for a read-only inventory API. Define the tool surface, validated schemas, transport, output shape, pagination, and error behavior."
+      },
+      "success_criteria": [
+        "Workflow tools and generic endpoint coverage are explicitly balanced",
+        "Schemas bound types, size, pagination, and invalid inputs",
+        "Transport and SDK versions are recorded as assumptions or verified facts",
+        "Errors reveal no secrets or stack traces"
+      ],
+      "fixture": "fixtures/mcp-server-engineering/mcp-server-engineering-case-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Workflow tools and generic endpoint coverage are explicitly balanced",
+          "Schemas bound types, size, pagination, and invalid inputs",
+          "Transport and SDK versions are recorded as assumptions or verified facts",
+          "Errors reveal no secrets or stack traces"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "skill-specific output properties are checked by a task grader when available",
+        "no unsupported agent-success claim"
+      ],
+      "human_review_rubric": [
+        "scope and permissions respected",
+        "technical reasoning is coherent",
+        "evidence directly supports claims",
+        "uncertainty and failures are explicit"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "mcpse-02",
+      "title": "Test MCP authorization and failures",
+      "input": {
+        "request": "Build a test plan for an MCP tool that retrieves customer orders from a staging system, including cross-user access, timeouts, malformed upstream responses, retries, and redaction."
+      },
+      "success_criteria": [
+        "Authorization is enforced server-side for each object access",
+        "Denied and cross-boundary requests have explicit assertions",
+        "Timeout, retry, pagination, malformed-data, and idempotency behavior are covered where applicable",
+        "Logs and artifacts redact credentials and personal data"
+      ],
+      "fixture": "fixtures/mcp-server-engineering/mcp-server-engineering-case-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Authorization is enforced server-side for each object access",
+          "Denied and cross-boundary requests have explicit assertions",
+          "Timeout, retry, pagination, malformed-data, and idempotency behavior are covered where applicable",
+          "Logs and artifacts redact credentials and personal data"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "skill-specific output properties are checked by a task grader when available",
+        "no unsupported agent-success claim"
+      ],
+      "human_review_rubric": [
+        "scope and permissions respected",
+        "technical reasoning is coherent",
+        "evidence directly supports claims",
+        "uncertainty and failures are explicit"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    },
+    {
+      "id": "mcpse-03",
+      "title": "Verify real client-path compatibility",
+      "input": {
+        "request": "Review an MCP server that starts successfully but has not been tested through the intended client. Define the verification needed before a release recommendation."
+      },
+      "success_criteria": [
+        "Server startup is not treated as client compatibility proof",
+        "At least one integration case uses the planned client/SDK surface",
+        "Tool discovery, invocation, invalid arguments, and protocol errors are tested",
+        "Release decision distinguishes tested behavior from deployment assumptions"
+      ],
+      "fixture": "fixtures/mcp-server-engineering/mcp-server-engineering-case-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "implementation or structured analysis",
+          "exact command results",
+          "evidence and limitations"
+        ],
+        "properties": [
+          "Server startup is not treated as client compatibility proof",
+          "At least one integration case uses the planned client/SDK surface",
+          "Tool discovery, invocation, invalid arguments, and protocol errors are tested",
+          "Release decision distinguishes tested behavior from deployment assumptions"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "skill-specific output properties are checked by a task grader when available",
+        "no unsupported agent-success claim"
+      ],
+      "human_review_rubric": [
+        "scope and permissions respected",
+        "technical reasoning is coherent",
+        "evidence directly supports claims",
+        "uncertainty and failures are explicit"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run"
+    }
+  ]
+}

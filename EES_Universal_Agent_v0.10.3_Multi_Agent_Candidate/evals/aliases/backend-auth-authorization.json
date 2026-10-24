@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "backend-auth-authorization",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "backend-auth-authorization-01",
+      "title": "Tenant Isolation",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-03-01-backend-auth-authorization",
+      "input": {
+        "request": "Prevent one tenant from reading another tenant’s resource.",
+        "scenario": "tenant-isolation"
+      },
+      "expected_output": "Authorization is enforced server-side for every object access and cross-tenant tests fail closed.",
+      "automated_checks": [
+        "cross-tenant read/write tests pass",
+        "server-side ownership check is present"
+      ],
+      "human_review_rubric": [
+        "tenant boundary is explicit",
+        "client-supplied tenant IDs are not trusted"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Authorization is enforced server-side for every object access and cross-tenant tests fail closed.",
+        "Verification requirement: cross-tenant read/write tests pass",
+        "Verification requirement: server-side ownership check is present"
+      ]
+    },
+    {
+      "id": "backend-auth-authorization-02",
+      "title": "Least Privilege",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-03-02-backend-auth-authorization",
+      "input": {
+        "request": "Create roles for viewer, editor, and administrator.",
+        "scenario": "least-privilege"
+      },
+      "expected_output": "Permission matrix follows least privilege and denied actions return consistent responses.",
+      "automated_checks": [
+        "positive and negative role matrix passes",
+        "privilege escalation paths tested"
+      ],
+      "human_review_rubric": [
+        "roles and actions are separated",
+        "default deny is enforced"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Permission matrix follows least privilege and denied actions return consistent responses.",
+        "Verification requirement: positive and negative role matrix passes",
+        "Verification requirement: privilege escalation paths tested"
+      ]
+    },
+    {
+      "id": "backend-auth-authorization-03",
+      "title": "Credential Lifecycle",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-03-03-backend-auth-authorization",
+      "input": {
+        "request": "Rotate an expired service credential without logging secrets.",
+        "scenario": "credential-lifecycle"
+      },
+      "expected_output": "Credential rotation has a safe overlap/rollback plan and logs contain no secret values.",
+      "automated_checks": [
+        "secret-redaction test passes",
+        "rotation failure path is documented"
+      ],
+      "human_review_rubric": [
+        "secret handling is least-privilege",
+        "rotation and revocation are distinct"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Credential rotation has a safe overlap/rollback plan and logs contain no secret values.",
+        "Verification requirement: secret-redaction test passes",
+        "Verification requirement: rotation failure path is documented"
+      ]
+    }
+  ]
+}

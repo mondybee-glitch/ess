@@ -1,0 +1,14 @@
+{
+  "status": "structurally_valid",
+  "behavioral_quality": "not established by structural validation",
+  "summary": {
+    "version": "0.9.2",
+    "skills": 32,
+    "capabilities": 74,
+    "eval_contracts": 222,
+    "central_fixtures": 51,
+    "checks": 9,
+    "operational_fixture_projects": 16
+  },
+  "warnings": []
+}

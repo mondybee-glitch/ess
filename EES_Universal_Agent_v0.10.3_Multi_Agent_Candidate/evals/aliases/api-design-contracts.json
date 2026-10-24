@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "api-design-contracts",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "api-design-contracts-01",
+      "title": "Backward Compatibility",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-01-01-api-design-contracts",
+      "input": {
+        "request": "Add a versioned API field without breaking existing clients.",
+        "scenario": "backward-compatibility"
+      },
+      "expected_output": "Existing contract and old clients remain compatible; schema checks and migration notes are recorded.",
+      "automated_checks": [
+        "old-client contract test passes",
+        "schema diff is reviewed"
+      ],
+      "human_review_rubric": [
+        "backward compatibility is demonstrated",
+        "versioning and deprecation are explicit"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Existing contract and old clients remain compatible; schema checks and migration notes are recorded.",
+        "Verification requirement: old-client contract test passes",
+        "Verification requirement: schema diff is reviewed"
+      ]
+    },
+    {
+      "id": "api-design-contracts-02",
+      "title": "Idempotency",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-01-02-api-design-contracts",
+      "input": {
+        "request": "Design an idempotent payment webhook receiver.",
+        "scenario": "idempotency"
+      },
+      "expected_output": "Duplicate deliveries produce no duplicate side effect and reuse a stable idempotency key.",
+      "automated_checks": [
+        "duplicate event replay test passes",
+        "idempotency key scope is defined"
+      ],
+      "human_review_rubric": [
+        "retry and duplicate semantics are explicit",
+        "concurrency path is considered"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Duplicate deliveries produce no duplicate side effect and reuse a stable idempotency key.",
+        "Verification requirement: duplicate event replay test passes",
+        "Verification requirement: idempotency key scope is defined"
+      ]
+    },
+    {
+      "id": "api-design-contracts-03",
+      "title": "Contract Negative Path",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-01-03-api-design-contracts",
+      "input": {
+        "request": "Reject an invalid API payload and return the documented error contract.",
+        "scenario": "contract-negative-path"
+      },
+      "expected_output": "Invalid input is rejected with stable status and error shape; no partial side effect occurs.",
+      "automated_checks": [
+        "invalid payload contract test passes",
+        "side effect absence is asserted"
+      ],
+      "human_review_rubric": [
+        "error shape is documented",
+        "failure does not leak internal details"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Invalid input is rejected with stable status and error shape; no partial side effect occurs.",
+        "Verification requirement: invalid payload contract test passes",
+        "Verification requirement: side effect absence is asserted"
+      ]
+    }
+  ]
+}

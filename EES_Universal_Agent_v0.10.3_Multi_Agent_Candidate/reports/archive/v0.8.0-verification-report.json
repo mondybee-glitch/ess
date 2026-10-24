@@ -1,0 +1,53 @@
+{
+  "release": "0.8.0-clean-candidate",
+  "package_version": "0.8.0",
+  "verified": {
+    "structural_validation": {
+      "status": "passed",
+      "skills": 74,
+      "capabilities": 74,
+      "eval_contracts": 222,
+      "central_fixtures": 51,
+      "checks": 9,
+      "operational_fixture_projects": 11,
+      "warnings": 0
+    },
+    "routing_audit": {
+      "status": "passed",
+      "errors": 0,
+      "warnings": 0
+    },
+    "operational_fixtures": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "timed_out": 0
+    },
+    "focused_tests": {
+      "passed": 15,
+      "subtests_passed": 9
+    },
+    "high_risk_routing_smoke_test": {
+      "status": "passed",
+      "risk": "high",
+      "mandatory_security_floor": true
+    }
+  },
+  "not_verified": [
+    "Full pytest suite did not complete within the execution time limit; partial run showed one failure before timeout and must not be represented as fully passing.",
+    "No live Gemini API or Gemini CLI session was executed.",
+    "No independent benchmark of agent effectiveness was run.",
+    "The 74 skill bodies were preserved; a semantic consolidation into 32 physical skill files was not performed.",
+    "Security floor is a deterministic routing control, not a replacement for human review or OS-level sandboxing."
+  ],
+  "remediation": [
+    "Runtime consumes hierarchical-routing.json and records selected stage-one routes.",
+    "High/critical risk routes include security-review, defensive-appsec-assessment, and prompt-provenance-and-safety when present.",
+    "Added hierarchical-routing.schema.json and validator checks for complete, unique skill mapping.",
+    "Added .gitignore and .dockerignore protections for bytecode, local environments, and secrets.",
+    "Removed Node.js skill-local duplicate fixture copies; central fixtures are canonical.",
+    "Moved legacy archive and scripts out of the active scripts path.",
+    "Moved old release notes to docs/releases and renamed stale fixture report.",
+    "Aligned package version fields and repaired ml-lifecycle fixture paths."
+  ]
+}

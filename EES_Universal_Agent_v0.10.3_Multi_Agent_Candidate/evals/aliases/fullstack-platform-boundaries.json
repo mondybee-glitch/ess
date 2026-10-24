@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "fullstack-platform-boundaries",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "fullstack-platform-boundaries-01",
+      "title": "Api Ui Boundary",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-02-01-fullstack-platform-boundaries",
+      "input": {
+        "request": "Design frontend/server separation for authenticated data.",
+        "scenario": "api-ui-boundary"
+      },
+      "expected_output": "Server remains authoritative for secrets and authorization; client contracts are typed and validated.",
+      "automated_checks": [
+        "server-side auth assertion present",
+        "contract mismatch test exists"
+      ],
+      "human_review_rubric": [
+        "trust boundaries are explicit",
+        "no secret is shipped to client"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Server remains authoritative for secrets and authorization; client contracts are typed and validated.",
+        "Verification requirement: server-side auth assertion present",
+        "Verification requirement: contract mismatch test exists"
+      ]
+    },
+    {
+      "id": "fullstack-platform-boundaries-02",
+      "title": "Configuration",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-02-02-fullstack-platform-boundaries",
+      "input": {
+        "request": "Load configuration safely across development and production.",
+        "scenario": "configuration"
+      },
+      "expected_output": "Required values are validated at startup; secrets are not committed or exposed in client bundles.",
+      "automated_checks": [
+        "missing required config fails fast",
+        "bundle scan excludes secrets"
+      ],
+      "human_review_rubric": [
+        "environment defaults are safe",
+        "config errors are actionable"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Required values are validated at startup; secrets are not committed or exposed in client bundles.",
+        "Verification requirement: missing required config fails fast",
+        "Verification requirement: bundle scan excludes secrets"
+      ]
+    },
+    {
+      "id": "fullstack-platform-boundaries-03",
+      "title": "Error Contract",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-02-03-fullstack-platform-boundaries",
+      "input": {
+        "request": "Propagate a backend failure into a usable UI error state.",
+        "scenario": "error-contract"
+      },
+      "expected_output": "Errors are mapped to stable user-facing states without exposing internal traces.",
+      "automated_checks": [
+        "error path integration test passes",
+        "internal detail redaction checked"
+      ],
+      "human_review_rubric": [
+        "retry and recovery affordance clear",
+        "accessibility preserved"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Errors are mapped to stable user-facing states without exposing internal traces.",
+        "Verification requirement: error path integration test passes",
+        "Verification requirement: internal detail redaction checked"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "skill": "react-component-library-engineering",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "rcl-01",
+      "input": "Publish a React component in TypeScript and JavaScript styling flavors.",
+      "success_criteria": [
+        "Behavior and accessibility remain equivalent",
+        "Public props and peer dependencies are documented",
+        "Build and type evidence are retained"
+      ],
+      "result": null,
+      "fixture": "fixtures/react-component-library-engineering/react-component-library-engineering-rcl-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Behavior and accessibility remain equivalent",
+          "Public props and peer dependencies are documented",
+          "Build and type evidence are retained"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "rcl-02",
+      "input": "Add a registry-backed component with live demo and install metadata.",
+      "success_criteria": [
+        "Registry and docs derive from a source of truth",
+        "Demo covers non-default states",
+        "Generated outputs are reproducible"
+      ],
+      "result": null,
+      "fixture": "fixtures/react-component-library-engineering/react-component-library-engineering-rcl-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Registry and docs derive from a source of truth",
+          "Demo covers non-default states",
+          "Generated outputs are reproducible"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "rcl-03",
+      "input": "Review a component library before adopting third-party code.",
+      "success_criteria": [
+        "License and provenance constraints are identified",
+        "API and dependency compatibility are checked",
+        "No unsupported redistribution claim is made"
+      ],
+      "result": null,
+      "fixture": "fixtures/react-component-library-engineering/react-component-library-engineering-rcl-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "License and provenance constraints are identified",
+          "API and dependency compatibility are checked",
+          "No unsupported redistribution claim is made"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "react-component-library-engineering"
+}

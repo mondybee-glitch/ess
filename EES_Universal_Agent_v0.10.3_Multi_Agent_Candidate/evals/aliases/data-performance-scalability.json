@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "data-performance-scalability",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "data-performance-scalability-01",
+      "title": "Load Baseline",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-05-01-data-performance-scalability",
+      "input": {
+        "request": "Measure a data pipeline at a defined workload.",
+        "scenario": "load-baseline"
+      },
+      "expected_output": "Throughput, latency distribution, resource use, and data quality are measured on a fixed workload.",
+      "automated_checks": [
+        "workload and environment recorded",
+        "data-quality counts reconcile"
+      ],
+      "human_review_rubric": [
+        "sample size is stated",
+        "no unsupported scale extrapolation"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Throughput, latency distribution, resource use, and data quality are measured on a fixed workload.",
+        "Verification requirement: workload and environment recorded",
+        "Verification requirement: data-quality counts reconcile"
+      ]
+    },
+    {
+      "id": "data-performance-scalability-02",
+      "title": "Data Integrity",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-05-02-data-performance-scalability",
+      "input": {
+        "request": "Move data between services and verify the result.",
+        "scenario": "data-integrity"
+      },
+      "expected_output": "Counts, keys, nullability, and checksums reconcile; rejected records are accounted for.",
+      "automated_checks": [
+        "reconciliation report exists",
+        "error bucket totals match input"
+      ],
+      "human_review_rubric": [
+        "data lineage is preserved",
+        "partial failure is detected"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Counts, keys, nullability, and checksums reconcile; rejected records are accounted for.",
+        "Verification requirement: reconciliation report exists",
+        "Verification requirement: error bucket totals match input"
+      ]
+    },
+    {
+      "id": "data-performance-scalability-03",
+      "title": "Capacity",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-src-05-03-data-performance-scalability",
+      "input": {
+        "request": "Estimate capacity under a forecasted growth scenario.",
+        "scenario": "capacity"
+      },
+      "expected_output": "Assumptions, safety margin, bottleneck, and scaling trigger are explicit and testable.",
+      "automated_checks": [
+        "capacity calculations reproducible",
+        "load-test limit or extrapolation stated"
+      ],
+      "human_review_rubric": [
+        "forecast sensitivity is shown",
+        "cost and failure modes included"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Assumptions, safety margin, bottleneck, and scaling trigger are explicit and testable.",
+        "Verification requirement: capacity calculations reproducible",
+        "Verification requirement: load-test limit or extrapolation stated"
+      ]
+    }
+  ]
+}

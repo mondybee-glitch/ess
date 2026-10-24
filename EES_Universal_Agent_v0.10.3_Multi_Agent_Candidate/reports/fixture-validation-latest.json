@@ -1,0 +1,1146 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-10-23T18:21:24.636123+00:00",
+  "mode": "fixture-only",
+  "records": [
+    {
+      "skill": "accessible-component-behavior",
+      "case_id": "acb-01",
+      "fixture": "fixtures/accessible-component-behavior/accessible-component-behavior-acb-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "accessible-component-behavior",
+      "case_id": "acb-02",
+      "fixture": "fixtures/accessible-component-behavior/accessible-component-behavior-acb-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "accessible-component-behavior",
+      "case_id": "acb-03",
+      "fixture": "fixtures/accessible-component-behavior/accessible-component-behavior-acb-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "ai-agents-rag-mcp",
+      "case_id": "ai-01",
+      "fixture": "fixtures/ai-agents-rag-mcp/ai-agents-rag-mcp-ai-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "ai-agents-rag-mcp",
+      "case_id": "ai-02",
+      "fixture": "fixtures/ai-agents-rag-mcp/ai-agents-rag-mcp-ai-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "ai-agents-rag-mcp",
+      "case_id": "ai-03",
+      "fixture": "fixtures/ai-agents-rag-mcp/ai-agents-rag-mcp-ai-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "api-integrations",
+      "case_id": "api-01",
+      "fixture": "fixtures/api-integrations/api-integrations-api-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "api-integrations",
+      "case_id": "api-02",
+      "fixture": "fixtures/api-integrations/api-integrations-api-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "api-integrations",
+      "case_id": "api-03",
+      "fixture": "fixtures/api-integrations/api-integrations-api-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "backend-development",
+      "case_id": "be-01",
+      "fixture": "fixtures/backend-development/backend-development-be-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "backend-development",
+      "case_id": "be-02",
+      "fixture": "fixtures/backend-development/backend-development-be-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "backend-development",
+      "case_id": "be-03",
+      "fixture": "fixtures/backend-development/backend-development-be-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "browser-editor-extensions",
+      "case_id": "bro-01",
+      "fixture": "fixtures/browser-editor-extensions/browser-editor-extensions-bro-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "browser-editor-extensions",
+      "case_id": "bro-02",
+      "fixture": "fixtures/browser-editor-extensions/browser-editor-extensions-bro-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "browser-editor-extensions",
+      "case_id": "bro-03",
+      "fixture": "fixtures/browser-editor-extensions/browser-editor-extensions-bro-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "cloud-architecture-cost",
+      "case_id": "clo-01",
+      "fixture": "fixtures/cloud-architecture-cost/cloud-architecture-cost-clo-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "cloud-architecture-cost",
+      "case_id": "clo-02",
+      "fixture": "fixtures/cloud-architecture-cost/cloud-architecture-cost-clo-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "cloud-architecture-cost",
+      "case_id": "clo-03",
+      "fixture": "fixtures/cloud-architecture-cost/cloud-architecture-cost-clo-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "css-motion-performance",
+      "case_id": "cmp-01",
+      "fixture": "fixtures/css-motion-performance/css-motion-performance-cmp-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "css-motion-performance",
+      "case_id": "cmp-02",
+      "fixture": "fixtures/css-motion-performance/css-motion-performance-cmp-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "css-motion-performance",
+      "case_id": "cmp-03",
+      "fixture": "fixtures/css-motion-performance/css-motion-performance-cmp-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "data-engineering-analytics",
+      "case_id": "dat-01",
+      "fixture": "fixtures/data-engineering-analytics/data-engineering-analytics-dat-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "data-engineering-analytics",
+      "case_id": "dat-02",
+      "fixture": "fixtures/data-engineering-analytics/data-engineering-analytics-dat-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "data-engineering-analytics",
+      "case_id": "dat-03",
+      "fixture": "fixtures/data-engineering-analytics/data-engineering-analytics-dat-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "debugging-and-code-repair",
+      "case_id": "db-01",
+      "fixture": "fixtures/debugging-and-code-repair/debugging-and-code-repair-db-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "debugging-and-code-repair",
+      "case_id": "db-02",
+      "fixture": "fixtures/debugging-and-code-repair/debugging-and-code-repair-db-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "debugging-and-code-repair",
+      "case_id": "db-03",
+      "fixture": "fixtures/debugging-and-code-repair/debugging-and-code-repair-db-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "defensive-security-ops",
+      "case_id": "ds-01",
+      "fixture": "fixtures/defensive-security-ops/defensive-security-ops-ds-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "defensive-security-ops",
+      "case_id": "ds-02",
+      "fixture": "fixtures/defensive-security-ops/defensive-security-ops-ds-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "defensive-security-ops",
+      "case_id": "ds-03",
+      "fixture": "fixtures/defensive-security-ops/defensive-security-ops-ds-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "design-intelligence-recommendation",
+      "case_id": "dir-01",
+      "fixture": "fixtures/design-intelligence-recommendation/design-intelligence-recommendation-dir-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "design-intelligence-recommendation",
+      "case_id": "dir-02",
+      "fixture": "fixtures/design-intelligence-recommendation/design-intelligence-recommendation-dir-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "design-intelligence-recommendation",
+      "case_id": "dir-03",
+      "fixture": "fixtures/design-intelligence-recommendation/design-intelligence-recommendation-dir-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "design-system-theming-rtl",
+      "case_id": "dst-01",
+      "fixture": "fixtures/design-system-theming-rtl/design-system-theming-rtl-dst-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "design-system-theming-rtl",
+      "case_id": "dst-02",
+      "fixture": "fixtures/design-system-theming-rtl/design-system-theming-rtl-dst-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "design-system-theming-rtl",
+      "case_id": "dst-03",
+      "fixture": "fixtures/design-system-theming-rtl/design-system-theming-rtl-dst-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "devops-and-deployment",
+      "case_id": "do-01",
+      "fixture": "fixtures/devops-and-deployment/devops-and-deployment-do-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "devops-and-deployment",
+      "case_id": "do-02",
+      "fixture": "fixtures/devops-and-deployment/devops-and-deployment-do-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "devops-and-deployment",
+      "case_id": "do-03",
+      "fixture": "fixtures/devops-and-deployment/devops-and-deployment-do-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "editor-plugin-architecture",
+      "case_id": "epa-01",
+      "fixture": "fixtures/editor-plugin-architecture/editor-plugin-architecture-epa-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "editor-plugin-architecture",
+      "case_id": "epa-02",
+      "fixture": "fixtures/editor-plugin-architecture/editor-plugin-architecture-epa-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "editor-plugin-architecture",
+      "case_id": "epa-03",
+      "fixture": "fixtures/editor-plugin-architecture/editor-plugin-architecture-epa-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "embedded-iot",
+      "case_id": "emb-01",
+      "fixture": "fixtures/embedded-iot/embedded-iot-emb-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "embedded-iot",
+      "case_id": "emb-02",
+      "fixture": "fixtures/embedded-iot/embedded-iot-emb-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "embedded-iot",
+      "case_id": "emb-03",
+      "fixture": "fixtures/embedded-iot/embedded-iot-emb-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "frontend-build-quality",
+      "case_id": "fbq-01",
+      "fixture": "fixtures/frontend-build-quality/frontend-build-quality-fbq-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "frontend-build-quality",
+      "case_id": "fbq-02",
+      "fixture": "fixtures/frontend-build-quality/frontend-build-quality-fbq-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "frontend-build-quality",
+      "case_id": "fbq-03",
+      "fixture": "fixtures/frontend-build-quality/frontend-build-quality-fbq-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "frontend-development",
+      "case_id": "fe-01",
+      "fixture": "fixtures/frontend-development/frontend-development-fe-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "frontend-development",
+      "case_id": "fe-02",
+      "fixture": "fixtures/frontend-development/frontend-development-fe-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "frontend-development",
+      "case_id": "fe-03",
+      "fixture": "fixtures/frontend-development/frontend-development-fe-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "game-development",
+      "case_id": "gam-01",
+      "fixture": "fixtures/game-development/game-development-gam-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "game-development",
+      "case_id": "gam-02",
+      "fixture": "fixtures/game-development/game-development-gam-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "game-development",
+      "case_id": "gam-03",
+      "fixture": "fixtures/game-development/game-development-gam-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "github-research",
+      "case_id": "gh-01",
+      "fixture": "fixtures/github-research/github-research-gh-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "github-research",
+      "case_id": "gh-02",
+      "fixture": "fixtures/github-research/github-research-gh-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "github-research",
+      "case_id": "gh-03",
+      "fixture": "fixtures/github-research/github-research-gh-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "graphic-design",
+      "case_id": "gd-01",
+      "fixture": "fixtures/graphic-design/graphic-design-gd-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "graphic-design",
+      "case_id": "gd-02",
+      "fixture": "fixtures/graphic-design/graphic-design-gd-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "graphic-design",
+      "case_id": "gd-03",
+      "fixture": "fixtures/graphic-design/graphic-design-gd-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "llm-evaluation-observability",
+      "case_id": "lee-01",
+      "fixture": "fixtures/llm-evaluation-observability/llm-evaluation-observability-lee-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "llm-evaluation-observability",
+      "case_id": "lee-02",
+      "fixture": "fixtures/llm-evaluation-observability/llm-evaluation-observability-lee-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "llm-evaluation-observability",
+      "case_id": "lee-03",
+      "fixture": "fixtures/llm-evaluation-observability/llm-evaluation-observability-lee-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "llm-tool-contracts",
+      "case_id": "ltc-01",
+      "fixture": "fixtures/llm-tool-contracts/llm-tool-contracts-ltc-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "llm-tool-contracts",
+      "case_id": "ltc-02",
+      "fixture": "fixtures/llm-tool-contracts/llm-tool-contracts-ltc-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "llm-tool-contracts",
+      "case_id": "ltc-03",
+      "fixture": "fixtures/llm-tool-contracts/llm-tool-contracts-ltc-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "machine-learning-evaluation",
+      "case_id": "mac-01",
+      "fixture": "fixtures/machine-learning-evaluation/machine-learning-evaluation-mac-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "machine-learning-evaluation",
+      "case_id": "mac-02",
+      "fixture": "fixtures/machine-learning-evaluation/machine-learning-evaluation-mac-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "machine-learning-evaluation",
+      "case_id": "mac-03",
+      "fixture": "fixtures/machine-learning-evaluation/machine-learning-evaluation-mac-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "media-production",
+      "case_id": "med-01",
+      "fixture": "fixtures/media-production/media-production-med-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "media-production",
+      "case_id": "med-02",
+      "fixture": "fixtures/media-production/media-production-med-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "media-production",
+      "case_id": "med-03",
+      "fixture": "fixtures/media-production/media-production-med-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "mobile-desktop-development",
+      "case_id": "mob-01",
+      "fixture": "fixtures/mobile-desktop-development/mobile-desktop-development-mob-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "mobile-desktop-development",
+      "case_id": "mob-02",
+      "fixture": "fixtures/mobile-desktop-development/mobile-desktop-development-mob-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "mobile-desktop-development",
+      "case_id": "mob-03",
+      "fixture": "fixtures/mobile-desktop-development/mobile-desktop-development-mob-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "motion-system-engineering",
+      "case_id": "mse-01",
+      "fixture": "fixtures/motion-system-engineering/motion-system-engineering-mse-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "motion-system-engineering",
+      "case_id": "mse-02",
+      "fixture": "fixtures/motion-system-engineering/motion-system-engineering-mse-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "motion-system-engineering",
+      "case_id": "mse-03",
+      "fixture": "fixtures/motion-system-engineering/motion-system-engineering-mse-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "multi-agent-orchestration",
+      "case_id": "ma-01",
+      "fixture": "fixtures/multi-agent-orchestration/multi-agent-orchestration-ma-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "multi-agent-orchestration",
+      "case_id": "ma-02",
+      "fixture": "fixtures/multi-agent-orchestration/multi-agent-orchestration-ma-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "multi-agent-orchestration",
+      "case_id": "ma-03",
+      "fixture": "fixtures/multi-agent-orchestration/multi-agent-orchestration-ma-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-component-architecture",
+      "case_id": "nca-01",
+      "fixture": "fixtures/nodejs-component-architecture/nodejs-component-architecture-nca-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-component-architecture",
+      "case_id": "nca-02",
+      "fixture": "fixtures/nodejs-component-architecture/nodejs-component-architecture-nca-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-component-architecture",
+      "case_id": "nca-03",
+      "fixture": "fixtures/nodejs-component-architecture/nodejs-component-architecture-nca-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-outcome-testing",
+      "case_id": "not-01",
+      "fixture": "fixtures/nodejs-outcome-testing/nodejs-outcome-testing-not-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-outcome-testing",
+      "case_id": "not-02",
+      "fixture": "fixtures/nodejs-outcome-testing/nodejs-outcome-testing-not-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-outcome-testing",
+      "case_id": "not-03",
+      "fixture": "fixtures/nodejs-outcome-testing/nodejs-outcome-testing-not-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-production-performance",
+      "case_id": "npp-01",
+      "fixture": "fixtures/nodejs-production-performance/nodejs-production-performance-npp-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-production-performance",
+      "case_id": "npp-02",
+      "fixture": "fixtures/nodejs-production-performance/nodejs-production-performance-npp-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "nodejs-production-performance",
+      "case_id": "npp-03",
+      "fixture": "fixtures/nodejs-production-performance/nodejs-production-performance-npp-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "payments-financial",
+      "case_id": "pay-01",
+      "fixture": "fixtures/payments-financial/payments-financial-pay-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "payments-financial",
+      "case_id": "pay-02",
+      "fixture": "fixtures/payments-financial/payments-financial-pay-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "payments-financial",
+      "case_id": "pay-03",
+      "fixture": "fixtures/payments-financial/payments-financial-pay-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "react-component-library-engineering",
+      "case_id": "rcl-01",
+      "fixture": "fixtures/react-component-library-engineering/react-component-library-engineering-rcl-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "react-component-library-engineering",
+      "case_id": "rcl-02",
+      "fixture": "fixtures/react-component-library-engineering/react-component-library-engineering-rcl-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "react-component-library-engineering",
+      "case_id": "rcl-03",
+      "fixture": "fixtures/react-component-library-engineering/react-component-library-engineering-rcl-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "responsive-utility-engineering",
+      "case_id": "rue-01",
+      "fixture": "fixtures/responsive-utility-engineering/responsive-utility-engineering-rue-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "responsive-utility-engineering",
+      "case_id": "rue-02",
+      "fixture": "fixtures/responsive-utility-engineering/responsive-utility-engineering-rue-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "responsive-utility-engineering",
+      "case_id": "rue-03",
+      "fixture": "fixtures/responsive-utility-engineering/responsive-utility-engineering-rue-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "reverse-engineering",
+      "case_id": "re-01",
+      "fixture": "fixtures/reverse-engineering/reverse-engineering-re-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "reverse-engineering",
+      "case_id": "re-02",
+      "fixture": "fixtures/reverse-engineering/reverse-engineering-re-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "reverse-engineering",
+      "case_id": "re-03",
+      "fixture": "fixtures/reverse-engineering/reverse-engineering-re-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "search-retrieval",
+      "case_id": "sea-01",
+      "fixture": "fixtures/search-retrieval/search-retrieval-sea-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "search-retrieval",
+      "case_id": "sea-02",
+      "fixture": "fixtures/search-retrieval/search-retrieval-sea-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "search-retrieval",
+      "case_id": "sea-03",
+      "fixture": "fixtures/search-retrieval/search-retrieval-sea-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "security-review",
+      "case_id": "sr-01",
+      "fixture": "fixtures/security-review/security-review-sr-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "security-review",
+      "case_id": "sr-02",
+      "fixture": "fixtures/security-review/security-review-sr-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "security-review",
+      "case_id": "sr-03",
+      "fixture": "fixtures/security-review/security-review-sr-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "seo-digital-content",
+      "case_id": "seo-01",
+      "fixture": "fixtures/seo-digital-content/seo-digital-content-seo-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "seo-digital-content",
+      "case_id": "seo-02",
+      "fixture": "fixtures/seo-digital-content/seo-digital-content-seo-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "seo-digital-content",
+      "case_id": "seo-03",
+      "fixture": "fixtures/seo-digital-content/seo-digital-content-seo-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "software-testing",
+      "case_id": "st-01",
+      "fixture": "fixtures/software-testing/software-testing-st-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "software-testing",
+      "case_id": "st-02",
+      "fixture": "fixtures/software-testing/software-testing-st-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "software-testing",
+      "case_id": "st-03",
+      "fixture": "fixtures/software-testing/software-testing-st-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "system-design",
+      "case_id": "sys-01",
+      "fixture": "fixtures/system-design/system-design-sys-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "system-design",
+      "case_id": "sys-02",
+      "fixture": "fixtures/system-design/system-design-sys-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "system-design",
+      "case_id": "sys-03",
+      "fixture": "fixtures/system-design/system-design-sys-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "technical-documentation",
+      "case_id": "td-01",
+      "fixture": "fixtures/technical-documentation/technical-documentation-td-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "technical-documentation",
+      "case_id": "td-02",
+      "fixture": "fixtures/technical-documentation/technical-documentation-td-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "technical-documentation",
+      "case_id": "td-03",
+      "fixture": "fixtures/technical-documentation/technical-documentation-td-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "ui-ux-design",
+      "case_id": "ux-01",
+      "fixture": "fixtures/ui-ux-design/ui-ux-design-ux-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "ui-ux-design",
+      "case_id": "ux-02",
+      "fixture": "fixtures/ui-ux-design/ui-ux-design-ux-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "ui-ux-design",
+      "case_id": "ux-03",
+      "fixture": "fixtures/ui-ux-design/ui-ux-design-ux-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "web-motion-accessibility",
+      "case_id": "wma-01",
+      "fixture": "fixtures/web-motion-accessibility/web-motion-accessibility-wma-01/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "web-motion-accessibility",
+      "case_id": "wma-02",
+      "fixture": "fixtures/web-motion-accessibility/web-motion-accessibility-wma-02/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    },
+    {
+      "skill": "web-motion-accessibility",
+      "case_id": "wma-03",
+      "fixture": "fixtures/web-motion-accessibility/web-motion-accessibility-wma-03/task.md",
+      "fixture_status": "passed",
+      "missing": [],
+      "agent_status": "unverified",
+      "claim": "fixture contract only; no agent task executed"
+    }
+  ],
+  "summary": {
+    "total": 126,
+    "fixture_passed": 126,
+    "agent_results": "not run"
+  }
+}

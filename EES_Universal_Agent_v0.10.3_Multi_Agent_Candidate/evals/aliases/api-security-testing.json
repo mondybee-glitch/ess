@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "skill_id": "api-security-testing",
+  "evaluation_mode": "contract-only-until-agent-run",
+  "cases": [
+    {
+      "id": "api-security-testing-01",
+      "title": "Object Level Authorization",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-04-01-api-security-testing",
+      "input": {
+        "request": "Test API endpoints for broken object-level authorization.",
+        "scenario": "object-level-authorization"
+      },
+      "expected_output": "Out-of-scope object IDs cannot reveal or modify another user’s data.",
+      "automated_checks": [
+        "two-user negative test passes",
+        "response and side effect are checked"
+      ],
+      "human_review_rubric": [
+        "scope is authorized and bounded",
+        "both reads and writes are covered"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Out-of-scope object IDs cannot reveal or modify another user’s data.",
+        "Verification requirement: two-user negative test passes",
+        "Verification requirement: response and side effect are checked"
+      ]
+    },
+    {
+      "id": "api-security-testing-02",
+      "title": "Input Boundaries",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-04-02-api-security-testing",
+      "input": {
+        "request": "Fuzz boundary values for a public JSON endpoint.",
+        "scenario": "input-boundaries"
+      },
+      "expected_output": "Malformed and oversized inputs fail safely within documented limits.",
+      "automated_checks": [
+        "invalid types and size boundaries tested",
+        "service remains responsive"
+      ],
+      "human_review_rubric": [
+        "payloads are non-destructive",
+        "validation is server-side"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Malformed and oversized inputs fail safely within documented limits.",
+        "Verification requirement: invalid types and size boundaries tested",
+        "Verification requirement: service remains responsive"
+      ]
+    },
+    {
+      "id": "api-security-testing-03",
+      "title": "Rate Limits",
+      "fixture": "fixtures/engineering-v072.json",
+      "fixture_selector": "v072-04-03-api-security-testing",
+      "input": {
+        "request": "Verify authentication endpoint throttling and lockout protections.",
+        "scenario": "rate-limits"
+      },
+      "expected_output": "Rate limits are consistent, observable, and do not expose account-existence signals.",
+      "automated_checks": [
+        "threshold and reset tests pass",
+        "responses are compared for account enumeration"
+      ],
+      "human_review_rubric": [
+        "test scope and rate are bounded",
+        "false lockouts are considered"
+      ],
+      "status": "defined-not-run",
+      "agent_status": "not-run",
+      "success_criteria": [
+        "Required outcome: Rate limits are consistent, observable, and do not expose account-existence signals.",
+        "Verification requirement: threshold and reset tests pass",
+        "Verification requirement: responses are compared for account enumeration"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-24T14:39:57.249944+00:00",
+  "package_version": "0.9.2",
+  "review_type": "targeted contract-fix review; not a production certification",
+  "changes": [
+    {
+      "id": "release-report-version",
+      "status": "fixed",
+      "detail": "scripts/check_all.py now reads package-manifest.json version; regression test added."
+    },
+    {
+      "id": "npm-direct-dependency-drift",
+      "status": "improved",
+      "detail": "Playwright fixture direct dependencies are exact-pinned; no package-lock.json was generated because npm lockfile generation timed out in this environment."
+    },
+    {
+      "id": "fixture-runner-output-path",
+      "status": "known-limitation",
+      "detail": "run_multilang_fixtures.py requires its --output path to remain within the repository; an absolute /tmp output path raises ValueError. Successful run used reports/review-multilang-fresh.json."
+    }
+  ],
+  "fresh_checks": [
+    {
+      "name": "zip-integrity",
+      "status": "passed",
+      "detail": "Source ZIP testzip() returned None."
+    },
+    {
+      "name": "check_all_version_regression",
+      "status": "passed",
+      "detail": "python -m unittest tests.test_check_all_version -v: 1 test passed."
+    },
+    {
+      "name": "python_operational_fixtures",
+      "status": "passed",
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "timed_out": 0,
+      "agent_effectiveness": "not evaluated"
+    },
+    {
+      "name": "multilang_fixtures",
+      "status": "passed",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "timed_out": 0,
+        "skipped": 0
+      },
+      "detail": "One JS fixture passed; Playwright browser tests were not included."
+    },
+    {
+      "name": "python_compile",
+      "status": "passed",
+      "detail": "check_all.py and test_check_all_version.py compile successfully."
+    }
+  ],
+  "production_blockers": [
+    "No package-lock.json; exact-pinned direct dependencies do not replace a committed transitive lockfile.",
+    "Clean Docker build not verified; base image and OS packages are not digest/version pinned.",
+    "Full pytest suite did not complete within available execution window; no full-suite pass is claimed.",
+    "Playwright browser tests and clean-container runtime remain unverified.",
+    "Live Gemini integration, SBOM/CVE scanning, secret scan, signed-ledger review, and independent security review remain pending.",
+    "Saved historic validation reports are not equivalent to a fresh full validation run."
+  ],
+  "release_decision": "Keep as v0.9.2 engineering candidate for controlled internal validation only. Do not label v1.0.0-GA or production approved."
+}

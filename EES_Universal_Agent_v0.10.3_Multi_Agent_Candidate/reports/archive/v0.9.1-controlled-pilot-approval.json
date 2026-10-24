@@ -1,0 +1,72 @@
+{
+  "document_title": "EES Gemini v0.9.1 Controlled Internal Pilot Approval",
+  "assessment_type": "scoped internal release authorization",
+  "version": "0.9.1",
+  "decision": "APPROVED FOR CONTROLLED INTERNAL PILOT ONLY — NOT CERTIFIED FOR PRODUCTION",
+  "decision_date": "2026-10-24",
+  "scope": "Use by authorized internal testers in a non-production, least-privilege environment. Do not expose to external users, process sensitive production data, or enable unrestricted command/file access.",
+  "verified_facts": {
+    "canonical_skill_folders": 32,
+    "preserved_capability_ids": 74,
+    "evaluation_contracts": 222,
+    "central_fixtures": 51,
+    "operational_fixture_projects": 13
+  },
+  "checks": [
+    {
+      "name": "Structural validator",
+      "command": "python scripts/validate.py",
+      "status": "PASS",
+      "evidence": "Run immediately before packaging: structurally_valid; 32 skills; 74 capabilities; 222 evaluation contracts; 51 central fixtures; 13 operational fixture projects; zero warnings."
+    },
+    {
+      "name": "Routing audit",
+      "command": "python scripts/audit_routing.py",
+      "status": "PASS",
+      "evidence": "Run immediately before packaging: zero errors and zero warnings."
+    },
+    {
+      "name": "Operational fixtures",
+      "command": "python scripts/run_operational_fixtures.py",
+      "status": "PASS_RECORDED",
+      "evidence": "Existing project report records 13 passed, 0 failed, 0 timed out; this does not evaluate agent effectiveness."
+    },
+    {
+      "name": "Focused regression suites",
+      "status": "PASS_RECORDED",
+      "evidence": "Previously recorded focused suites passed; individual additional test files passed. Full suite did not complete in the available environment."
+    },
+    {
+      "name": "Full pytest suite",
+      "command": "python -m pytest -q --durations=20",
+      "status": "BLOCKED_INCOMPLETE",
+      "evidence": "Timed out before completion. Some individual test modules also timed out when run separately; full-suite success is not claimed."
+    },
+    {
+      "name": "Live Gemini integration",
+      "status": "NOT_RUN",
+      "evidence": "No live Gemini CLI/API run or provider-credential validation was performed."
+    },
+    {
+      "name": "Independent security review",
+      "status": "NOT_PERFORMED",
+      "evidence": "No independent penetration test or OS-level sandbox verification."
+    }
+  ],
+  "approval_conditions": [
+    "Internal testers only; isolated non-production environment.",
+    "Least-privilege credentials and filesystem permissions.",
+    "No unrestricted shell or destructive actions without human approval.",
+    "Record test failures and incidents; stop pilot if unexpected file access or command execution occurs."
+  ],
+  "production_release_blockers": [
+    "Complete the entire pytest suite in clean CI and resolve timeouts/order-dependent hangs.",
+    "Run supported live Gemini integration tests.",
+    "Complete human semantic review of all 32 canonical skills.",
+    "Complete independent security review and validate runtime sandbox boundaries."
+  ],
+  "limitations": [
+    "This is an internal scoped authorization, not a third-party certificate, regulatory certification, or production approval.",
+    "No claim is made that the suite is more intelligent or effective than the underlying model."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-24T15:35:08.052401+00:00",
+  "runner": "scripts/run_multilang_fixtures.py",
+  "claim_boundary": "Only listed fixture outcomes are covered; skipped means not tested. Existing Python fixtures run via scripts/run_operational_fixtures.py.",
+  "summary": {
+    "total": 2,
+    "passed": 1,
+    "failed": 0,
+    "timed_out": 0,
+    "skipped": 1
+  },
+  "records": [
+    {
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "TAP version 13\n# Subtest: repeated sequential key reuses result\nok 1 - repeated sequential key reuses result\n  ---\n  duration_ms: 1.122783\n  type: 'test'\n  ...\n# Subtest: missing key is rejected\nok 2 - missing key is rejected\n  ---\n  duration_ms: 0.446824\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 58.138208\n",
+      "stderr": "",
+      "fixture_id": "node-idempotency-boundary",
+      "language": "JavaScript",
+      "artifact_hashes": {
+        "fixture.json": "9f9b104e940a9e54be483e46cdbec181bbc4666ad235f3987beec42d479da054",
+        "subject.mjs": "6f044163aba85e684a2daba5663832486cc6a90bd98a86eec07b3ac79138efee",
+        "subject.test.mjs": "cbba2d96a2c83eb436e6f7045738c2cddaa8298bd6a1e97fe5f557c7513d09f0"
+      }
+    },
+    {
+      "status": "skipped",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "Playwright dependency not installed; runner will not install dependencies",
+      "fixture_id": "playwright-ui-state",
+      "language": "TypeScript",
+      "artifact_hashes": {
+        "contrast-checks.md": "b783f8d1751d7cae6affa8669ca0d6749a2d12aaa55b759943f5e57931308675",
+        "fixture.json": "c470bf4c10368a47f5ec4101bd4adf1cd56cc4e6e7e4d447ccadcebae0f11644",
+        "package.json": "82950254e335757b14e63dcb30f9ac9a2fa9b9b253ed8810d8b00271faa521db",
+        "playwright.config.ts": "0742b6c6fd998de73d1d002d9658c9ec7904a7ccca4d8c7ff26c7049d96ab457",
+        "subject.spec.ts": "a6a1838e8f54d20d34edec6a5d647c291e0dd56dda8ff2006a04a7c9c95cc29a"
+      }
+    }
+  ]
+}

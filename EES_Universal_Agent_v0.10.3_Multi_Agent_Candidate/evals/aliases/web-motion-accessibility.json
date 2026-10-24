@@ -1,0 +1,113 @@
+{
+  "skill": "web-motion-accessibility",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "wma-01",
+      "input": "Add a modal transition that remains accessible with reduced motion.",
+      "success_criteria": [
+        "Reduced-motion path preserves content and focus",
+        "Keyboard and escape behavior remain correct",
+        "Motion purpose and evidence are recorded"
+      ],
+      "result": null,
+      "fixture": "fixtures/web-motion-accessibility/web-motion-accessibility-wma-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Reduced-motion path preserves content and focus",
+          "Keyboard and escape behavior remain correct",
+          "Motion purpose and evidence are recorded"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "wma-02",
+      "input": "Review a dashboard that uses infinite attention animations.",
+      "success_criteria": [
+        "Unbounded motion is identified",
+        "A bounded non-motion alternative is proposed",
+        "Flashing and motion sensitivity risks are checked"
+      ],
+      "result": null,
+      "fixture": "fixtures/web-motion-accessibility/web-motion-accessibility-wma-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Unbounded motion is identified",
+          "A bounded non-motion alternative is proposed",
+          "Flashing and motion sensitivity risks are checked"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "wma-03",
+      "input": "Add animated loading, success, and error states to a form.",
+      "success_criteria": [
+        "Each state has a non-motion functional representation",
+        "Screen-reader and focus behavior are preserved",
+        "Interrupted and repeated submissions are handled"
+      ],
+      "result": null,
+      "fixture": "fixtures/web-motion-accessibility/web-motion-accessibility-wma-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Each state has a non-motion functional representation",
+          "Screen-reader and focus behavior are preserved",
+          "Interrupted and repeated submissions are handled"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "web-motion-accessibility"
+}

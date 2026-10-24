@@ -1,0 +1,113 @@
+{
+  "skill": "responsive-utility-engineering",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "rue-01",
+      "input": "Build a mobile-first dashboard with grid and utility classes.",
+      "success_criteria": [
+        "Content constraints and breakpoints are explicit",
+        "Long content and zoom are tested",
+        "Overflow and screenshot evidence are retained"
+      ],
+      "result": null,
+      "fixture": "fixtures/responsive-utility-engineering/responsive-utility-engineering-rue-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Content constraints and breakpoints are explicit",
+          "Long content and zoom are tested",
+          "Overflow and screenshot evidence are retained"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "rue-02",
+      "input": "Fix an RTL layout with incorrect gutters and icon placement.",
+      "success_criteria": [
+        "Logical properties or explicit direction rules are used",
+        "Mixed-direction text is checked",
+        "LTR behavior is not regressed"
+      ],
+      "result": null,
+      "fixture": "fixtures/responsive-utility-engineering/responsive-utility-engineering-rue-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Logical properties or explicit direction rules are used",
+          "Mixed-direction text is checked",
+          "LTR behavior is not regressed"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "rue-03",
+      "input": "Review utility class precedence causing hidden content on small screens.",
+      "success_criteria": [
+        "Precedence and state ownership are identified",
+        "An accessible fix is proposed",
+        "Multiple viewport states are verified"
+      ],
+      "result": null,
+      "fixture": "fixtures/responsive-utility-engineering/responsive-utility-engineering-rue-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Precedence and state ownership are identified",
+          "An accessible fix is proposed",
+          "Multiple viewport states are verified"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "responsive-utility-engineering"
+}

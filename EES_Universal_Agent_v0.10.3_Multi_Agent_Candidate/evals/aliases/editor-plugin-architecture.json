@@ -1,0 +1,113 @@
+{
+  "skill": "editor-plugin-architecture",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "epa-01",
+      "input": "Add a plugin-defined node type to a schema-driven editor.",
+      "success_criteria": [
+        "Registration and schema validation are explicit",
+        "Renderer and state ownership are separated",
+        "Unsupported plugin versions fail safely"
+      ],
+      "result": null,
+      "fixture": "fixtures/editor-plugin-architecture/editor-plugin-architecture-epa-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Registration and schema validation are explicit",
+          "Renderer and state ownership are separated",
+          "Unsupported plugin versions fail safely"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "epa-02",
+      "input": "Implement undo/redo and persistence for editor mutations.",
+      "success_criteria": [
+        "Transactions restore state correctly",
+        "Transient state is excluded or justified",
+        "Reload and malformed data paths are tested"
+      ],
+      "result": null,
+      "fixture": "fixtures/editor-plugin-architecture/editor-plugin-architecture-epa-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Transactions restore state correctly",
+          "Transient state is excluded or justified",
+          "Reload and malformed data paths are tested"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "epa-03",
+      "input": "Expose a bounded editor command through an MCP tool.",
+      "success_criteria": [
+        "Input validation and authorization are explicit",
+        "Command is idempotent or duplicate-safe",
+        "Failure does not corrupt the document"
+      ],
+      "result": null,
+      "fixture": "fixtures/editor-plugin-architecture/editor-plugin-architecture-epa-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Input validation and authorization are explicit",
+          "Command is idempotent or duplicate-safe",
+          "Failure does not corrupt the document"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "technical reasoning is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "editor-plugin-architecture"
+}

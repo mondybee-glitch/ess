@@ -1,0 +1,119 @@
+{
+  "skill": "frontend-development",
+  "status": "defined-not-run",
+  "cases": [
+    {
+      "id": "fe-01",
+      "input": "Add a filter control to an existing dashboard table without changing the API.",
+      "success_criteria": [
+        "Filter updates rows and shows an empty state",
+        "Operable by keyboard with visible focus",
+        "Sorting and pagination unaffected",
+        "Lint, typecheck, and build run with results shown"
+      ],
+      "result": null,
+      "fixture": "fixtures/frontend-development/frontend-development-fe-01/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Filter updates rows and shows an empty state",
+          "Operable by keyboard with visible focus",
+          "Sorting and pagination unaffected",
+          "Lint, typecheck, and build run with results shown"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "fe-02",
+      "input": "Make an English LTR landing page work correctly in Arabic RTL.",
+      "success_criteria": [
+        "`dir=rtl` applied",
+        "Logical properties used instead of left/right",
+        "Directional icons mirrored where meaningful",
+        "Screenshots at 360 and 1280 widths"
+      ],
+      "result": null,
+      "fixture": "fixtures/frontend-development/frontend-development-fe-02/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "`dir=rtl` applied",
+          "Logical properties used instead of left/right",
+          "Directional icons mirrored where meaningful",
+          "Screenshots at 360 and 1280 widths"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    },
+    {
+      "id": "fe-03",
+      "input": "A landing page has CLS 0.3. Reduce it.",
+      "success_criteria": [
+        "Baseline measured and reported",
+        "Cause identified",
+        "After-measurement under the same conditions",
+        "CLS below 0.1 or honest report of the gap"
+      ],
+      "result": null,
+      "fixture": "fixtures/frontend-development/frontend-development-fe-03/task.md",
+      "expected_output": {
+        "required_artifacts": [
+          "changed files or report",
+          "exact command results",
+          "unverified limitations"
+        ],
+        "properties": [
+          "Baseline measured and reported",
+          "Cause identified",
+          "After-measurement under the same conditions",
+          "CLS below 0.1 or honest report of the gap"
+        ]
+      },
+      "automated_checks": [
+        "fixture exists",
+        "declared commands are recorded",
+        "expected properties are checked",
+        "no unsupported passed claim"
+      ],
+      "human_review_rubric": [
+        "scope and authorization respected",
+        "root cause or stated design is coherent",
+        "evidence directly supports each claimed result",
+        "regressions and uncertainty are disclosed"
+      ]
+    }
+  ],
+  "schema_version": 2,
+  "skill_id": "frontend-development"
+}

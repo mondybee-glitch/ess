@@ -1,0 +1,158 @@
+{
+  "release_label": "EES Gemini v0.9.2 engineering completion candidate",
+  "approval_scope": "Engineering candidate validated locally; GA remains blocked pending a real npm lockfile, Playwright and clean Docker CI, resolved dependency audits/SBOM, full-history secret scan, Trivy container CVE triage, immutable Docker base digest pin, live Gemini verification, and independent security review.",
+  "date": "2026-10-24",
+  "changes": [
+    "Added external-skill intake and provenance policy",
+    "Added evidence-based incumbent-versus-candidate scorecard with non-compensable license and security gates",
+    "Added MERGE_UPGRADE / ADD_DISTINCT_SKILL / KEEP_EXISTING / QUARANTINE / REJECT decisions",
+    "Added canonical placement rules, negative-trigger routing checks, regression and rollback requirements",
+    "Added intake decision template, JSON Schema, Arabic and English README notes, and focused policy tests",
+    "Added domain-specific blind-spot traps and hard invariants to all 32 canonical skills",
+    "Added native Google GenAI SDK adapter and optional dependency manifest",
+    "Added Node.js and Playwright operational fixtures plus multilingual fixture runner",
+    "Added end-to-end task-runtime lifecycle, invalid-transition, and concurrent-read tests",
+    "Archived historical release reports and created a single current validation report",
+    "Fixed fixture-count regression to derive the expected fixture count dynamically.",
+    "Hardened subprocess test helpers to kill process groups on timeout, preventing descendant processes from holding test pipes open.",
+    "Added real npm lockfile bootstrap and a manual CI workflow to resolve and preserve a reviewed lockfile artifact.",
+    "Added release assurance CI gates for browser tests, dependency audits, resolved-environment SBOMs, full-history secret scanning, Docker build, and live Gemini smoke verification.",
+    "Added local secret-entropy scanner and an explicitly partial manifest SBOM; no synthetic lockfile or release-grade claim is made."
+  ],
+  "checks": {
+    "structural_validation": {
+      "status": "PASS",
+      "command": "python scripts/validate.py --full",
+      "details": "32 canonical skills, 74 capabilities, 222 eval contracts, 51 central fixtures, 9 checks, 16 operational fixture projects; 0 warnings."
+    },
+    "focused_regression": {
+      "status": "PASS",
+      "command": "python -m pytest -q tests/test_gemini_native_adapter.py tests/test_e2e_runtime_lifecycle.py tests/test_validate.py tests/test_operational_fixtures.py",
+      "result": "Historical focused result: 8 passed in 26.50s; current complete suite also passed."
+    },
+    "python_operational_fixtures": {
+      "status": "PASS",
+      "command": "python scripts/run_operational_fixtures.py --timeout 60 --output reports/operational-fixtures-local-latest.json",
+      "result": "14 passed, 0 failed, 0 timed out; agent effectiveness not evaluated."
+    },
+    "javascript_operational_fixture": {
+      "status": "PASS_WITH_PLAYWRIGHT_SKIPPED",
+      "command": "python scripts/run_multilang_fixtures.py --include-playwright --timeout 60 --output reports/multilang-fixtures-local-latest.json",
+      "result": "JavaScript fixture passed; its two Node tests passed. Playwright fixture skipped because its dependency/browser runtime is not installed in this environment."
+    },
+    "playwright_fixture": {
+      "status": "SKIPPED_NOT_PASSED",
+      "details": "Playwright dependencies/browser not installed locally; release CI blocks on a committed real package-lock and must run the browser fixture."
+    },
+    "full_pytest_suite": {
+      "status": "PASS_LOCAL",
+      "command": "python -m pytest -q tests",
+      "result": "67 passed, 9 subtests passed in 80.59s. This was a local execution, not a clean CI/container run."
+    },
+    "native_gemini_live_call": {
+      "status": "BLOCKED_NO_API_KEY",
+      "details": "No live provider call was performed because GEMINI_API_KEY was not supplied."
+    },
+    "context_cache": {
+      "status": "IMPLEMENTED_OPT_IN_NOT_LIVE_VERIFIED",
+      "details": "Set EES_GEMINI_CONTEXT_CACHE=1; TTL configurable; cache cleanup attempted; provider-specific token/model/region/billing behavior still needs live verification"
+    },
+    "circuit_breaker_integration": {
+      "status": "BLOCKED_ON_EXISTING_ARCHITECTURE",
+      "details": "No explicit circuit-breaker implementation was found in the current runtime/scripts/integration code. E2E tests cover event ledger, state transitions, invalid transition, concurrent reads, and release gate; circuit-breaker behavior is not claimed. Add only after agreeing on the existing component/contract or explicitly approving a new one."
+    },
+    "release_status": "v0.9.2 engineering candidate; not v1.0.0-GA and not production-certified",
+    "npm_lockfile": {
+      "status": "BLOCKED",
+      "command": "python scripts/bootstrap_node_lock.py --timeout 25",
+      "result": "npm timed out (exit 124) before creating package-lock.json. No lockfile was hand-authored or fabricated; run .github/workflows/resolve-node-lock-candidate.yml on a connected GitHub runner."
+    },
+    "npm_dependency_audit": {
+      "status": "NOT_RUN_LOCALLY_CI_GATE_CONFIGURED",
+      "details": "Registry access is unavailable in this environment; npm audit is configured after lock resolution in release-assurance CI."
+    },
+    "python_dependency_audit_and_full_sbom": {
+      "status": "NOT_RUN_LOCALLY_CI_GATE_CONFIGURED",
+      "details": "pip-audit is not installed locally. Release CI installs pip-audit and CycloneDX tooling and records resolved-environment SBOM evidence."
+    },
+    "candidate_manifest_sbom": {
+      "status": "PARTIAL_NOT_RELEASE_GRADE",
+      "details": "4 direct manifest components; transitive dependency resolution is unavailable locally."
+    },
+    "secret_entropy_scan": {
+      "status": "PASS_HEURISTIC_ONLY",
+      "command": "python scripts/secret_entropy_scan.py --output reports/secret-entropy-scan-local-latest.json",
+      "result": "0 heuristic findings across 612 text files. This does not replace full history scanning or independent review."
+    },
+    "gitleaks_full_history": {
+      "status": "NOT_RUN_LOCALLY_CI_GATE_CONFIGURED",
+      "details": "Release workflow scans full Git history with Gitleaks 8.30.0 pinned; no Gitleaks binary is installed locally."
+    },
+    "docker_clean_build": {
+      "status": "NOT_RUN_LOCALLY_CI_GATE_CONFIGURED",
+      "details": "Docker is not installed in this environment. Release CI includes a no-cache Docker build gate; Dockerfile requires npm ci and a real committed lockfile."
+    },
+    "independent_security_review": {
+      "status": "PENDING_EXTERNAL_REVIEW",
+      "details": "No independent human reviewer has reviewed the candidate."
+    },
+    "docker_image_cve_scan": {
+      "status": "NOT_RUN_LOCALLY_CI_CONFIGURED",
+      "details": "Trivy image scan fails CI for CRITICAL/HIGH OS/library CVEs; local Docker/Trivy are unavailable."
+    },
+    "docker_base_image_digest": {
+      "status": "PENDING_PIN_AND_CVE_TRIAGE",
+      "details": "Dockerfile uses mutable node:22-bookworm-slim tag; resolve security findings then commit a reviewed multi-platform digest."
+    }
+  },
+  "not_completed": [
+    "A real npm package-lock.json has not been generated/committed; local registry resolution timed out.",
+    "Playwright browser tests were skipped locally and must run in CI from the committed lockfile.",
+    "Clean Docker build/runtime restriction checks must run in an actual Docker-capable runner.",
+    "npm audit, pip-audit, full resolved-dependency SBOM generation, and full-history Gitleaks scan have not run in this local environment.",
+    "Live Gemini API smoke test is blocked because GEMINI_API_KEY is not configured.",
+    "Independent security review and signed-ledger review remain external release gates.",
+    "Agent-run skill effectiveness and universal compatibility are not established by repository tests.",
+    "An explicit circuit-breaker component/contract is not established in the current runtime; any integration requirement must be defined and tested before claiming coverage.",
+    "Container image CVE scanning (Trivy) has not run locally and must pass in CI with all CRITICAL/HIGH findings triaged.",
+    "The Docker base image reference is still a mutable tag; commit a reviewed digest pin after vulnerability triage."
+  ],
+  "policy_note": "Imported skills are candidates, not automatic additions. Benchmark first; merge into an existing canonical skill when overlapping, and create a new route only for a distinct task intent.",
+  "candidate_version": "0.9.2",
+  "release_status": "ENGINEERING_CANDIDATE_NOT_PRODUCTION_APPROVED",
+  "checks_added_or_updated": {
+    "crypto_pattern_guard": {
+      "status": "PASS",
+      "evidence": "pytest operational-fixtures/crypto-envelope-nonce-safety/subject.py; 3 passed"
+    },
+    "wcag_contrast_checker": {
+      "status": "PASS",
+      "evidence": "#000000/#FFFFFF 21.00:1 passes AA; #777777/#FFFFFF 4.48:1 correctly fails normal-text AA"
+    },
+    "structural_validation": {
+      "status": "PASS",
+      "evidence": "scripts/validate.py --full; version 0.9.2; 32 canonical skills, 74 capabilities, 222 eval contracts; exit code 0"
+    },
+    "playwright_execution": {
+      "status": "NOT_RUN",
+      "reason": "Browser dependencies were not installed/verified in this environment"
+    },
+    "full_pytest_suite": {
+      "status": "PASS_LOCAL",
+      "evidence": "67 passed, 9 subtests passed in 80.59s; clean CI/clean-container status still pending."
+    },
+    "npm_lockfile": {
+      "status": "BLOCKED",
+      "reason": "Registry resolution timed out; real lockfile bootstrap and artifact-preserving workflow added; no synthetic lockfile."
+    },
+    "sbom_cve_secret_scan": {
+      "status": "PARTIAL_WITH_CI_GATES",
+      "reason": "Manifest BOM and local heuristic secret scan are present; release CI is configured for resolved BOMs, npm/pip audits, and full-history Gitleaks. Those external checks have not yet run here."
+    },
+    "signed_telemetry_ledger": {
+      "status": "NOT_IMPLEMENTED",
+      "reason": "Hash integrity is not a digital signature; separate design and implementation review required"
+    }
+  },
+  "local_assurance_timestamp": "2026-10-24T15:40:45Z"
+}

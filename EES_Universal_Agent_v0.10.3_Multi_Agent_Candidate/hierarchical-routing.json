@@ -1,0 +1,577 @@
+{
+  "schema_version": "1.0",
+  "release": "0.9.0-Candidate",
+  "stage1_routes": [
+    {
+      "id": "route-01",
+      "name": "Agent workflows & orchestration",
+      "skills": [
+        "agent-workflow-orchestration",
+        "agent-workflow-specification",
+        "multi-agent-orchestration"
+      ]
+    },
+    {
+      "id": "route-02",
+      "name": "LLM tools & MCP",
+      "skills": [
+        "ai-agents-rag-mcp",
+        "llm-tool-contracts",
+        "mcp-server-engineering"
+      ]
+    },
+    {
+      "id": "route-03",
+      "name": "RAG & search",
+      "skills": [
+        "rag-ingestion-and-vector-retrieval",
+        "search-retrieval"
+      ]
+    },
+    {
+      "id": "route-04",
+      "name": "LLM evaluation & observability",
+      "skills": [
+        "llm-evaluation-observability",
+        "machine-learning-evaluation",
+        "observability-and-ai-evaluation"
+      ]
+    },
+    {
+      "id": "route-05",
+      "name": "ML lifecycle & synthetic media governance",
+      "skills": [
+        "ml-lifecycle-and-synthetic-media-governance"
+      ]
+    },
+    {
+      "id": "route-06",
+      "name": "Prompt provenance & safety",
+      "skills": [
+        "prompt-provenance-and-safety"
+      ]
+    },
+    {
+      "id": "route-07",
+      "name": "Frontend implementation",
+      "skills": [
+        "frontend-build-quality",
+        "frontend-development",
+        "frontend-quality-and-cross-platform-ui"
+      ]
+    },
+    {
+      "id": "route-08",
+      "name": "React & component systems",
+      "skills": [
+        "accessible-component-behavior",
+        "react-component-library-engineering"
+      ]
+    },
+    {
+      "id": "route-09",
+      "name": "Responsive UI & cross-platform",
+      "skills": [
+        "mobile-desktop-development",
+        "responsive-utility-engineering"
+      ]
+    },
+    {
+      "id": "route-10",
+      "name": "UX, design systems & RTL",
+      "skills": [
+        "design-intelligence-recommendation",
+        "design-system-theming-rtl",
+        "ui-design-system-accessibility",
+        "ui-ux-design"
+      ]
+    },
+    {
+      "id": "route-11",
+      "name": "Brand & graphic design",
+      "skills": [
+        "brand-guidelines",
+        "graphic-design",
+        "web-artifacts-builder"
+      ]
+    },
+    {
+      "id": "route-12",
+      "name": "Motion & animation",
+      "skills": [
+        "css-motion-performance",
+        "motion-system-engineering",
+        "web-motion-accessibility"
+      ]
+    },
+    {
+      "id": "route-13",
+      "name": "Backend architecture",
+      "skills": [
+        "backend-development",
+        "fullstack-platform-boundaries",
+        "system-design"
+      ]
+    },
+    {
+      "id": "route-14",
+      "name": "Backend production readiness",
+      "skills": [
+        "backend-production-readiness",
+        "backend-reliability-recovery"
+      ]
+    },
+    {
+      "id": "route-15",
+      "name": "Backend performance",
+      "skills": [
+        "backend-performance",
+        "nodejs-production-performance"
+      ]
+    },
+    {
+      "id": "route-16",
+      "name": "Node.js architecture & testing",
+      "skills": [
+        "nodejs-component-architecture",
+        "nodejs-outcome-testing"
+      ]
+    },
+    {
+      "id": "route-17",
+      "name": "API contracts & integrations",
+      "skills": [
+        "api-design-contracts",
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "route-18",
+      "name": "Identity & authorization",
+      "skills": [
+        "backend-auth-authorization"
+      ]
+    },
+    {
+      "id": "route-19",
+      "name": "API security",
+      "skills": [
+        "api-security-testing",
+        "defensive-appsec-assessment"
+      ]
+    },
+    {
+      "id": "route-20",
+      "name": "Security review & response",
+      "skills": [
+        "defensive-security-ops",
+        "security-architecture-and-response",
+        "security-review"
+      ]
+    },
+    {
+      "id": "route-21",
+      "name": "Security automation & skill intake",
+      "skills": [
+        "agent-skill-security-intake",
+        "defensive-automation-and-audit",
+        "skill-package-governance"
+      ]
+    },
+    {
+      "id": "route-22",
+      "name": "Databases & migrations",
+      "skills": [
+        "database-engineering"
+      ]
+    },
+    {
+      "id": "route-23",
+      "name": "Data engineering & analytics",
+      "skills": [
+        "data-engineering-analytics",
+        "data-performance-scalability"
+      ]
+    },
+    {
+      "id": "route-24",
+      "name": "Async jobs & messaging",
+      "skills": [
+        "async-jobs-messaging"
+      ]
+    },
+    {
+      "id": "route-25",
+      "name": "Testing & diagnostics",
+      "skills": [
+        "backend-integration-testing",
+        "browser-e2e-and-test-diagnostics",
+        "software-testing"
+      ]
+    },
+    {
+      "id": "route-26",
+      "name": "Debugging & reverse engineering",
+      "skills": [
+        "debugging-and-code-repair",
+        "reverse-engineering"
+      ]
+    },
+    {
+      "id": "route-27",
+      "name": "DevOps & deployment",
+      "skills": [
+        "cloud-architecture-cost",
+        "devops-and-deployment"
+      ]
+    },
+    {
+      "id": "route-28",
+      "name": "Platform operations & research",
+      "skills": [
+        "gitea-platform-operations",
+        "github-research"
+      ]
+    },
+    {
+      "id": "route-29",
+      "name": "Browser & editor extensions",
+      "skills": [
+        "browser-editor-extensions",
+        "editor-plugin-architecture"
+      ]
+    },
+    {
+      "id": "route-30",
+      "name": "Documentation & SEO",
+      "skills": [
+        "seo-digital-content",
+        "technical-documentation"
+      ]
+    },
+    {
+      "id": "route-31",
+      "name": "Media, games & desktop workflows",
+      "skills": [
+        "game-development",
+        "local-desktop-media-lifecycle",
+        "media-production"
+      ]
+    },
+    {
+      "id": "route-32",
+      "name": "Specialist systems & finance",
+      "skills": [
+        "backend-observability",
+        "embedded-iot",
+        "payments-financial",
+        "skill-creation-and-evaluation"
+      ]
+    }
+  ],
+  "source_skill_count": 74,
+  "source_skills_preserved": true,
+  "canonical_route_count": 32,
+  "canonical_skill_count": 32,
+  "canonical_skills": [
+    {
+      "id": "agent-workflows-orchestration",
+      "route_id": "route-01",
+      "name": "Agent workflows & orchestration",
+      "aliases": [
+        "agent-workflow-orchestration",
+        "agent-workflow-specification",
+        "multi-agent-orchestration"
+      ]
+    },
+    {
+      "id": "llm-tools-mcp",
+      "route_id": "route-02",
+      "name": "LLM tools & MCP",
+      "aliases": [
+        "ai-agents-rag-mcp",
+        "llm-tool-contracts",
+        "mcp-server-engineering"
+      ]
+    },
+    {
+      "id": "rag-search",
+      "route_id": "route-03",
+      "name": "RAG & search",
+      "aliases": [
+        "rag-ingestion-and-vector-retrieval",
+        "search-retrieval"
+      ]
+    },
+    {
+      "id": "ai-evaluation-observability",
+      "route_id": "route-04",
+      "name": "LLM evaluation & observability",
+      "aliases": [
+        "llm-evaluation-observability",
+        "machine-learning-evaluation",
+        "observability-and-ai-evaluation"
+      ]
+    },
+    {
+      "id": "ml-lifecycle-governance",
+      "route_id": "route-05",
+      "name": "ML lifecycle & synthetic media governance",
+      "aliases": [
+        "ml-lifecycle-and-synthetic-media-governance"
+      ]
+    },
+    {
+      "id": "prompt-provenance-safety",
+      "route_id": "route-06",
+      "name": "Prompt provenance & safety",
+      "aliases": [
+        "prompt-provenance-and-safety"
+      ]
+    },
+    {
+      "id": "frontend-engineering",
+      "route_id": "route-07",
+      "name": "Frontend implementation",
+      "aliases": [
+        "frontend-build-quality",
+        "frontend-development",
+        "frontend-quality-and-cross-platform-ui"
+      ]
+    },
+    {
+      "id": "react-component-systems",
+      "route_id": "route-08",
+      "name": "React & component systems",
+      "aliases": [
+        "accessible-component-behavior",
+        "react-component-library-engineering"
+      ]
+    },
+    {
+      "id": "responsive-cross-platform",
+      "route_id": "route-09",
+      "name": "Responsive UI & cross-platform",
+      "aliases": [
+        "mobile-desktop-development",
+        "responsive-utility-engineering"
+      ]
+    },
+    {
+      "id": "design-systems-accessibility-rtl",
+      "route_id": "route-10",
+      "name": "UX, design systems & RTL",
+      "aliases": [
+        "design-intelligence-recommendation",
+        "design-system-theming-rtl",
+        "ui-design-system-accessibility",
+        "ui-ux-design"
+      ]
+    },
+    {
+      "id": "brand-graphic-design",
+      "route_id": "route-11",
+      "name": "Brand & graphic design",
+      "aliases": [
+        "brand-guidelines",
+        "graphic-design",
+        "web-artifacts-builder"
+      ]
+    },
+    {
+      "id": "motion-animation",
+      "route_id": "route-12",
+      "name": "Motion & animation",
+      "aliases": [
+        "css-motion-performance",
+        "motion-system-engineering",
+        "web-motion-accessibility"
+      ]
+    },
+    {
+      "id": "backend-architecture",
+      "route_id": "route-13",
+      "name": "Backend architecture",
+      "aliases": [
+        "backend-development",
+        "fullstack-platform-boundaries",
+        "system-design"
+      ]
+    },
+    {
+      "id": "backend-production-readiness",
+      "route_id": "route-14",
+      "name": "Backend production readiness",
+      "aliases": [
+        "backend-production-readiness",
+        "backend-reliability-recovery"
+      ]
+    },
+    {
+      "id": "backend-performance",
+      "route_id": "route-15",
+      "name": "Backend performance",
+      "aliases": [
+        "backend-performance",
+        "nodejs-production-performance"
+      ]
+    },
+    {
+      "id": "nodejs-architecture-testing",
+      "route_id": "route-16",
+      "name": "Node.js architecture & testing",
+      "aliases": [
+        "nodejs-component-architecture",
+        "nodejs-outcome-testing"
+      ]
+    },
+    {
+      "id": "api-contracts-integrations",
+      "route_id": "route-17",
+      "name": "API contracts & integrations",
+      "aliases": [
+        "api-design-contracts",
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "identity-authorization",
+      "route_id": "route-18",
+      "name": "Identity & authorization",
+      "aliases": [
+        "backend-auth-authorization"
+      ]
+    },
+    {
+      "id": "api-security",
+      "route_id": "route-19",
+      "name": "API security",
+      "aliases": [
+        "api-security-testing",
+        "defensive-appsec-assessment"
+      ]
+    },
+    {
+      "id": "security-review-response",
+      "route_id": "route-20",
+      "name": "Security review & response",
+      "aliases": [
+        "defensive-security-ops",
+        "security-architecture-and-response",
+        "security-review"
+      ]
+    },
+    {
+      "id": "security-automation-governance",
+      "route_id": "route-21",
+      "name": "Security automation & skill intake",
+      "aliases": [
+        "agent-skill-security-intake",
+        "defensive-automation-and-audit",
+        "skill-package-governance"
+      ]
+    },
+    {
+      "id": "database-engineering",
+      "route_id": "route-22",
+      "name": "Databases & migrations",
+      "aliases": [
+        "database-engineering"
+      ]
+    },
+    {
+      "id": "data-engineering-analytics",
+      "route_id": "route-23",
+      "name": "Data engineering & analytics",
+      "aliases": [
+        "data-engineering-analytics",
+        "data-performance-scalability"
+      ]
+    },
+    {
+      "id": "async-jobs-messaging",
+      "route_id": "route-24",
+      "name": "Async jobs & messaging",
+      "aliases": [
+        "async-jobs-messaging"
+      ]
+    },
+    {
+      "id": "testing-diagnostics",
+      "route_id": "route-25",
+      "name": "Testing & diagnostics",
+      "aliases": [
+        "backend-integration-testing",
+        "browser-e2e-and-test-diagnostics",
+        "software-testing"
+      ]
+    },
+    {
+      "id": "debugging-reverse-engineering",
+      "route_id": "route-26",
+      "name": "Debugging & reverse engineering",
+      "aliases": [
+        "debugging-and-code-repair",
+        "reverse-engineering"
+      ]
+    },
+    {
+      "id": "devops-cloud-deployment",
+      "route_id": "route-27",
+      "name": "DevOps & deployment",
+      "aliases": [
+        "cloud-architecture-cost",
+        "devops-and-deployment"
+      ]
+    },
+    {
+      "id": "platform-operations-research",
+      "route_id": "route-28",
+      "name": "Platform operations & research",
+      "aliases": [
+        "gitea-platform-operations",
+        "github-research"
+      ]
+    },
+    {
+      "id": "browser-editor-extensions",
+      "route_id": "route-29",
+      "name": "Browser & editor extensions",
+      "aliases": [
+        "browser-editor-extensions",
+        "editor-plugin-architecture"
+      ]
+    },
+    {
+      "id": "documentation-seo",
+      "route_id": "route-30",
+      "name": "Documentation & SEO",
+      "aliases": [
+        "seo-digital-content",
+        "technical-documentation"
+      ]
+    },
+    {
+      "id": "media-games-desktop",
+      "route_id": "route-31",
+      "name": "Media, games & desktop workflows",
+      "aliases": [
+        "game-development",
+        "local-desktop-media-lifecycle",
+        "media-production"
+      ]
+    },
+    {
+      "id": "specialist-systems-finance",
+      "route_id": "route-32",
+      "name": "Specialist systems & finance",
+      "aliases": [
+        "backend-observability",
+        "embedded-iot",
+        "payments-financial",
+        "skill-creation-and-evaluation"
+      ]
+    }
+  ],
+  "alias_policy": "stage1_routes.skills retains legacy capability IDs; capability-registry maps each alias to canonical_skill_id and skill_path."
+}

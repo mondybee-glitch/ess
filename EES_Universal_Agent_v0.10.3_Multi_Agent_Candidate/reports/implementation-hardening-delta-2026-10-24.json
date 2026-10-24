@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-24T18:15:00Z",
+  "package": "EES Gemini",
+  "version": "0.9.2",
+  "candidate_delta": "engineering-hardening-prototype",
+  "release_decision": "BLOCKED_NOT_GA",
+  "changes": [
+    {
+      "id": "signed_evidence_verifier",
+      "status": "IMPLEMENTED_TESTED",
+      "details": "Ed25519 signature, canonical payload digest, strict manifest validation, mandatory-check policy; private key is not stored in the repository."
+    },
+    {
+      "id": "sandbox_launcher",
+      "status": "IMPLEMENTED_STATIC_TESTED",
+      "details": "Docker launch wrapper applies non-root UID, read-only rootfs, network none, dropped capabilities, no-new-privileges, resource limits, temporary /tmp, and one task-directory mount."
+    },
+    {
+      "id": "sandbox_build_context",
+      "status": "FIXED_STATIC_TESTED",
+      "details": "Build helper now uses project root context so Dockerfile COPY paths resolve."
+    },
+    {
+      "id": "evolution_routing_guardrails",
+      "status": "DOCUMENTED_NOT_AUTOMATED",
+      "details": "Promotion and cache invalidation policy documented; automatic promotion and Gemini provider-side context caching remain unimplemented."
+    }
+  ],
+  "validation": {
+    "focused_tests": {
+      "status": "PASS",
+      "command": "python -m pytest -q tests/test_contract_verifier.py tests/test_sandbox_wrapper.py tests/test_universal_contract.py tests/test_event_ledger_v072.py",
+      "result": "13 passed (final focused run)"
+    },
+    "post_hardening_focused_tests": {
+      "status": "PASS",
+      "command": "python -m pytest -q tests/test_contract_verifier.py tests/test_sandbox_wrapper.py",
+      "result": "9 passed"
+    },
+    "structural_validation": {
+      "status": "PASS",
+      "command": "python scripts/validate.py --full",
+      "result": "32 skills; 74 capabilities; 222 eval contracts; 51 central fixtures; 9 checks; 16 operational fixture projects; 0 warnings"
+    },
+    "shell_syntax": {
+      "status": "PASS",
+      "result": "sh -n passed for both sandbox scripts"
+    },
+    "full_pytest": {
+      "status": "BLOCKED_TIMEOUT",
+      "details": "Full suite and a broader subset did not complete within the available execution window; logs showed progress through existing runtime/operational-fixture tests but no final summary. No full-suite pass is claimed."
+    },
+    "docker_build_and_runtime": {
+      "status": "NOT_RUN",
+      "details": "Docker unavailable in this environment; wrapper has static tests only."
+    },
+    "live_gemini": {
+      "status": "BLOCKED_NO_KEY",
+      "details": "No GEMINI_API_KEY available; no live API call made."
+    },
+    "dependency_audit_sbom": {
+      "status": "NOT_RUN",
+      "details": "Must run in CI with resolved dependencies."
+    },
+    "independent_security_review": {
+      "status": "PENDING_EXTERNAL_REVIEW"
+    }
+  },
+  "limitations": [
+    "Signed manifests are not yet wired into task_runtime.py final PASSED/release-decision transitions.",
+    "Evidence signer proves integrity and key possession, not truth of claims.",
+    "Key allowlisting, key rotation/revocation, and protected production key storage are not implemented.",
+    "Sandbox wrapper assumes Docker daemon and GNU timeout; actual isolation/escape tests have not run.",
+    "No claim of GA readiness or end-to-end agent effectiveness."
+  ]
+}
